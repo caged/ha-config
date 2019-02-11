@@ -4,3 +4,9 @@ kitchen_lights:
   - light.k3
   - light.k4
   - light.k5
+dining_room_lights:
+  - light.hue_white_lamp_1
+  - light.hue_white_lamp_2
+  - light.hue_white_lamp_3
+  - light.hue_white_lamp_4
+  - light.hue_white_lamp_5  
