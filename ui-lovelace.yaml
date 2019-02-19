@@ -14,4 +14,6 @@ views:
           - light.office
           - light.garage
           - light.front_porch
-          - light.living_room
+          - light.playroom
+          - light.hallway
+          - light.stairs
