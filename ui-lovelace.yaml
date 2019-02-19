@@ -1,0 +1,15 @@
+title: Home
+views:
+  - badges:
+      - sensor.yr_symbol
+    cards:
+      - entities:
+          - light.kitchen
+          - light.back_door
+          - light.bed
+          - light.dining_room
+          - light.sink
+          - light.office
+          - light.garage
+          - light.front_porch
+          - light.living_room                       
