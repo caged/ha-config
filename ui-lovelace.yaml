@@ -22,3 +22,7 @@ views:
   - title: Downstairs
     badges:
       - sensor.yr_symbol
+  - title: Music
+    cards:
+      - type: media-control
+        entity: media_player.lounge_room
