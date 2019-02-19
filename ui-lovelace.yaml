@@ -1,6 +1,7 @@
 title: Home
 views:
-  - badges:
+  - title: Home
+    badges:
       - sensor.yr_symbol
     cards:
       - type: entities
@@ -18,3 +19,6 @@ views:
           - light.playroom
           - light.hallway
           - light.stairs
+  - title: Downstairs
+    badges:
+      - sensor.yr_symbol
