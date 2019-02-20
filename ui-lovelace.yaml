@@ -11,9 +11,8 @@ views:
         title: Climate
         show_header_toggle: false
         entities:
-          - entity: binary_sensor.cool_breeze_occupancy
+          - entity: sensor.living_room_climate
             icon: mdi:walk
-            secondary_info: sensor.living_room_climate
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity
