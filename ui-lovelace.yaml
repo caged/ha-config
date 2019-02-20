@@ -13,7 +13,7 @@ views:
           - entity: binary_sensor.cool_breeze_occupancy
             icon: mdi:walk
             name: Living Room
-            label: holy shit
+            secondary_info: sensor.cool_breeze_temperature
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity
