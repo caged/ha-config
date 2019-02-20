@@ -6,8 +6,6 @@ resources:
 title: Palmer Palace
 views:
   - title: Home
-    badges:
-      - sensor.yr_symbol
     cards:
       - type: weather-forecast
         entity: weather.dark_sky
