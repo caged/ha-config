@@ -67,3 +67,7 @@ views:
           entity: light.dining_room
         - type: light
           entity: light.kitchen
+        - type: light
+          entity: light.hallway               
+        - type: light
+          entity: light.stairs
