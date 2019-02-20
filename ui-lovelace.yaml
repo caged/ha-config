@@ -9,7 +9,7 @@ views:
     cards:
       - type: entities
         entities:
-          - configurator.ecobee
+          - climate.home
       - type: weather-forecast
         entity: weather.dark_sky
       - type: entities
