@@ -61,13 +61,17 @@ views:
           - light.stairs
   - title: Downstairs
     cards:
-      - type: horizontal-stack
+      - type: vertical-stack
         cards:
-        - type: light
-          entity: light.dining_room
-        - type: light
-          entity: light.kitchen
-        - type: light
-          entity: light.hallway               
-        - type: light
-          entity: light.stairs
+        - type: horizontal-stack
+         cards:
+          - type: light
+            entity: light.dining_room
+          - type: light
+            entity: light.kitchen
+        - type: horizontal-stack
+          cards:
+          - type: light
+            entity: light.hallway
+          - type: light
+            entity: light.stairs
