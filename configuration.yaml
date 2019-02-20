@@ -13,6 +13,11 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    mode: daily
+
 lovelace:
   mode: yaml
 # Show links to resources in log and frontend
