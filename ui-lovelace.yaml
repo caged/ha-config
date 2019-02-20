@@ -9,10 +9,11 @@ views:
     cards:
       - type: entities
         title: Climate
+        show_header_toggle: false
         entities:
           - entity: binary_sensor.cool_breeze_occupancy
             icon: mdi:walk
-            name: Living Room
+            name: Living Room "{{'sensor.cool_breeze_temperature'}}"
             secondary_info: sensor.cool_breeze_temperature
           # - weather.cool_breeze
           # - climate.cool_breeze
