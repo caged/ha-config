@@ -61,6 +61,25 @@ views:
           - light.stairs
   - title: Downstairs
     cards:
+      - type: entities
+        entities:
+        - type: "custom:mini-media-player"
+          entity: media_player.sonos_living_room
+          icon: mdi:speaker
+          artwork: full
+          source: icon
+          info: short
+          hide:
+            power: true
+            shuffle: false
+          sonos:
+            show_group_count: true
+            sync_volume: true
+            entities:
+            - entity_id: media_player.sonos_office
+              name: Office
+            - entity_id: media_player.sonos_bedroom
+              name: Bedroom
       - type: vertical-stack
         cards:
           - type: horizontal-stack
