@@ -7,7 +7,9 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
-      - type: ecobee
+      - type: entities
+        entities:
+          - - configurator.ecobee
       - type: weather-forecast
         entity: weather.dark_sky
       - type: entities
