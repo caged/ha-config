@@ -15,13 +15,16 @@ views:
             cards:
               - type: "custom:mini-media-player"
                 entity: media_player.sonos_living_room
-                icon: mdi:speaker
+                group: true
+                artwork: cover
               - type: "custom:mini-media-player"
                 entity: media_player.sonos_office
-                icon: mdi:speaker
+                group: true
+                artwork: cover
               - type: "custom:mini-media-player"
                 entity: media_player.sonos_bedroom
-                icon: mdi:speaker
+                group: true
+                artwork: cover
       - type: entities
         title: Lights
         show_header_toggle: false
