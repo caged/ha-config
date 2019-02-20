@@ -18,8 +18,8 @@ views:
           source: icon
           info: short
           hide:
-            volume: true
             power: true
+            shuffle: false
           sonos:
             show_group_count: true
             sync_volume: true
@@ -35,6 +35,7 @@ views:
           artwork: cover
           hide:
             controls: true
+            power: true
         - type: "custom:mini-media-player"
           entity: media_player.sonos_bedroom
           icon: mdi:speaker
@@ -42,6 +43,7 @@ views:
           artwork: cover
           hide:
             controls: true
+            power: true
       - type: entities
         title: Lights
         show_header_toggle: false
