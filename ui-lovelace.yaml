@@ -32,7 +32,6 @@ views:
           entity: media_player.sonos_office
           icon: mdi:speaker
           group: true
-          artwork: cover
           hide:
             controls: true
             power: true
@@ -40,7 +39,6 @@ views:
           entity: media_player.sonos_bedroom
           icon: mdi:speaker
           group: true
-          artwork: cover
           hide:
             controls: true
             power: true
