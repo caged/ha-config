@@ -32,16 +32,20 @@ views:
           entity: media_player.sonos_office
           icon: mdi:speaker
           group: true
+          artwork: cover
           hide:
             controls: true
             power: true
+            progress: true
         - type: "custom:mini-media-player"
           entity: media_player.sonos_bedroom
           icon: mdi:speaker
           group: true
+          artwork: cover
           hide:
             controls: true
             power: true
+            progress: true
       - type: entities
         title: Lights
         show_header_toggle: false
