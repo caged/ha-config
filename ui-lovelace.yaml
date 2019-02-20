@@ -9,6 +9,19 @@ views:
     badges:
       - sensor.yr_symbol
     cards:
+      - type: horizontal-stack
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: "custom:mini-media-player"
+                entity: media_player.sonos_living_room
+                icon: mdi:speaker
+              - type: "custom:mini-media-player"
+                entity: media_player.sonos_office
+                icon: mdi:speaker
+              - type: "custom:mini-media-player"
+                entity: media_player.sonos_bedroom
+                icon: mdi:speaker
       - type: entities
         title: Lights
         show_header_toggle: false
