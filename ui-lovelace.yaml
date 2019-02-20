@@ -9,7 +9,7 @@ views:
     cards:
       - type: entities
         entities:
-          - climate.home
+          - climate.cool_breeze
       - type: weather-forecast
         entity: weather.dark_sky
       - type: entities
