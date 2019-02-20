@@ -6,6 +6,9 @@
 !*.yaml
 !.gitignore
 !*.md
+!*.js
+!www/
+!www/lovelace/
 !devices/
 
 # Ignore folders.

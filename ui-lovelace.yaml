@@ -1,4 +1,8 @@
-title: Home
+resources:
+  - url: /local/lovelace/mini-media-player-bundle.js?v=1.0.2
+    type: module
+  - url: /local/lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
+    type: module
 views:
   - title: Home
     badges:
@@ -24,5 +28,9 @@ views:
       - sensor.yr_symbol
   - title: Music
     cards:
-      - type: media-control
-        entity: media_player.lounge_room
+      - type: "custom:mini-media-player"
+        entity: media_player.sonos_living_room
+        icon: mdi:speaker
+        more_info: true
+        volume_stateless: true
+        artwork: full-cover
