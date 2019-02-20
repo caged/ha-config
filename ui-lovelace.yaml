@@ -13,6 +13,7 @@ views:
           - binary_sensor.camden_s_room_occupancy
           - sensor.camden_s_room_temperature
           - weather.cool_breeze
+          - climate.cool_breeze          
       - type: entities
         entities:
           - climate.cool_breeze
