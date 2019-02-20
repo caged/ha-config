@@ -10,6 +10,7 @@
 !www/
 !www/lovelace/
 !devices/
+!views/
 
 # Ignore folders.
 .storage
