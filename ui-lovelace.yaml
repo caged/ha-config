@@ -10,10 +10,17 @@ views:
       - type: glance
         title: Climate
         entities:
+          - weather.cool_breeze
+          - climate.cool_breeze
+          - sensor.cool_breeze_humidity
+          - sensor.cool_breeze_temperature
+          - binary_sensor.cool_breeze_occupancy
           - binary_sensor.camden_s_room_occupancy
           - sensor.camden_s_room_temperature
-          - weather.cool_breeze
-          - climate.cool_breeze          
+          - binary_sensor.justin_s_office_occupancy
+          - sensor.justin_s_office_temperature
+          - binary_sensor.master_bedroom_occupancy
+          - sensor.master_bedroom_temperature
       - type: entities
         entities:
           - climate.cool_breeze
