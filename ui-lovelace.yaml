@@ -9,6 +9,8 @@ views:
     badges:
       - sensor.yr_symbol
     cards:
+      - type: weather-forecast
+        entity: weather.dark_sky
       - type: entities
         entities:
         - type: "custom:mini-media-player"
