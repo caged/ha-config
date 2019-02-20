@@ -11,6 +11,7 @@ views:
         entity: weather.dark_sky
       - type: entities
         title: Sonos
+        show_header_toggle: false
         entities:
         - type: "custom:mini-media-player"
           entity: media_player.sonos_living_room
