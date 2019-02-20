@@ -1,5 +1,5 @@
-- platform: template
-    sensors:
-      living_room_climate:
-        value_template: '{{ states.sensor.cool_breeze_temperature }}'
-        friendly_name: 'Living Room'
+  - platform: template
+      sensors:
+        living_room_climate:
+          value_template: '{{ states.sensor.cool_breeze_temperature }}'
+          friendly_name: 'Living Room'
