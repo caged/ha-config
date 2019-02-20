@@ -13,21 +13,31 @@ views:
         entities:
         - type: "custom:mini-media-player"
           entity: media_player.sonos_living_room
+          icon: mdi:speaker
           artwork: cover
           source: icon
           info: short
           hide:
             volume: true
             power: true
+          sonos:
+            show_group_count: true
+            sync_volume: true
+            entities:
+            - entity_id: media_player.sonos_office
+              name: Office
+            - entity_id: media_player.sonos_bedroom
+              name: Bedroom
         - type: "custom:mini-media-player"
           entity: media_player.sonos_office
+          icon: mdi:speaker
           group: true
           artwork: cover
-          source: icon
           hide:
             controls: true
         - type: "custom:mini-media-player"
           entity: media_player.sonos_bedroom
+          icon: mdi:speaker
           group: true
           artwork: cover
           hide:
