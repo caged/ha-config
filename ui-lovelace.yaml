@@ -11,7 +11,7 @@ views:
         title: Climate
         entities:
           - entity: binary_sensor.cool_breeze_occupancy
-            icon: mdi:motion-sensor
+            icon: mdi:walk
             name: Living Room
           # - weather.cool_breeze
           # - climate.cool_breeze
