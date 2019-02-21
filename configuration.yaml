@@ -13,6 +13,9 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+customizer:
+  custom_ui: local  
+
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
