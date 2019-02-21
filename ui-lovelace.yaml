@@ -37,6 +37,7 @@ views:
       - type: weather-forecast
         entity: weather.dark_sky
       - type: history-graph
+        hours_to_show: 12
         entities:
           - climate.cool_breeze
       - type: entities
@@ -93,7 +94,7 @@ views:
           - type: section
             label: Upstairs
           - light.bed
-          - light.office          
+          - light.office
           - type: section
             label: Outside
           - light.back_door
