@@ -91,14 +91,14 @@ views:
           - light.stairs
           - light.sink
           - type: section
+            label: Upstairs
+          - light.bed
+          - light.office          
+          - type: section
             label: Outside
           - light.back_door
           - light.garage
           - light.front_porch
-          - type: section
-            label: Upstairs
-          - light.bed
-          - light.office
   - title: Downstairs
     cards:
       - type: "custom:mini-media-player"
