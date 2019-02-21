@@ -109,12 +109,12 @@ views:
             title: Front Door
             entities:
               - binary_sensor.ring_front_door_motion
-              - binary_sensor.ring_front_door_ding
+              - sensor.ring_front_door_last_activity            
             camera_image: camera.front_door
           - type: picture-glance
             title: Garage
             entities:
-              - binary_sensor.ring_garege_motion
+              - binary_sensor.ring_garage_motion
               - sensor.ring_garage_last_activity
             camera_image: camera.garage
 
