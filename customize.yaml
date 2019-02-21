@@ -1,4 +1,4 @@
-sensor.living_room_climate:
+sensor.cool_breeze_temperature:
   templates:
     icon: >-
        {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}

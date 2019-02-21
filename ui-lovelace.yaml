@@ -11,7 +11,7 @@ views:
         title: Climate
         show_header_toggle: false
         entities:
-          - entity: sensor.living_room_climate
+          - entity: sensor.cool_breeze_temperature
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity
