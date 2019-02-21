@@ -1,8 +1,8 @@
 sensor.cool_breeze_temperature:
   templates:
     icon: >-
-       {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+      {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
         mdi:run-fast
-       {% else %}
+      {% else %}
         mdi:run
       {% endif %}
