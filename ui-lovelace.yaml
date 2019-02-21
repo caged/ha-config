@@ -102,6 +102,12 @@ views:
           - light.back_door
           - light.garage
           - light.front_porch
+      - type: picture-glance
+        title: Front Door
+        entities:
+          - binary_sensor.ring_front_door_motion
+          - binary_sensor.ring_front_door_ding
+        camera_image: camera.front_door
   - title: Downstairs
     cards:
       - type: "custom:mini-media-player"
