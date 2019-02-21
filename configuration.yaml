@@ -21,8 +21,17 @@ weather:
 ecobee:
   api_key: !secret ecobee_api_key
 
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
 lovelace:
   mode: yaml
+
+camera:
+  - platform: ring
+binary_sensor:
+  - platform: ring  
 # Show links to resources in log and frontend
 # introduction:
 

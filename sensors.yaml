@@ -1,4 +1,5 @@
 - platform: yr
+- platform: ring
 - platform: template
   sensors:
     climate_living_room:
