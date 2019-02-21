@@ -23,3 +23,9 @@
         {% else %}
           Unoccupied
         {% endif %}
+      icon_template: >-
+        {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:run
+        {% endif %}
