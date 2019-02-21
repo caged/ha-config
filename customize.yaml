@@ -1,2 +1,3 @@
 sensor.cool_breeze_temperature:
-  icon_template: mdi:run-fast
+  templates:
+    icon: mdi:run-fast
