@@ -108,6 +108,12 @@ views:
           - binary_sensor.ring_front_door_motion
           - binary_sensor.ring_front_door_ding
         camera_image: camera.front_door
+      - type: picture-glance
+        title: Front Door
+        entities:
+          - binary_sensor.ring_garege_motion
+          - sensor.ring_garage_last_activity
+        camera_image: camera.garage
   - title: Downstairs
     cards:
       - type: "custom:mini-media-player"
