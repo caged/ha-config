@@ -9,6 +9,12 @@
         {% else %}
           Unoccupied
         {% endif %}
+      icon_template: >-
+        {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:run
+        {% endif %}
     climate_master_bedroom:
       friendly_name: "Bedroom"
       value_template: >-
