@@ -11,6 +11,9 @@
 !www/lovelace/
 !devices/
 !views/
+!custom_components/
+!custom_components/customizer/
+!update-customizer.sh
 
 # Ignore folders.
 .storage
