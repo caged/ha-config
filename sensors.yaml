@@ -13,12 +13,8 @@
         {% endif %}
     climate_master_bedroom:
       friendly_name: "Bedroom"
-      value_template: >-
-        {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
-          Occupied
-        {% else %}
-          Unoccupied
-        {% endif %}
+      value_template: "{{ states('sensor.master_bedroom_temperature') }}"
+      unit_of_measurement: 'º'
       icon_template: >-
         {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
           mdi:run-fast
@@ -27,12 +23,8 @@
         {% endif %}
     climate_office:
       friendly_name: "Office"
-      value_template: >-
-        {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
-          Occupied
-        {% else %}
-          Unoccupied
-        {% endif %}
+      value_template: "{{ states('sensor.justin_s_office_temperature') }}"
+      unit_of_measurement: 'º'
       icon_template: >-
         {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
           mdi:run-fast
@@ -41,12 +33,8 @@
         {% endif %}
     climate_camdens_bedroom:
       friendly_name: "Camden's Bedroom"
-      value_template: >-
-        {% if is_state('binary_sensor.camden_s_room_occupancy', 'on') %}
-          Occupied
-        {% else %}
-          Unoccupied
-        {% endif %}
+      value_template: "{{ states('sensor.camden_s_room_temperature') }}"
+      unit_of_measurement: 'º'
       icon_template: >-
         {% if is_state('binary_sensor.camden_s_room_occupancy', 'on') %}
           mdi:run-fast
