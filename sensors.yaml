@@ -3,4 +3,4 @@
   sensors:
     climate_living_room:
       friendly_name: "Sun angle"
-      value_template: "{{ states.binary_sensor.cool_breeze_occupancy }}"
+      value_template: "{{ state_attr('states.binary_sensor', 'cool_breeze_occupancy') }}"
