@@ -102,18 +102,23 @@ views:
           - light.back_door
           - light.garage
           - light.front_porch
-      - type: picture-glance
-        title: Front Door
-        entities:
-          - binary_sensor.ring_front_door_motion
-          - binary_sensor.ring_front_door_ding
-        camera_image: camera.front_door
-      - type: picture-glance
-        title: Front Door
-        entities:
-          - binary_sensor.ring_garege_motion
-          - sensor.ring_garage_last_activity
-        camera_image: camera.garage
+
+      - type: horizontal-stack
+        cards:
+          - type: picture-glance
+            title: Front Door
+            entities:
+              - binary_sensor.ring_front_door_motion
+              - binary_sensor.ring_front_door_ding
+            camera_image: camera.front_door
+          - type: picture-glance
+            title: Garage
+            entities:
+              - binary_sensor.ring_garege_motion
+              - sensor.ring_garage_last_activity
+            camera_image: camera.garage
+
+  # Downstairs section
   - title: Downstairs
     cards:
       - type: "custom:mini-media-player"
