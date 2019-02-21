@@ -1,3 +1,4 @@
 sensor.cool_breeze_temperature:
   templates:
-    icon: mdi:run-fast
+    rgb_color: >
+      return [191,27,0];
