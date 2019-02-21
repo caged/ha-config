@@ -1,0 +1,8 @@
+sensor.living_room_climate:
+  templates:
+    icon: >-
+       {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+        mdi:run-fast
+       {% else %}
+        mdi:run
+      {% endif %}

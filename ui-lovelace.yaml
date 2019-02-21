@@ -12,7 +12,6 @@ views:
         show_header_toggle: false
         entities:
           - entity: sensor.living_room_climate
-            icon: mdi:run-fast
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity
