@@ -3,4 +3,4 @@
     living_room_climate:
       value_template: "{{ state_attr('climate.cool_breeze', 'current_temperature') }}"
       friendly_name: 'Living Room'
-      rgb_color: [34, 147, 83]
+      rgb_color: "[34, 147, 83]"
