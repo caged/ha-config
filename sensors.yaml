@@ -3,4 +3,9 @@
   sensors:
     climate_living_room:
       friendly_name: "Sun angle"
-      value_template: "{{ state_attr('states.binary_sensor', 'cool_breeze_occupancy') }}"
+      value_template: >-
+        {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+          Occupied
+        {% else %}
+          Unoccupied
+        {% endif %}
