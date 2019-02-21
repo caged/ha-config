@@ -11,9 +11,8 @@ views:
         title: Climate
         show_header_toggle: false
         entities:
-          - type: section
-            label: Home
-          - climate.cool_breeze
+          - entity: climate.cool_breeze
+            name: Home
           - type: divider
           - sensor.climate_living_room
           - sensor.climate_office
