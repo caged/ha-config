@@ -71,7 +71,6 @@ views:
           hide:
             controls: true
             power: true
-            progress: true
         - type: "custom:mini-media-player"
           entity: media_player.sonos_bedroom
           icon: mdi:speaker
@@ -80,7 +79,6 @@ views:
           hide:
             controls: true
             power: true
-            progress: true
       - type: entities
         title: Lights
         show_header_toggle: false
