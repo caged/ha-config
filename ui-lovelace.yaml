@@ -41,7 +41,6 @@ views:
         entities:
           - entity: climate.cool_breeze
             name: Living Room
-
       - type: entities
         title: Sonos
         show_header_toggle: false
@@ -51,7 +50,8 @@ views:
           icon: mdi:speaker
           artwork: cover
           source: icon
-          info: short
+          info: scroll
+          group: true
           hide:
             power: true
             shuffle: false
