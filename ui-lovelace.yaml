@@ -82,17 +82,23 @@ views:
         title: Lights
         show_header_toggle: false
         entities:
-          - light.kitchen
-          - light.back_door
-          - light.bed
+          - type: section
+            label: Downstairs
           - light.dining_room
-          - light.sink
-          - light.office
-          - light.garage
-          - light.front_porch
+          - light.kitchen
           - light.playroom
           - light.hallway
           - light.stairs
+          - light.sink
+          - type: section
+            label: Outside
+          - light.back_door
+          - light.garage
+          - light.front_porch
+          - type: section
+            label: Upstairs
+          - light.bed
+          - light.office
   - title: Downstairs
     cards:
       - type: "custom:mini-media-player"
