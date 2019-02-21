@@ -3,4 +3,3 @@
     living_room_climate:
       value_template: "{{ state_attr('climate.cool_breeze', 'current_temperature') }}"
       friendly_name: 'Living Room'
-      device_class: motion
