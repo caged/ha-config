@@ -11,11 +11,13 @@ views:
         title: Climate
         show_header_toggle: false
         entities:
-          - entity: sensor.cool_breeze_temperature
-          - entity: sensor.camden_s_room_temperature
-          - entity: sensor.master_bedroom_temperature
-          - entity: sensor.justin_s_office_temperature
-          - entity: sensor.climate_living_room
+          - sensor.climate_living_room
+          - sensor.climate_master_bedroom
+          # - entity: sensor.cool_breeze_temperature
+          # - entity: sensor.camden_s_room_temperature
+          # - entity: sensor.master_bedroom_temperature
+          # - entity: sensor.justin_s_office_temperature
+          # - entity: sensor.climate_living_room
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity

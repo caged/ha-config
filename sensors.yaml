@@ -2,9 +2,17 @@
 - platform: template
   sensors:
     climate_living_room:
-      friendly_name: "Sun angle"
+      friendly_name: "Living Room"
       value_template: >-
         {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+          Occupied
+        {% else %}
+          Unoccupied
+        {% endif %}
+    climate_master_bedroom:
+      friendly_name: "Bedroom"
+      value_template: >-
+        {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
           Occupied
         {% else %}
           Unoccupied
