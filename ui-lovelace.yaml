@@ -38,7 +38,7 @@ views:
         entity: weather.dark_sky
       - type: history-graph
         entities:
-          - climate.cool_breeze.temperature
+          - climate.cool_breeze
       - type: entities
         title: Sonos
         show_header_toggle: false
