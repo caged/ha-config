@@ -1,19 +1,6 @@
 # Example .gitignore file for your config dir.
 # A * ensures that everything will be ignored.
-*
 
-# You can whitelist files/folders with !, these will not be ignored.
-!*.yaml
-!.gitignore
-!*.md
-!*.js
-!www/
-!www/lovelace/
-!devices/
-!views/
-!custom_components/
-!custom_components/customizer/
-!update-customizer.sh
 
 # Ignore folders.
 .storage
