@@ -12,7 +12,8 @@ views:
         show_header_toggle: false
         entities:
           - sensor.climate_living_room
-          - sensor.climate_office          
+          - sensor.climate_office
+          - type: divider
           - sensor.climate_master_bedroom
           - sensor.climate_camdens_bedroom
           # - entity: sensor.cool_breeze_temperature
