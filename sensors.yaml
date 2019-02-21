@@ -13,7 +13,7 @@
         {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
-          mdi:run
+          mdi:account-off-outline
         {% endif %}
     climate_master_bedroom:
       friendly_name: "Bedroom"
@@ -27,5 +27,33 @@
         {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
-          mdi:run
+          mdi:account-off-outline
+        {% endif %}
+    climate_office:
+      friendly_name: "Office"
+      value_template: >-
+        {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
+          Occupied
+        {% else %}
+          Unoccupied
+        {% endif %}
+      icon_template: >-
+        {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:account-off-outline
+        {% endif %}
+    climate_camdens_bedroom:
+      friendly_name: "Camden's Bedroom"
+      value_template: >-
+        {% if is_state('binary_sensor.camden_s_room_occupancy', 'on') %}
+          Occupied
+        {% else %}
+          Unoccupied
+        {% endif %}
+      icon_template: >-
+        {% if is_state('binary_sensor.camden_s_room_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:account-off-outline
         {% endif %}
