@@ -1,1 +1,7 @@
 - platform: yr
+- platform: template
+  sensors:
+    climate_living_room:
+      friendly_name: "Sun angle"
+      unit_of_measurement: 'degrees'
+      value_template: "{{ state_attr('binary_sensor', 'cool_breeze_occupancy') }}"

@@ -15,6 +15,7 @@ views:
           - entity: sensor.camden_s_room_temperature
           - entity: sensor.master_bedroom_temperature
           - entity: sensor.justin_s_office_temperature
+          - entity: sensor.climate_living_room
           # - weather.cool_breeze
           # - climate.cool_breeze
           # - sensor.cool_breeze_humidity
