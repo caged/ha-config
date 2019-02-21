@@ -14,8 +14,6 @@ views:
           - entity: climate.cool_breeze
             name: Home
           - type: history-graph
-            entities:
-              - climate.cool_breeze.temperature
           - type: divider
           - sensor.climate_living_room
           - sensor.climate_office
