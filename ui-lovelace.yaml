@@ -47,10 +47,11 @@ views:
             artwork: full-cover-fit
             group: true
             icon: mdi:apple
+            name: Living Room
             hide:
               volume: true
               source: true
-              power_state: false
+              power: true
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
@@ -64,6 +65,7 @@ views:
             hide:
               power: true
               shuffle: false
+              source: true
             sonos:
               show_group_count: true
               sync_volume: true
