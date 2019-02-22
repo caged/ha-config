@@ -4,4 +4,6 @@ resources:
   - url: /local/lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
     type: module
 title: Palmer Palace
-views: !include_dir_list views
+views:
+  - !include views/home
+  - !include views/downstairs
