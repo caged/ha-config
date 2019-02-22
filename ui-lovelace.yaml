@@ -5,5 +5,5 @@ resources:
     type: module
 title: Palmer Palace
 views:
-  - !include views/home
-  - !include views/downstairs
+  - !include views/home.yaml
+  - !include views/downstairs.yaml
