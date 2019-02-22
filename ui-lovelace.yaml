@@ -7,10 +7,6 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
-      - type: custom:mini-media-player
-        entity: media_player.living_room
-        artwork: full-cover
-        icon: mdi:apple
       - type: horizontal-stack
         cards:
           - type: picture-glance
@@ -59,42 +55,43 @@ views:
         title: Sonos
         show_header_toggle: false
         entities:
-        - type: "custom:mini-media-player"
-          entity: media_player.sonos_living_room
-          icon: mdi:speaker
-          artwork: cover
-          source: icon
-          info: scroll
-          group: true
-          hide:
-            power: true
-            shuffle: false
-          sonos:
-            show_group_count: true
-            sync_volume: true
-            entities:
-            - entity_id: media_player.sonos_office
-              name: Office
-            - entity_id: media_player.sonos_bedroom
-              name: Bedroom
-        - type: "custom:mini-media-player"
-          entity: media_player.sonos_office
-          icon: mdi:speaker
-          group: true
-          artwork: cover
-          volume_stateless: true
-          hide:
-            controls: true
-            power: true
-        - type: "custom:mini-media-player"
-          entity: media_player.sonos_bedroom
-          icon: mdi:speaker
-          group: true
-          artwork: cover
-          volume_stateless: true
-          hide:
-            controls: true
-            power: true
+          - type: "custom:mini-media-player"
+            entity: media_player.sonos_living_room
+            icon: mdi:speaker
+            artwork: cover
+            source: icon
+            info: scroll
+            group: true
+            hide:
+              power: true
+              shuffle: false
+            sonos:
+              show_group_count: true
+              sync_volume: true
+              entities:
+              - entity_id: media_player.sonos_office
+                name: Office
+              - entity_id: media_player.sonos_bedroom
+                name: Bedroom
+          - type: "custom:mini-media-player"
+            entity: media_player.sonos_office
+            icon: mdi:speaker
+            group: true
+            artwork: cover
+            volume_stateless: true
+            hide:
+              controls: true
+              power: true
+          - type: "custom:mini-media-player"
+            entity: media_player.sonos_bedroom
+            icon: mdi:speaker
+            group: true
+            artwork: cover
+            volume_stateless: true
+            hide:
+              controls: true
+              power: true
+
       - type: entities
         title: Lights
         show_header_toggle: false
