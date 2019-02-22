@@ -10,6 +10,7 @@ views:
       - type: custom:mini-media-player
         entity: media_player.living_room
         artwork: full-cover
+        icon: mdi:apple
       - type: horizontal-stack
         cards:
           - type: picture-glance
