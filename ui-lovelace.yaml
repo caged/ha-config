@@ -46,10 +46,10 @@ views:
             entity: media_player.living_room
             artwork: full-cover-fit
             group: true
-            sonos:
-              sync_volume: true
-              entities:
-                - media_player.sonos_living_room
+            hide:
+              volume: true
+              source: true
+              power_state: false
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
