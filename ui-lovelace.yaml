@@ -46,6 +46,7 @@ views:
             entity: media_player.living_room
             artwork: full-cover-fit
             group: true
+            icon: mdi:apple
             hide:
               volume: true
               source: true
@@ -59,7 +60,7 @@ views:
             source: icon
             info: scroll
             group: true
-            volume_stateless: true            
+            volume_stateless: true
             hide:
               power: true
               shuffle: false
