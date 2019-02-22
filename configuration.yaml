@@ -29,6 +29,10 @@ apple_tv:
   - host: !secret apple_tv_host
     login_id: !secret apple_tv_login_id
 
+remote:
+  - platform: harmony
+    name: Living Room
+
 lovelace:
   mode: yaml
 
