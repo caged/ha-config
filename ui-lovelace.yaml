@@ -48,7 +48,6 @@ views:
             group: true
             sonos:
               sync_volume: true
-              - entity_id: media_player.sonos_living_room
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
