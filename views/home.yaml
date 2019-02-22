@@ -1,5 +1,6 @@
 title: Home
 cards:
+  # Ring Videos
   - type: horizontal-stack
     cards:
       - type: picture-glance
@@ -15,6 +16,7 @@ cards:
           - sensor.ring_garage_last_activity
         camera_image: camera.garage
 
+  # HVAC
   - type: entities
     title: Climate
     show_header_toggle: false
@@ -27,8 +29,11 @@ cards:
       - sensor.climate_master_bedroom
       - sensor.climate_camdens_bedroom
 
+  # Weather
   - type: weather-forecast
     entity: weather.dark_sky
+
+  # Media and apple tv
   - type: entities
     title: Media
     show_header_toggle: false
@@ -86,6 +91,7 @@ cards:
           controls: true
           power: true
 
+  # Lights
   - type: entities
     title: Lights
     show_header_toggle: false
