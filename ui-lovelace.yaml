@@ -48,6 +48,7 @@ views:
           - type: custom:mini-media-player
             entity: media_player.living_room
             artwork: full-cover-fit
+            group: true
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
