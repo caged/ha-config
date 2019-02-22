@@ -47,7 +47,7 @@ views:
             label: Apple TV
           - type: custom:mini-media-player
             entity: media_player.living_room
-            artwork: full-cover-fit
+            artwork: full-cover
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
