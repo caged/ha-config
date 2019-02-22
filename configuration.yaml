@@ -25,13 +25,15 @@ ring:
   username: !secret ring_username
   password: !secret ring_password
 
+apple_tv:
+
 lovelace:
   mode: yaml
 
 camera:
   - platform: ring
 binary_sensor:
-  - platform: ring  
+  - platform: ring
 # Show links to resources in log and frontend
 # introduction:
 
