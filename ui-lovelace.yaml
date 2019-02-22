@@ -7,6 +7,9 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
+      - type: custom:mini-media-player
+        entity: media_player.apple_tv
+        artwork: full-cover
       - type: horizontal-stack
         cards:
           - type: picture-glance
