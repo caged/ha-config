@@ -9,7 +9,7 @@ views:
     cards:
       - type: custom:mini-media-player
         entity: media_player.living_room
-        artwork: full-cover-fit
+        artwork: cover
       - type: horizontal-stack
         cards:
           - type: picture-glance
