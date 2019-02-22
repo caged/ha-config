@@ -7,6 +7,9 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
+      - type: custom:mini-media-player
+        entity: media_player.living_room
+        artwork: cover
       - type: horizontal-stack
         cards:
           - type: picture-glance
@@ -57,12 +60,6 @@ views:
         entities:
           - type: section
             label: Apple TV
-          - type: custom:mini-media-player
-            entity: media_player.living_room
-            artwork: cover
-            icon: mdi:apple
-            background: entity_picture
-            group: true
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
