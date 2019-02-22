@@ -65,6 +65,7 @@ views:
             sonos:
               show_group_count: true
               sync_volume: true
+              volume_stateless: true
               entities:
               - entity_id: media_player.sonos_office
                 name: Office
