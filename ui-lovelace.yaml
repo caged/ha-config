@@ -36,22 +36,7 @@ views:
           - sensor.climate_office
           - sensor.climate_master_bedroom
           - sensor.climate_camdens_bedroom
-          # - entity: sensor.cool_breeze_temperature
-          # - entity: sensor.camden_s_room_temperature
-          # - entity: sensor.master_bedroom_temperature
-          # - entity: sensor.justin_s_office_temperature
-          # - entity: sensor.climate_living_room
-          # - weather.cool_breeze
-          # - climate.cool_breeze
-          # - sensor.cool_breeze_humidity
-          # - sensor.cool_breeze_temperature
-          # - binary_sensor.cool_breeze_occupancy
-          # - binary_sensor.camden_s_room_occupancy
-          # - sensor.camden_s_room_temperature
-          # - binary_sensor.justin_s_office_occupancy
-          # - sensor.justin_s_office_temperature
-          # - binary_sensor.master_bedroom_occupancy
-          # - sensor.master_bedroom_temperature
+
       - type: weather-forecast
         entity: weather.dark_sky
       - type: entities
@@ -60,6 +45,9 @@ views:
         entities:
           - type: section
             label: Apple TV
+          - type: custom:mini-media-player
+            entity: media_player.living_room
+            artwork: full-cover-fit
           - type: section
             label: Sonos
           - type: "custom:mini-media-player"
