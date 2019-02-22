@@ -8,7 +8,7 @@ views:
   - title: Home
     cards:
       - type: custom:mini-media-player
-        entity: media_player.apple_tv
+        entity: media_player.living_room
         artwork: full-cover
       - type: horizontal-stack
         cards:
@@ -104,7 +104,7 @@ views:
           - light.kitchen
           - light.playroom
           - light.hallway
-          - light.stairs
+          - light.stairway
           - light.sink
           - type: section
             label: Upstairs
@@ -149,4 +149,4 @@ views:
               - type: light
                 entity: light.hallway
               - type: light
-                entity: light.stairs
+                entity: light.stairway
