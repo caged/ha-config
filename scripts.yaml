@@ -1,1 +1,16 @@
 # scripts
+watch_trailblazer_game:
+  alias: watch trailblazer game
+  sequence:
+    - service: remote.turn_on
+      entity_id: remote.living_room_harmony
+      data:
+         activity: "Watch TV"
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
+        command:
+          - menu
+          - left
+          - left
+          - select
