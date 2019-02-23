@@ -17,3 +17,11 @@ watch_trailblazer_game:
           - right
           - menu
           - select
+
+flash_sink_light:
+  alias: 'Flash Sink light'
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.sink
+        flash: short
