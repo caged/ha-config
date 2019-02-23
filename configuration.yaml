@@ -31,7 +31,7 @@ apple_tv:
 
 remote:
   - platform: harmony
-    name: Living Room
+    name: Living Room Harmony
 
 lovelace:
   mode: yaml
