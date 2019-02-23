@@ -24,4 +24,4 @@ flash_sink_light:
     - service: light.turn_on
       data:
         entity_id: light.sink
-        flash: short
+        flash: long
