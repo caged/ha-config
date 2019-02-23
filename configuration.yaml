@@ -32,6 +32,7 @@ apple_tv:
 remote:
   - platform: harmony
     name: Living Room Harmony
+    host: !secret harmony_hub_host
 
 lovelace:
   mode: yaml
