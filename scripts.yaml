@@ -17,3 +17,5 @@ watch_trailblazer_game:
           - right
           - menu
           - select
+          - down
+          - select
