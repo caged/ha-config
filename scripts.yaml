@@ -24,4 +24,4 @@ flash_hallway_light:
     - service: light.turn_on
       data:
         entity_id: light.hallway
-        flash: medium
+        flash: long
