@@ -10,7 +10,7 @@ watch_trailblazer_game:
       entity_id: remote.living_room
       data:
         command:
+          - top_menu
+          - right
           - menu
-          - left
-          - left
           - select
