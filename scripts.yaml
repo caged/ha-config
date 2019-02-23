@@ -6,9 +6,11 @@ watch_trailblazer_game:
       entity_id: remote.living_room_harmony
       data:
          activity: "Watch TV"
+    - delay:
+        # supports seconds, milliseconds, minutes, hours
+        milliseconds: 500         
     - service: remote.send_command
       entity_id: remote.living_room
-      delay_secs: 1.0
       data:
         command:
           - top_menu
