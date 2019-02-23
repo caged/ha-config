@@ -8,6 +8,7 @@ watch_trailblazer_game:
          activity: "Watch TV"
     - service: remote.send_command
       entity_id: remote.living_room
+      delay_secs: 1
       data:
         command:
           - top_menu
