@@ -1,12 +1,14 @@
-kitchen_lights:
-  - light.k1
-  - light.k2
-  - light.k3
-  - light.k4
-  - light.k5
-dining_room_lights:
-  - light.hue_white_lamp_1
-  - light.hue_white_lamp_2
-  - light.hue_white_lamp_3
-  - light.hue_white_lamp_4
-  - light.hue_white_lamp_5  
+outside_lights:
+  - light.back_door
+  - light.garage
+  - light.front_porch
+downstairs_lights:
+  - light.kitchen
+  - light.sink
+  - light.dining_room
+  - light.stairway
+  - light.hallway
+  - light.playroom
+upstairs_lights:
+  - light.office
+  - light.bedroom

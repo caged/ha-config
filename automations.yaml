@@ -1,7 +1,15 @@
 - alias: Turn on the outside lights when the sun sets
   trigger:
-    platform: time
-    at: '19:50:00'
+      platform: sun
+      event: sunset
   action:
     service: light.turn_on
-    entity_id: light.sink
+    entity_id: group.outside_lights
+
+- alias: Turn off the outside lights when the sun rises
+  trigger:
+      platform: sun
+      event: sunrise
+  action:
+    service: light.turn_off
+    entity_id: group.outside_lights
