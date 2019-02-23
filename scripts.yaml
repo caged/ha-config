@@ -18,10 +18,10 @@ watch_trailblazer_game:
           - menu
           - select
 
-flash_sink_light:
-  alias: 'Flash Sink light'
+flash_hallway_light:
+  alias: 'Flash Hallway light'
   sequence:
     - service: light.turn_on
       data:
         entity_id: light.hallway
-        flash: long
+        flash: medium
