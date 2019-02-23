@@ -23,5 +23,5 @@ flash_sink_light:
   sequence:
     - service: light.turn_on
       data:
-        entity_id: light.sink
+        entity_id: light.hallway
         flash: long
