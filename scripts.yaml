@@ -8,7 +8,7 @@ watch_trailblazer_game:
          activity: "Watch TV"
     - delay:
         # supports seconds, milliseconds, minutes, hours
-        milliseconds: 500         
+        seconds: 5
     - service: remote.send_command
       entity_id: remote.living_room
       data:
