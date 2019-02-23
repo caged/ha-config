@@ -2,7 +2,8 @@
 title: Downstairs
 cards:
   - type: entities
-    entity: sun.sun
+    entities:
+      - sun.sun
   - type: "custom:mini-media-player"
     entity: media_player.sonos_living_room
     icon: mdi:speaker
