@@ -1,3 +1,9 @@
 - platform: ring
 - platform: workday
   country: US
+- platform: template
+  sensors:
+    awake:
+      friendly_name: "Awake"
+      value_template: >-
+        {{ is_state('sun.sun', 'above_horizon') }}
