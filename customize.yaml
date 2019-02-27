@@ -1,8 +1,2 @@
 sensor.cool_breeze_temperature:
   friendly_name: 'Living Room'
-  icon_template: >-
-    {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
-      mdi:login
-    {% else %}
-      mdi:logout
-    {% endif %}
