@@ -14,16 +14,35 @@
     service: light.turn_off
     entity_id: group.outside_lights
 
-# - alias: Turn on office heater
-#   trigger:
-#     platform: time
-#     at: '11:06:00'
-#   condition:
-#     condition: and
-#     conditions:
-#       - condition: state
-#         entity_id: 'binary_sensor.workday_sensor'
-#         state: 'on'
-#   action:
-#     service: switch.turn_on
-#     entity_id: switch.office_wemo
+- alias: Turn on office heater on workdays when we wake up
+  trigger:
+    platform: state
+    entity_id: binary_sensor.awake
+    to: 'on'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.office_wemo
+
+- alias: Turn off office heater when office is unoccupied
+  trigger:
+    platform: state
+    entity_id: binary_sensor.justin_s_office_occupancy
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: switch.office_wemo
+
+- alias: Turn off office heater when temp in office stays above 75
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.justin_s_office_temperature
+    above: 75
+    for:
+      minutes: 15
+  action:
+    service: switch.turn_off
+    entity_id: switch.office_wemo
