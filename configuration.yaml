@@ -39,8 +39,12 @@ lovelace:
 
 camera:
   - platform: ring
+
 binary_sensor:
   - platform: ring
+
+ios:
+  
 # Show links to resources in log and frontend
 # introduction:
 
