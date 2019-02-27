@@ -40,11 +40,6 @@ lovelace:
 camera:
   - platform: ring
 
-binary_sensor:
-  - platform: ring
-  - platform: workday
-    country: US
-
 ios:
 
 wemo:
@@ -88,6 +83,9 @@ map:
 
 # Track the sun
 sun:
+
+# Binary sensors
+binary_sensor: !include binary_sensors.yaml
 
 # Sensors
 sensor: !include sensors.yaml

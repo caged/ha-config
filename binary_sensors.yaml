@@ -1,0 +1,3 @@
+- platform: ring
+- platform: workday
+  country: US
