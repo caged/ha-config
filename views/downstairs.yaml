@@ -4,6 +4,9 @@ cards:
   - type: entities
     entities:
       - sun.sun
+      - binary_sensor.justin_s_office_occupancy
+      - binary_sensor.master_bedroom_occupancy
+      - binary_sensor.camden_s_room_occupancy      
   - type: "custom:mini-media-player"
     entity: media_player.sonos_living_room
     icon: mdi:speaker
