@@ -44,7 +44,9 @@ binary_sensor:
   - platform: ring
 
 ios:
-  
+
+wemo:
+
 # Show links to resources in log and frontend
 # introduction:
 
