@@ -42,6 +42,8 @@ camera:
 
 binary_sensor:
   - platform: ring
+  - platform: workday
+    country: US
 
 ios:
 
