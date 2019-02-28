@@ -108,7 +108,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 http:
- api_password: qZ@9Puvhk3}Wx
+ # api_password: qZ@9Puvhk3}Wx
  ip_ban_enabled: true
  login_attempts_threshold: 3
 
