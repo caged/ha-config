@@ -1,0 +1,58 @@
+# Main colors
+ha-card-border-radius: '8px'
+primary-color: 'rgba(50, 77, 103, 1)'         # Header
+accent-color: 'rgba(20, 142, 153, 1)'         # Accent color
+dark-primary-color: 'rgba(36, 58, 82, 1)'     # Hyperlinks
+light-primary-color: 'rgba(97, 125, 152, 1)'  # Horizontal line in about
+# Text colors
+primary-text-color: 'rgba(16, 42, 66, 1)'      # Primary text colour, here is referencing dark-primary-color
+text-primary-color: 'rgba(255, 255, 255, 1)'   # Primary text colour
+secondary-text-color: 'rgba(130, 154, 176, 1)' # For secondary titles in more info boxes etc.
+disabled-text-color: 'rgba(218, 226, 236, 1)'  # Disabled text colour
+# Background colors
+primary-background-color: 'rgba(241, 245, 248, 1)'   # Settings background
+secondary-background-color: 'rgba(241, 245, 248, 1)' # Main card UI background
+sidebar-background-color: 'rgba(241, 245, 248, 1)'
+divider-color: 'rgba(0, 0, 0, .12)'                  # Divider
+# Table rows
+table-row-background-color: 'rgba(241, 245, 248, 1)' # Table row
+table-row-alternative-background-color: 'rgba(228, 234, 241, 1)' # Table row alternative
+# Nav Menu
+paper-listbox-color: 'rgba(16, 42, 66, 1)'                       # Navigation menu selection hoover
+paper-listbox-background-color: 'rgba(241, 245, 248, 1)'         # Navigation menu background
+paper-grey-50: 'var(--primary-text-color)'
+paper-grey-200: '#414A59'                             # Navigation menu selection
+# Paper card
+paper-card-header-color: 'var(--accent-color)'  # Card header text colour
+paper-card-background-color: '#FFF'             # Card background colour
+paper-dialog-background-color: '#FFF'           # Card dialog background colour
+paper-item-icon-color: 'var(--accent-color)'    # Icon color
+paper-item-icon-active-color: '#F9C536'         # Icon color active
+paper-item-icon_-_color: 'green'
+paper-item-selected_-_background-color: '#434954'# Popup item select
+paper-tabs-selection-bar-color: 'green'
+# Labels
+label-badge-red: 'var(--google-red-500)'
+label-badge-blue: 'var(--accent-color)'             # References the brand colour label badge border
+ha-label-badge-color: 'var(--accent-color)'
+label-badge-text-color: 'var(--primary-text-color)' # Now same as label badge border but that's a matter of taste
+label-badge-background-color: 'rgba(241, 245, 248, 1)'  # Same, but can also be set to transparent here
+# Switches
+paper-toggle-button-checked-button-color: 'var(--accent-color)'
+paper-toggle-button-checked-bar-color: 'var(--accent-color)'
+paper-toggle-button-checked-ink-color: 'var(--accent-color)'
+paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
+paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
+paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
+# Sliders
+paper-slider-knob-color: 'var(--accent-color)'
+paper-slider-knob-start-color: 'var(--accent-color)'
+paper-slider-pin-color: 'var(--accent-color)'
+paper-slider-active-color: 'var(--accent-color)'
+paper-slider-container-color: 'linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat'
+paper-slider-secondary-color: 'var(--secondary-background-color)'
+paper-slider-disabled-active-color: 'var(--disabled-text-color)'
+paper-slider-disabled-secondary-color: 'var(--disabled-text-color)'
+# Google colors
+google-red-500: '#db3236'
+google-green-500: '#39E949'
