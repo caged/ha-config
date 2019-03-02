@@ -6,4 +6,4 @@ resources:
 title: Palmer Palace
 views:
   - !include views/home.yaml
-  - !include views/downstairs.yaml
+  - !include views/miscellaneous.yaml
