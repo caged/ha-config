@@ -4,6 +4,7 @@ cards:
   - type: entities
     entities:
       - sun.sun
+      - binary_sensor.workday
       - binary_sensor.awake
       - switch.office_wemo
       - binary_sensor.home_occupied
