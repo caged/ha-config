@@ -140,7 +140,7 @@ views:
 
   - title: Miscellaneous
     cards:
-      - type: history
+      - type: history-graph
         entities:
           - sensor.kitchen_wemo_current_power
       - type: glance
