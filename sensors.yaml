@@ -42,3 +42,6 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
+    kitchen_wemo_current_power:
+      value_template: '{{ states.switch.kitchen_wemo_insight.attributes["current_power_w"] }}'
+      unit_of_measurement: 'W'

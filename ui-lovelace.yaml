@@ -140,6 +140,9 @@ views:
 
   - title: Miscellaneous
     cards:
+      - type: history
+        entities:
+          - sensor.kitchen_wemo_current_power
       - type: glance
         title: Lights
         entities:
