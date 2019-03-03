@@ -172,13 +172,13 @@ views:
         cards:
           - type: horizontal-stack
             cards:
-              - type: light
+              - type: entity-button
                 entity: light.dining_room
-              - type: light
+              - type: entity-button
                 entity: light.kitchen
           - type: horizontal-stack
             cards:
-              - type: light
+              - type: entity-button
                 entity: light.hallway
-              - type: light
+              - type: entity-button
                 entity: light.stairway
