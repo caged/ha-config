@@ -137,4 +137,47 @@ views:
 ##     ##  ##  ##    ## ##    ## ##       ##       ##       ##     ## ##   ### ##       ##     ## ##     ## ##    ##
 ##     ## ####  ######   ######  ######## ######## ######## ##     ## ##    ## ########  #######   #######   ######
 
-  - !include views/miscellaneous.yaml
+  - title: Miscellaneous
+    cards:
+      - type: entities
+        entities:
+          - sun.sun
+          - binary_sensor.workday_sensor
+          - binary_sensor.awake
+          - switch.office_wemo
+          - binary_sensor.home_occupied
+          - binary_sensor.justin_s_office_occupancy
+          - binary_sensor.master_bedroom_occupancy
+          - binary_sensor.camden_s_room_occupancy
+          - binary_sensor.cool_breeze_occupancy
+      - type: "custom:mini-media-player"
+        entity: media_player.sonos_living_room
+        icon: mdi:speaker
+        artwork: full-cover
+        source: icon
+        info: short
+        hide:
+          power: true
+          shuffle: false
+        sonos:
+          show_group_count: true
+          sync_volume: true
+          entities:
+          - entity_id: media_player.sonos_office
+            name: Office
+          - entity_id: media_player.sonos_bedroom
+            name: Bedroom
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: light
+                entity: light.dining_room
+              - type: light
+                entity: light.kitchen
+          - type: horizontal-stack
+            cards:
+              - type: light
+                entity: light.hallway
+              - type: light
+                entity: light.stairway
