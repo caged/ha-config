@@ -47,6 +47,6 @@
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["current_power_w"] }}'
       unit_of_measurement: 'W'
     kitchen_heater_today_energy:
-      friendly_name: 'Kitchen space heater power'
+      friendly_name: "Kitchen space heater today's energy"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
