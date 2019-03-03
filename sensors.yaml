@@ -13,7 +13,7 @@
           mdi:account-off-outline
         {% endif %}
     climate_master_bedroom:
-      friendly_name: "Bedroom"
+      friendly_name: "Master Bedroom"
       value_template: "{{ states('sensor.master_bedroom_temperature') }}"
       unit_of_measurement: 'º'
       icon_template: >-
@@ -49,4 +49,12 @@
     kitchen_heater_today_energy:
       friendly_name: "Kitchen space heater today's energy"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["today_energy_kwh"] }}'
+      unit_of_measurement: 'kwH'
+    washer_power:
+      friendly_name: 'Washer power'
+      value_template: '{{ states.switch.washer_wemo_insight.attributes["current_power_w"] }}'
+      unit_of_measurement: 'W'
+    washer_today_energy:
+      friendly_name: "Washer today's energy"
+      value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
