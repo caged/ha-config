@@ -142,7 +142,10 @@ views:
     cards:
       - type: history-graph
         entities:
-          - sensor.kitchen_wemo_current_power
+          - sensor.kitchen_heater_power
+      - type: history-graph
+        entities:
+          - sensor.kitchen_heater_today_energy          
       - type: glance
         title: Lights
         entities:
