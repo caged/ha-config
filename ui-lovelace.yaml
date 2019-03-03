@@ -141,17 +141,21 @@ views:
   - title: Miscellaneous
     cards:
       - type: history-graph
-        title: Power usage
+        title: Power
         hours_to_show: 24
         entities:
-          - sensor.kitchen_heater_power
-          - sensor.washer_power
+          - entity: sensor.kitchen_heater_power
+            name: Kitchen heater
+          - entity: sensor.washer_power
+            name: Washer
       - type: history-graph
-        title: Today's energy usage
+        title: Today's cumulative energy usage
         hours_to_show: 24
         entities:
-          - sensor.kitchen_heater_today_energy
-          - sensor.washer_today_energy
+          - entity: sensor.kitchen_heater_today_energy
+            name: Kitchen heater
+          - entity: sensor.washer_today_energy
+            name: Washer
       - type: glance
         title: Lights
         entities:
