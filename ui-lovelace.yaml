@@ -141,11 +141,13 @@ views:
   - title: Miscellaneous
     cards:
       - type: history-graph
+        hours_to_show: 24
         entities:
           - sensor.kitchen_heater_power
       - type: history-graph
+        hours_to_show: 24
         entities:
-          - sensor.kitchen_heater_today_energy          
+          - sensor.kitchen_heater_today_energy
       - type: glance
         title: Lights
         entities:
