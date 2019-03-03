@@ -154,8 +154,14 @@ views:
           - light.living_room
           - light.dining_room
           - light.kitchen
+          - light.sink
           - light.hallway
           - light.stairway
+          - light.office
+          - light.bed
+          - light.garage
+          - light.back_door
+          - light.front_porch
       - type: entities
         entities:
           - sun.sun
