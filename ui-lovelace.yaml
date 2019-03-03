@@ -112,6 +112,7 @@ views:
         entities:
           - type: section
             label: Downstairs
+          - light.living_room
           - light.dining_room
           - light.kitchen
           - light.playroom
