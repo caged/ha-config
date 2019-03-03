@@ -139,6 +139,14 @@ views:
 
   - title: Miscellaneous
     cards:
+      - type: glance
+        title: Lights
+        entities:
+          - light.living_room
+          - light.dining_room
+          - light.kitchen
+          - light.hallway
+          - light.stairway
       - type: entities
         entities:
           - sun.sun
