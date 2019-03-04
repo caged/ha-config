@@ -40,7 +40,7 @@ views:
           - type: divider
           - sensor.climate_living_room
           - sensor.climate_office
-          - sensor.climate_master_bedroom
+          - sensor.climate_primary_bedroom
           - sensor.climate_camdens_bedroom
 
       # Weather

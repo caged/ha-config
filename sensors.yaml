@@ -12,8 +12,8 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
-    climate_master_bedroom:
-      friendly_name: "Master Bedroom"
+    climate_primary_bedroom:
+      friendly_name: "Primary Bedroom"
       value_template: "{{ states('sensor.master_bedroom_temperature') }}"
       unit_of_measurement: 'º'
       icon_template: >-
