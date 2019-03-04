@@ -105,13 +105,13 @@ cloud:
 # media_player: !include devices/media_players.yaml
 zone:
   - name: Home
-    latitude: 45.4898552
-    longitude: -122.6335082
+    latitude: 45.492667610857865
+    longitude: -122.63747532294663
     radius: 100
-    icon: mdi:account-multiple
+    icon: mdi:shield-home
   - name: School
-    latitude: 45.4896677
-    longitude: -122.638002
+    latitude: 45.49013526190419
+    longitude: -122.63590812433561
     radius: 100
     icon: mdi:school
 
