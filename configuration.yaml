@@ -109,7 +109,13 @@ zone:
     longitude: -122.6335082
     radius: 100
     icon: mdi:account-multiple
+  - name: School
+    latitude: 45.4896677
+    longitude: -122.638002
+    radius: 100
+    icon: mdi:school
 
+# 45.4896677,-122.638002
 group: !include groups.yaml
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
