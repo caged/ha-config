@@ -60,5 +60,9 @@
       unit_of_measurement: 'kwH'
 - platform: statistics
   sensors:
-    entity_id: sensor.washer_power, sensor.kitchen_heater_power
-    unit_of_measurement: 'W'
+    washer_stats:
+      entity_id: sensor.washer_power
+      unit_of_measurement: 'W'
+    kitchen_heater_stats:
+      entity_id: sensor.kitchen_heater_power
+      unit_of_measurement: 'W'
