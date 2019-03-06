@@ -6,18 +6,16 @@
 ##  #### ##     ##    ##     ##  ##        ##  ##       #########    ##     ##  ##     ## ##  ####       ##
 ##   ### ##     ##    ##     ##  ##        ##  ##    ## ##     ##    ##     ##  ##     ## ##   ### ##    ##
 ##    ##  #######     ##    #### ##       ####  ######  ##     ##    ##    ####  #######  ##    ##  ######
-# - alias: Notify Justin when office heater turns off
-#   trigger:
-#     platform: numeric_state
-#     entity_id: sensor.washer_power
-#     below: 0.5
-#     for:
-#       minutes: 2
-#   action:
-#     service: notify.ios_heather_palmers_iphone
-#     data:
-#       title: "The washer has finished"
-#       message: "Loads!  Speaking of, the washer has finished."
+- alias: Notify Justin when office heater turns off
+  trigger:
+    platform: state
+    entity_id: sensor.kitchen_heater_status
+    to: 'on'
+  action:
+    service: notify.ios_justins_iphone
+    data:
+      title: "Heater in office is on"
+      message: "It's getting hot in here."
 
 
    ###    ##     ## ########  #######  ##     ##    ###    ######## ####  #######  ##    ##  ######
