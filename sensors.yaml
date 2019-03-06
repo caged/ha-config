@@ -59,7 +59,6 @@
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
     kitchen_heater_status:
-      friendly_name: "Kitchen Heater"
       value_template: >-
         {% if is_state('switch.kitchen_wemo_insight', 'on')
             and is_state_attr('switch.kitchen_wemo_insight', 'state_detail', 'on') %}
@@ -78,5 +77,26 @@
             and is_state_attr('switch.kitchen_wemo_insight', 'state_detail', 'standby') %}
           mdi:radiator-disabled
         {% else %}
-          mdi:radiator-off
+          mdi:power-plug-off
+        {% endif %}
+    washer_status:
+      value_template: >-
+        {% if is_state('switch.washer_wemo_insight', 'on')
+            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'on') %}
+          washing
+        {% elif is_state('switch.washer_wemo_insight', 'on')
+            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'standby') %}
+          standby
+        {% else %}
+          off
+        {% endif %}
+      icon_template: >-
+        {% if is_state('switch.washer_wemo_insight', 'on')
+            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'on') %}
+          mdi:washing-machine
+        {% elif is_state('switch.washer_wemo_insight', 'on')
+            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'standby') %}
+          mdi:flash
+        {% else %}
+          mdi:power-plug-off
         {% endif %}
