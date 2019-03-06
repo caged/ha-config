@@ -182,3 +182,4 @@ views:
           - binary_sensor.camden_s_room_occupancy
           - binary_sensor.cool_breeze_occupancy
           - switch.kitchen_wemo_insight
+          - sensor.kitchen_heater_status
