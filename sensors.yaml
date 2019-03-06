@@ -70,3 +70,13 @@
         {% else %}
           off
         {% endif %}
+      icon_template: >-
+        {% if is_state('switch.kitchen_wemo_insight', 'on')
+            and is_state_attr('switch.kitchen_wemo_insight', 'state_detail', 'on') %}
+          mdi:radiator
+        {% elif is_state('switch.kitchen_wemo_insight', 'on')
+            and is_state_attr('switch.kitchen_wemo_insight', 'state_detail', 'standby') %}
+          mdi:radiator-disabled
+        {% else %}
+          mdi:radiator-off
+        {% endif %}
