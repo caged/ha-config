@@ -1,0 +1,19 @@
+
+##    ##  #######  ######## #### ######## ####  ######     ###    ######## ####  #######  ##    ##  ######
+###   ## ##     ##    ##     ##  ##        ##  ##    ##   ## ##      ##     ##  ##     ## ###   ## ##    ##
+####  ## ##     ##    ##     ##  ##        ##  ##        ##   ##     ##     ##  ##     ## ####  ## ##
+## ## ## ##     ##    ##     ##  ######    ##  ##       ##     ##    ##     ##  ##     ## ## ## ##  ######
+##  #### ##     ##    ##     ##  ##        ##  ##       #########    ##     ##  ##     ## ##  ####       ##
+##   ### ##     ##    ##     ##  ##        ##  ##    ## ##     ##    ##     ##  ##     ## ##   ### ##    ##
+##    ##  #######     ##    #### ##       ####  ######  ##     ##    ##    ####  #######  ##    ##  ######
+- alias: Notify Heather's phone when washer finishes
+  trigger:
+    platform: state
+    entity_id: sensor.washer_status
+    from: 'washing'
+    to: 'standby'
+  action:
+    service: notify.ios_heather_palmers_iphone
+    data:
+      title: "Washer has finished"
+      message: "So fresh. So clean"
