@@ -58,3 +58,5 @@
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
+- platform: statistics
+  entity_id: sensor.washer_power, sensor.kitchen_heater_power
