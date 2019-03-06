@@ -59,6 +59,7 @@
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
     kitchen_heater_status:
+      friendly_name: "Kitchen heater status"
       value_template: >-
         {% if is_state('switch.kitchen_wemo_insight', 'on')
             and is_state_attr('switch.kitchen_wemo_insight', 'state_detail', 'on') %}
@@ -80,6 +81,7 @@
           mdi:power-plug-off
         {% endif %}
     washer_status:
+      friendly_name: "Washer status"
       value_template: >-
         {% if is_state('switch.washer_wemo_insight', 'on')
             and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'on') %}

@@ -183,3 +183,4 @@ views:
           - binary_sensor.cool_breeze_occupancy
           - switch.kitchen_wemo_insight
           - sensor.kitchen_heater_status
+          - sensor.washer_status
