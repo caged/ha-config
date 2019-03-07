@@ -142,7 +142,7 @@ views:
     cards:
       - type: history-graph
         title: Power
-        hours_to_show: 12
+        hours_to_show: 24
         entities:
           - entity: sensor.kitchen_heater_power
             name: Kitchen heater
@@ -150,7 +150,7 @@ views:
             name: Washer
       - type: history-graph
         title: Today's cumulative energy usage
-        hours_to_show: 12
+        hours_to_show: 24
         entities:
           - entity: sensor.kitchen_heater_today_energy
             name: Kitchen heater
