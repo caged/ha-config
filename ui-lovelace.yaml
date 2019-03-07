@@ -3,7 +3,7 @@ resources:
     type: module
   - url: /local/lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
     type: module
-  - url: /local/list-card.js?v=0
+  - url: /local/lovelace/list-card.js?v=0
     type: js
 title: Palmer Palace
 views:
