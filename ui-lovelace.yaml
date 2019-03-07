@@ -150,6 +150,20 @@ views:
             entities:
               - entity: sensor.kitchen_heater_power
                 name: Kitchen heater
+      - type: entities
+        entities:
+          - sun.sun
+          - binary_sensor.workday_sensor
+          - binary_sensor.awake
+          - switch.office_wemo
+          - binary_sensor.home_occupied
+          - binary_sensor.justin_s_office_occupancy
+          - binary_sensor.master_bedroom_occupancy
+          - binary_sensor.camden_s_room_occupancy
+          - binary_sensor.cool_breeze_occupancy
+          - switch.kitchen_wemo_insight
+          - sensor.kitchen_heater_status
+          - sensor.washer_status                
       - type: glance
         title: Lights
         entities:
@@ -164,17 +178,3 @@ views:
           - light.garage
           - light.back_door
           - light.front_porch
-      - type: entities
-        entities:
-          - sun.sun
-          - binary_sensor.workday_sensor
-          - binary_sensor.awake
-          - switch.office_wemo
-          - binary_sensor.home_occupied
-          - binary_sensor.justin_s_office_occupancy
-          - binary_sensor.master_bedroom_occupancy
-          - binary_sensor.camden_s_room_occupancy
-          - binary_sensor.cool_breeze_occupancy
-          - switch.kitchen_wemo_insight
-          - sensor.kitchen_heater_status
-          - sensor.washer_status
