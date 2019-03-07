@@ -19,3 +19,9 @@
                  is_state('binary_sensor.justin_s_office_occupancy', 'on') or
                  is_state('binary_sensor.master_bedroom_occupancy', 'on') )
         }}
+    washer_status:
+      friendly_name: "Washer status"
+      value_template: >-
+        {{ is_state('switch.washer_wemo_insight', 'on')
+           and states('sensor.washer_power') | float > 0.5
+        }}
