@@ -23,7 +23,7 @@ class ListCard extends HTMLElement {
               padding: 16px;
             }
 
-            .header:not(:empty) {
+            header:not(:empty) {
               padding: 0;
             }
 
