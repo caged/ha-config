@@ -6,4 +6,4 @@
     service: notify.ios_justins_iphone
     data:
       title: "New liquor license issued at {{ trigger.event.data.title }}"
-      message: "Location: {{ trigger.event.data.description }}"
+      message: "Location: {{ trigger.event.data.summary }}"
