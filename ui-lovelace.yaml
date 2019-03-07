@@ -186,5 +186,6 @@ views:
         columns:
           - title: Title
             field: title
+            add_link: link
           - title: Address
             field: summary
