@@ -29,6 +29,11 @@ class ListCard extends HTMLElement {
             th {
               text-align: left;
             }
+
+            td {
+              padding: 5px;
+            }
+
             tbody tr:nth-child(odd) {
               background-color: var(--paper-card-background-color);
             }
