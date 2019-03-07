@@ -186,3 +186,5 @@ views:
         columns:
           - title: Title
             field: title
+          - title: Address
+            field: summary
