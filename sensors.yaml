@@ -102,3 +102,7 @@
         {% else %}
           mdi:power-plug-off
         {% endif %}
+- platform: statistics
+  sensors:
+    kitchen_heater_stats:
+      entity_id: sensor.kitchen_heater_power
