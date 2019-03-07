@@ -9,9 +9,8 @@
 - alias: Notify Heather's phone when washer finishes
   trigger:
     platform: state
-    entity_id: sensor.washer_status
-    from: 'Washing'
-    to: 'Standby'
+    entity_id: binary_sensor.washer_status
+    to: 'off'
   action:
     service: notify.ios_heather_palmers_iphone
     data:
