@@ -61,10 +61,3 @@
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: 'https://www.portlandoregon.gov/rss.cfm?c=61884'
-  date_format: '%a, %b %d %I:%M %p'
-  inclusions:
-    - title
-    - link
-    - description
-    - category
-    - pubDate
