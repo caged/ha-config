@@ -20,16 +20,12 @@ class ListCard extends HTMLElement {
       const style = document.createElement('style');
       style.textContent = `
             ha-card {
-              padding: 16px;
-            }
-
-            ha-card .header:not(:empty) {
-              padding: 0 !important;
+              // padding: 16px;
             }
 
             table {
               width: 100%;
-              padding: 0;
+              padding: 16px;
               border-collapse: collapse;
             }
             th {
