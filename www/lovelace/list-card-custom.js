@@ -25,7 +25,8 @@ class ListCard extends HTMLElement {
 
             table {
               width: 100%;
-              padding: 16px;
+              padding: 0;
+              margin: 16px;
               border-collapse: collapse;
             }
             th {
