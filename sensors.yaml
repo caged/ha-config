@@ -84,10 +84,11 @@
       friendly_name: "Washer status"
       value_template: >-
         {% if is_state('switch.washer_wemo_insight', 'on')
-            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'on') %}
+            and states('sensor.washer_power') | float > 0.5 %}
           washing
         {% elif is_state('switch.washer_wemo_insight', 'on')
-            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'standby') %}
+            and is_state_attr('switch.washer_wemo_insight', 'state_detail', 'standby')
+            and states('sensor.washer_power') | float <= 0.5 %}
           standby
         {% else %}
           off
@@ -102,7 +103,3 @@
         {% else %}
           mdi:power-plug-off
         {% endif %}
-- platform: statistics
-  sensors:
-    kitchen_heater_stats:
-      entity_id: sensor.kitchen_heater_power
