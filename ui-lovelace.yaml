@@ -143,14 +143,10 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
-            title: Power
-            hours_to_show: 24
             entities:
               - entity: sensor.washer_power
                 name: Washer
           - type: history-graph
-            title: Power
-            hours_to_show: 24
             entities:
               - entity: sensor.kitchen_heater_power
                 name: Kitchen heater
