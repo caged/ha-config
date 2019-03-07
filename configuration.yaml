@@ -85,7 +85,7 @@ logbook:
 map:
 
 # Enable feedreeder
-feedreeder:
+feedreader:
   urls:
     # New liquor licenses in Portland, OR
     - https://www.portlandoregon.gov/rss.cfm?c=61884
