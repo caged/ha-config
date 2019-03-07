@@ -183,12 +183,15 @@ views:
       - type: "custom:list-card"
         entity: sensor.portland_liquor_licenses
         title: Portland liquor licenses
+        row_limit: 6
         columns:
+          - title: Published
+            field: published
           - title: Title
             field: title
             add_link: link
             style:
-              - text-transform: capitalize !important
+              - white-space: nowrap
           - title: Address
             field: summary
             regex: ".+?\\s-"
