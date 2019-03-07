@@ -10,10 +10,10 @@
   trigger:
     platform: state
     entity_id: sensor.washer_status
-    from: 'washing'
-    to: 'standby'
+    from: 'Washing'
+    to: 'Standby'
   action:
     service: notify.ios_heather_palmers_iphone
     data:
       title: "Washer has finished"
-      message: "So fresh. So clean"
+      message: "So fresh. So clean."
