@@ -164,7 +164,8 @@ views:
           - switch.kitchen_wemo_insight
           - sensor.kitchen_heater_status
           - sensor.washer_status
-          - binary_sensor.washer_status          
+          - binary_sensor.washer_status
+          - binary_sensor.kitchen_heater_status      
       - type: glance
         title: Lights
         entities:
