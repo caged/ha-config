@@ -196,5 +196,3 @@ views:
           - title: Address
             field: summary
             regex: ".+?\\s-"
-            style:
-              - text-transform: lowercase !important
