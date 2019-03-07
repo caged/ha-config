@@ -26,7 +26,7 @@ class ListCard extends HTMLElement {
               width: 100%;
               padding: 0;
             }
-            thead th {
+            th {
               text-align: left;
             }
             tbody tr:nth-child(odd) {
@@ -35,13 +35,7 @@ class ListCard extends HTMLElement {
             tbody tr:nth-child(even) {
               background-color: var(--secondary-background-color);
             }
-            .button {
-              overflow: auto;
-              padding: 16px;
-            }
-            paper-button {
-              float: right;
-            }
+
             td a {
               color: var(--primary-text-color);
               text-decoration: none;
@@ -198,4 +192,4 @@ class ListCard extends HTMLElement {
     }
   }
 
-  customElements.define('list-card', ListCard);
+  customElements.define('list-card-custom', ListCard);
