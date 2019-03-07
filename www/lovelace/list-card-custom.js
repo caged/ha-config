@@ -23,8 +23,8 @@ class ListCard extends HTMLElement {
               padding: 16px;
             }
 
-            header:not(:empty) {
-              padding: 0;
+            ha-card .header:not(:empty) {
+              padding: 0 !important;
             }
 
             table {
