@@ -32,13 +32,11 @@ class ListCard extends HTMLElement {
 
             td {
               padding: 5px;
+              border-bottom: 1px solid var(--secondary-background-color);
             }
 
-            tbody tr:nth-child(odd) {
-              background-color: var(--paper-card-background-color);
-            }
-            tbody tr:nth-child(even) {
-              background-color: var(--secondary-background-color);
+            tr:last-child td {
+              border-bottom: none;
             }
 
             td a {
