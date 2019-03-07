@@ -188,8 +188,7 @@ views:
             field: title
             add_link: link
             style:
-              - white-space: nowrap
-              - text-transform: capitalize
+              - text-transform: lowercase !important
           - title: Address
             field: summary
             regex: ".+?\\s-"
