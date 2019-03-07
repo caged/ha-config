@@ -166,20 +166,6 @@ views:
           - switch.kitchen_wemo_insight
           - binary_sensor.washer_status
           - binary_sensor.kitchen_heater_status
-      - type: glance
-        title: Lights
-        entities:
-          - light.living_room
-          - light.dining_room
-          - light.kitchen
-          - light.sink
-          - light.hallway
-          - light.stairway
-          - light.office
-          - light.bed
-          - light.garage
-          - light.back_door
-          - light.front_porch
       - type: "custom:list-card-custom"
         entity: sensor.portland_liquor_licenses
         title: Portland liquor licenses
