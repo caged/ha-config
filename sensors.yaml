@@ -59,7 +59,7 @@
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
   - platform: feedparser
-    name: Portland, OR liquor licenses
+    name: Portland liquor licenses
     feed_url: 'https://www.portlandoregon.gov/rss.cfm?c=61884'
     date_format: '%a, %b %d %I:%M %p'
     inclusions:
