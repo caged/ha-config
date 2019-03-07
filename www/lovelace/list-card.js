@@ -24,7 +24,7 @@ class ListCard extends HTMLElement {
             }
             table {
               width: 100%;
-              padding: 0 32px 0 32px;
+              padding: 0;
             }
             thead th {
               text-align: left;
@@ -44,8 +44,7 @@ class ListCard extends HTMLElement {
             }
             td a {
               color: var(--primary-text-color);
-              text-decoration-line: none;
-              font-weight: normal;
+              text-decoration: none;
             }
           `;
 
@@ -72,7 +71,7 @@ class ListCard extends HTMLElement {
         }
       }
 
-      content.id = "container";
+      content.id = "content";
       cardConfig.title ? card.header = cardConfig.title : null;
       card.appendChild(content);
       card.appendChild(style);
