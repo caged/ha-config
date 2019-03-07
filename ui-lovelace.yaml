@@ -187,5 +187,7 @@ views:
           - title: Title
             field: title
             add_link: link
+            style:
+              - white-space: nowrap            
           - title: Address
             field: summary
