@@ -191,4 +191,4 @@ views:
               - white-space: nowrap
           - title: Address
             field: summary
-            regex: "(.+?)(?:\s-)"
+            regex: "(.+?)(?:\\s-)"
