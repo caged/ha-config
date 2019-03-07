@@ -22,6 +22,11 @@ class ListCard extends HTMLElement {
             ha-card {
               padding: 16px;
             }
+
+            .header {
+              padding: 0;
+            }
+
             table {
               width: 100%;
               padding: 0;
