@@ -3,6 +3,8 @@ resources:
     type: module
   - url: /local/lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
     type: module
+  - url: /local/list-card.js?v=0
+    type: js
 title: Palmer Palace
 views:
   ##     ##  #######  ##     ## ########
@@ -178,3 +180,13 @@ views:
           - light.garage
           - light.back_door
           - light.front_porch
+      - type: custom:list-card
+        entity: sensor.portland_liquor_licenses
+        title: Portland liquor licenses
+        columns:
+          - title: Title
+            field: title
+            style:
+              - white-space: nowrap
+          - title: Description
+            field: description
