@@ -186,7 +186,3 @@ views:
         columns:
           - title: Title
             field: title
-            style:
-              - white-space: nowrap
-          - title: Description
-            field: description
