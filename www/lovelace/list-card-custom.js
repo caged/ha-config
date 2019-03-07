@@ -48,32 +48,32 @@ class ListCard extends HTMLElement {
           `;
 
       // Go through columns and add CSS sytling to each column that is defined
-      if (columns) {
-        for (let column in columns) {
-          if (columns.hasOwnProperty(column) && columns[column].hasOwnProperty('style')) {
-            let styles = columns[column]['style'];
-
-            style.textContent += `
-              .${columns[column].field} {`
-
-            for (let index in styles) {
-              if (styles.hasOwnProperty(index)) {
-                for (let s in styles[index]) {
-                  style.textContent += `
-                  ${s}: ${styles[index][s]};`;
-                }
-              }
-            }
-
-            style.textContent += `}`;
-          }
-        }
-      }
+      // if (columns) {
+      //   for (let column in columns) {
+      //     if (columns.hasOwnProperty(column) && columns[column].hasOwnProperty('style')) {
+      //       let styles = columns[column]['style'];
+      //
+      //       style.textContent += `
+      //         .${columns[column].field} {`
+      //
+      //       for (let index in styles) {
+      //         if (styles.hasOwnProperty(index)) {
+      //           for (let s in styles[index]) {
+      //             style.textContent += `
+      //             ${s}: ${styles[index][s]};`;
+      //           }
+      //         }
+      //       }
+      //
+      //       style.textContent += `}`;
+      //     }
+      //   }
+      // }
 
       content.id = "container";
       cardConfig.title ? card.header = cardConfig.title : null;
-      card.appendChild(content);
       card.appendChild(style);
+      card.appendChild(content);
       root.appendChild(card);
       this._config = cardConfig;
     }
