@@ -192,6 +192,7 @@ views:
             add_link: link
             style:
               - white-space: nowrap
+              - font-weight: bold
           - title: Address
             field: summary
             regex: ".+?\\s-"
