@@ -58,13 +58,13 @@
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: 'kwH'
-  - platform: feedparser
-    name: Portland liquor licenses
-    feed_url: 'https://www.portlandoregon.gov/rss.cfm?c=61884'
-    date_format: '%a, %b %d %I:%M %p'
-    inclusions:
-      - title
-      - link
-      - description
-      - category
-      - pubDate
+- platform: feedparser
+  name: Portland liquor licenses
+  feed_url: 'https://www.portlandoregon.gov/rss.cfm?c=61884'
+  date_format: '%a, %b %d %I:%M %p'
+  inclusions:
+    - title
+    - link
+    - description
+    - category
+    - pubDate
