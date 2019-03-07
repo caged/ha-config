@@ -188,6 +188,7 @@ views:
             field: title
             add_link: link
             style:
-              - white-space: nowrap            
+              - white-space: nowrap
           - title: Address
             field: summary
+            regex: (.+?)-
