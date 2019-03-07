@@ -20,7 +20,7 @@ class ListCard extends HTMLElement {
       const style = document.createElement('style');
       style.textContent = `
             ha-card {
-              /* sample css */
+              padding: 16px;
             }
             table {
               width: 100%;
@@ -71,7 +71,7 @@ class ListCard extends HTMLElement {
         }
       }
 
-      content.id = "content";
+      content.id = "container";
       cardConfig.title ? card.header = cardConfig.title : null;
       card.appendChild(content);
       card.appendChild(style);
