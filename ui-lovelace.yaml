@@ -180,7 +180,7 @@ views:
           - light.garage
           - light.back_door
           - light.front_porch
-      - type: custom:list-card
+      - type: "custom:list-card"
         entity: sensor.portland_liquor_licenses
         title: Portland liquor licenses
         columns:
