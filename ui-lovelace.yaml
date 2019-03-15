@@ -126,6 +126,7 @@ views:
 
   - title: Network
     cards:
+      - type: custom:compact-custom-header
       - type: vertical-stack
         cards:
           - type: history-graph
@@ -153,6 +154,7 @@ views:
 
   - title: Miscellaneous
     cards:
+      - type: custom:compact-custom-header      
       - type: entities
         entities:
           - sun.sun
