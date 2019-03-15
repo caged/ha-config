@@ -1,0 +1,43 @@
+#!/bin/bash
+# Check if we were passed an argument for extra stream count
+if [ $# -eq 0 ]
+    then
+        StreamCount="4"
+    else
+        StreamCount=$1
+fi
+
+# Make sure $StreamCount is a natural number
+if ! [ $StreamCount -eq $StreamCount ] || [ $StreamCount -lt "1" ]
+    then
+        echo "Stream count argument must be a natural number."
+        exit 1
+fi
+
+StartTime=$(date +"%s.%N")
+
+# Save one as a file to read the size
+wget api.fast.com/netflix/speedtest -q -O speedtest.bin &
+
+# Run more streams to equal $StreamCount
+i="0"
+while [ $i -lt $StreamCount ]
+do
+    wget api.fast.com/netflix/speedtest -q -O /dev/null &
+    i=$(bc -l <<< "$i+1")
+done
+
+# Wait for all streams to finish
+wait
+
+# Calculate speed
+EndTime=$(date +"%s.%N")
+TotalTime=$(bc -l <<< "$EndTime-$StartTime")
+PayloadSize=$(du -b "speedtest.bin" | cut -f1)
+TransferSize=$(bc -l <<< "$PayloadSize*$StreamCount*8")
+TransferSpeed=$(bc -l <<< "$TransferSize/$TotalTime/1000000")
+
+# Remove the file we saved earlier
+rm speedtest.bin
+
+echo $TransferSpeed
