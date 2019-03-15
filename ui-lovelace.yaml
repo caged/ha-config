@@ -125,8 +125,8 @@ views:
 
   - title: Network
     cards:
-      - type: entities
-        entities:
+      - type: vertical-stack
+        cards:
           - type: history-graph
             entities:
               - entity: sensor.amplifi_router_kbyte_sec_received
