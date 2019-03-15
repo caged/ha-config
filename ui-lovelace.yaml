@@ -115,6 +115,22 @@ views:
           - light.garage
           - light.front_porch
 
+##    ## ######## ######## ##      ##  #######  ########  ##    ##
+###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
+####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
+## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
+##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
+##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
+##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
+
+  - title: Network
+    cards:
+      - type: history-graph
+        entities:
+          - entity: sensor.amplifi_router_kbyte_sec_received
+            name: Sent
+          - entity: sensor.amplifi_router_kbyte_sec_sent
+            name: Received
 
 ##     ## ####  ######   ######  ######## ##       ##          ###    ##    ## ########  #######  ##     ##  ######
 ###   ###  ##  ##    ## ##    ## ##       ##       ##         ## ##   ###   ## ##       ##     ## ##     ## ##    ##
@@ -184,19 +200,3 @@ views:
           - title: Address
             field: summary
             regex: ".+?\\s-"
-
-##    ## ######## ######## ##      ##  #######  ########  ##    ##
-###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
-####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
-## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
-##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
-##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
-##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
-
-  - title: Network
-    cards:
-      - type: history-graph
-        hours_to_show: 8
-        entities:
-          - sensor.amplifi_router_kbyte_sec_received
-          - sensor.amplifi_router_kbyte_sec_sent
