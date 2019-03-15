@@ -139,7 +139,7 @@ views:
           - binary_sensor.cool_breeze_occupancy
           - switch.kitchen_wemo_insight
           - binary_sensor.washer_status
-          - binary_sensor.kitchen_heater_status      
+          - binary_sensor.kitchen_heater_status
       # Ring Videos
       - type: horizontal-stack
         cards:
@@ -159,10 +159,12 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
+            hours_to_show: 8
             entities:
               - entity: sensor.washer_power
                 name: Washer
           - type: history-graph
+            hours_to_show: 8
             entities:
               - entity: sensor.kitchen_heater_power
                 name: Kitchen heater
