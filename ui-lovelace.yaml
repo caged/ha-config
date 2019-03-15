@@ -16,22 +16,6 @@ views:
   ##     ##  #######  ##     ## ########
   - title: Home
     cards:
-      # Ring Videos
-      - type: horizontal-stack
-        cards:
-          - type: picture-glance
-            title: Front Door
-            entities:
-              - binary_sensor.ring_front_door_motion
-              - sensor.ring_front_door_last_activity
-            camera_image: camera.front_door
-          - type: picture-glance
-            title: Garage
-            entities:
-              - binary_sensor.ring_garage_motion
-              - sensor.ring_garage_last_activity
-            camera_image: camera.garage
-
       # HVAC
       - type: entities
         title: Climate
@@ -142,16 +126,6 @@ views:
 
   - title: Miscellaneous
     cards:
-      - type: vertical-stack
-        cards:
-          - type: history-graph
-            entities:
-              - entity: sensor.washer_power
-                name: Washer
-          - type: history-graph
-            entities:
-              - entity: sensor.kitchen_heater_power
-                name: Kitchen heater
       - type: entities
         entities:
           - sun.sun
@@ -165,7 +139,33 @@ views:
           - binary_sensor.cool_breeze_occupancy
           - switch.kitchen_wemo_insight
           - binary_sensor.washer_status
-          - binary_sensor.kitchen_heater_status
+          - binary_sensor.kitchen_heater_status      
+      # Ring Videos
+      - type: horizontal-stack
+        cards:
+          - type: picture-glance
+            title: Front Door
+            entities:
+              - binary_sensor.ring_front_door_motion
+              - sensor.ring_front_door_last_activity
+            camera_image: camera.front_door
+          - type: picture-glance
+            title: Garage
+            entities:
+              - binary_sensor.ring_garage_motion
+              - sensor.ring_garage_last_activity
+            camera_image: camera.garage
+      # Sensor graphs
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            entities:
+              - entity: sensor.washer_power
+                name: Washer
+          - type: history-graph
+            entities:
+              - entity: sensor.kitchen_heater_power
+                name: Kitchen heater
       - type: "custom:list-card-custom"
         entity: sensor.portland_liquor_licenses
         title: Portland liquor licenses
