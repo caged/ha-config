@@ -102,8 +102,7 @@ binary_sensor: !include binary_sensors.yaml
 sensor: !include sensors.yaml
   # Weather prediction
   # - platform: yr
-shell_command:
-  speed_test: /config/bin/speed_test
+python_script:
 
 # Text to speech
 tts:
