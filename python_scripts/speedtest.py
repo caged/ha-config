@@ -36,7 +36,7 @@ except ImportError:
     gzip = None
     GZIP_BASE = object
 
-__version__ = '2.1.1'
+# __version__ = '2.1.1'
 
 
 class FakeShutdownEvent(object):
@@ -52,7 +52,7 @@ class FakeShutdownEvent(object):
 
 # Some global variables we use
 DEBUG = False
-_GLOBAL_DEFAULT_TIMEOUT = object()
+GLOBAL_DEFAULT_TIMEOUT = object()
 
 # Begin import game to handle Python 2 and Python 3
 try:
@@ -350,7 +350,7 @@ class SpeedtestMissingBestServer(SpeedtestException):
     """get_best_server not called or not able to determine best server"""
 
 
-def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
+def create_connection(address, timeout=GLOBAL_DEFAULT_TIMEOUT,
                       source_address=None):
     """Connect to *address* and return the socket object.
 
@@ -373,7 +373,7 @@ def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
         sock = None
         try:
             sock = socket.socket(af, socktype, proto)
-            if timeout is not _GLOBAL_DEFAULT_TIMEOUT:
+            if timeout is not GLOBAL_DEFAULT_TIMEOUT:
                 sock.settimeout(float(timeout))
             if source_address:
                 sock.bind(source_address)
