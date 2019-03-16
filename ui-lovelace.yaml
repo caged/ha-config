@@ -16,10 +16,10 @@ views:
   ##     ##  #######  ##     ## ########
   - title: Home
     icon: mdi:shield-home
-    notifications: overflow
-    main_config: true
     cards:
       - type: custom:compact-custom-header
+        notifications: overflow
+        main_config: true
       # HVAC
       - type: entities
         title: Climate
@@ -129,9 +129,10 @@ views:
 
   - title: Miscellaneous
     icon: mdi:rhombus-split
-    main_config: false
     cards:
       - type: custom:compact-custom-header
+        main_config: false
+        notifications: overflow
       - type: entities
         entities:
           - sun.sun
@@ -201,9 +202,10 @@ views:
 
   - title: Network
     icon: mdi:wifi
-    main_config: false
     cards:
       - type: custom:compact-custom-header
+        main_config: false
+        notifications: overflow
       - type: vertical-stack
         cards:
           - type: history-graph
