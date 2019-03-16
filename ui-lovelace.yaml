@@ -15,7 +15,8 @@ views:
   ##     ## ##     ## ##     ## ##
   ##     ##  #######  ##     ## ########
   - title: Home
-    icon: mdi:home
+    icon: mdi:shield-home
+    notifications: overflow
     cards:
       - type: custom:compact-custom-header
       # HVAC
@@ -126,6 +127,7 @@ views:
 ##     ## ####  ######   ######  ######## ######## ######## ##     ## ##    ## ########  #######   #######   ######
 
   - title: Miscellaneous
+    icon: mdi:rhombus-split
     cards:
       - type: custom:compact-custom-header
       - type: entities
@@ -196,6 +198,7 @@ views:
 ##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
 
   - title: Network
+    icon: mdi:wifi
     cards:
       - type: custom:compact-custom-header
       - type: vertical-stack
