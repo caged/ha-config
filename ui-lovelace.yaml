@@ -15,6 +15,7 @@ views:
   ##     ## ##     ## ##     ## ##
   ##     ##  #######  ##     ## ########
   - title: Home
+    icon: mdi:home
     cards:
       - type: custom:compact-custom-header
       # HVAC
@@ -116,34 +117,6 @@ views:
           - light.garage
           - light.front_porch
 
-##    ## ######## ######## ##      ##  #######  ########  ##    ##
-###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
-####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
-## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
-##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
-##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
-##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
-
-  - title: Network
-    cards:
-      - type: custom:compact-custom-header
-      - type: vertical-stack
-        cards:
-          - type: history-graph
-            title: Wireless Network Data
-            entities:
-              - entity: sensor.amplifi_router_kbyte_sec_sent
-                name: Sent
-              - entity: sensor.amplifi_router_kbyte_sec_received
-                name: Received
-          - type: history-graph
-            title: Wireless Network Packets
-            entities:
-              - entity: sensor.amplifi_router_packets_sec_sent
-                name: Sent
-              - entity: sensor.amplifi_router_packets_sec_received
-                name: Received
-
 ##     ## ####  ######   ######  ######## ##       ##          ###    ##    ## ########  #######  ##     ##  ######
 ###   ###  ##  ##    ## ##    ## ##       ##       ##         ## ##   ###   ## ##       ##     ## ##     ## ##    ##
 #### ####  ##  ##       ##       ##       ##       ##        ##   ##  ####  ## ##       ##     ## ##     ## ##
@@ -154,7 +127,7 @@ views:
 
   - title: Miscellaneous
     cards:
-      - type: custom:compact-custom-header      
+      - type: custom:compact-custom-header
       - type: entities
         entities:
           - sun.sun
@@ -213,3 +186,31 @@ views:
           - title: Address
             field: summary
             regex: ".+?\\s-"
+
+##    ## ######## ######## ##      ##  #######  ########  ##    ##
+###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
+####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
+## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
+##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
+##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
+##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
+
+  - title: Network
+    cards:
+      - type: custom:compact-custom-header
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            title: Wireless Network Data
+            entities:
+              - entity: sensor.amplifi_router_kbyte_sec_sent
+                name: Sent
+              - entity: sensor.amplifi_router_kbyte_sec_received
+                name: Received
+          - type: history-graph
+            title: Wireless Network Packets
+            entities:
+              - entity: sensor.amplifi_router_packets_sec_sent
+                name: Sent
+              - entity: sensor.amplifi_router_packets_sec_received
+                name: Received
