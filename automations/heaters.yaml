@@ -44,11 +44,13 @@
     service: switch.turn_on
     entity_id: switch.office_wemo
 
-- alias: Turn off office heater when office is unoccupied
+- alias: Turn off office heater when office is unoccupied for an hour
   trigger:
     platform: state
     entity_id: binary_sensor.justin_s_office_occupancy
-    to: 'off'
+    to: "off"
+    for:
+      hours: 1
   action:
     service: switch.turn_off
     entity_id: switch.office_wemo
