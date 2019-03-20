@@ -1,4 +1,4 @@
-- alias: Notify Justin's phone when a new liquir license is issued in Portland
+- alias: Notify Justin's phone when a new liquor license is issued in Portland
   trigger:
     platform: event
     event_type: feedreader
