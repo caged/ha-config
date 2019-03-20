@@ -14,20 +14,18 @@
     service: light.turn_off
     entity_id: group.outside_lights
 
-- alias: Turn on media lights an hour after the sun sets
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "+01:00:00"
-  action:
-    service: light.turn_on
-    entity_id: light.media
-
 - alias: Turn on the media lights in the morning, an hour before the sun rises
   trigger:
     platform: sun
     event: sunrise
     offset: "-01:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: "off"
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "off"
   action:
     service: light.turn_on
     entity_id: light.media
@@ -40,6 +38,13 @@
     platform: sun
     event: sunrise
     offset: "+02:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: "off"
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "off"
   action:
     service: light.turn_off
     entity_id: light.media
@@ -49,6 +54,13 @@
     platform: sun
     event: sunset
     offset: "+01:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: "off"
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "off"
   action:
     service: light.turn_on
     entity_id: light.media
