@@ -31,6 +31,9 @@
   action:
     service: light.turn_on
     entity_id: light.media
+    data:
+      brightness: 250
+      kelvin: 3000
 
 - alias: Turn off the media lights a couple hours after sunrise
   trigger:
@@ -49,3 +52,6 @@
   action:
     service: light.turn_on
     entity_id: light.media
+    data:
+      brightness: 175
+      kelvin: 2000
