@@ -108,6 +108,15 @@ input_boolean:
   guest_mode:
     name: Guest Mode
     initial: off
+    icon: mdi:account-star
+  party_mode:
+    name: Party Mode
+    initial: off
+    icon: mdi:artist
+  vacation_mode:
+    name: Vacation Mode
+    initial: off
+    icon: mdi:beach
   # Weather prediction
   # - platform: yr
 python_script:
