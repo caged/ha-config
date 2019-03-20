@@ -1,15 +1,51 @@
 - alias: Turn on the outside lights when the sun sets
   trigger:
-      platform: sun
-      event: sunset
+    platform: sun
+    event: sunset
   action:
     service: light.turn_on
     entity_id: group.outside_lights
 
 - alias: Turn off the outside lights when the sun rises
   trigger:
-      platform: sun
-      event: sunrise
+    platform: sun
+    event: sunrise
   action:
     service: light.turn_off
     entity_id: group.outside_lights
+
+- alias: Turn on media lights an hour after the sun sets
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "+01:00:00"
+  action:
+    service: light.turn_on
+    entity_id: light.media
+
+- alias: Turn on the media lights in the morning, an hour before the sun rises
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-01:00:00"
+  action:
+    service: light.turn_on
+    entity_id: light.media
+
+- alias: Turn off the media lights a couple hours after sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "+02:00:00"
+  action:
+    service: light.turn_off
+    entity_id: light.media
+
+- alias: Turn on the media lights after the sun sets
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "+01:00:00"
+  action:
+    service: light.turn_on
+    entity_id: light.media
