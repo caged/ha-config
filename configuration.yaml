@@ -105,7 +105,9 @@ sensor: !include sensors.yaml
 switch: !include switches.yaml
 
 input_boolean:
-  !include inputs.yaml
+  guest_mode:
+    name: Guest Mode
+    initial: off
   # Weather prediction
   # - platform: yr
 python_script:
