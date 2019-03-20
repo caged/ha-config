@@ -25,8 +25,8 @@ views:
         show_header_toggle: false
         entities:
           - input_boolean.party_mode
-          - input_boolean.vacation_mode
           - input_boolean.guest_mode
+          - input_boolean.vacation_mode
       # HVAC
       - type: entities
         title: Climate
