@@ -13,6 +13,8 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+  packages: !include_dir_named packages
+
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
@@ -113,10 +115,7 @@ input_boolean:
     name: Party Mode
     initial: off
     icon: mdi:artist
-  vacation_mode:
-    name: Vacation Mode
-    initial: off
-    icon: mdi:beach
+
   # Weather prediction
   # - platform: yr
 python_script:
