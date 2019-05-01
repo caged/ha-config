@@ -4,7 +4,7 @@
   sensors:
     climate_living_room:
       friendly_name: "Living Room"
-      unit_of_measurement: 'º'
+      unit_of_measurement: "º"
       value_template: "{{ states('sensor.cool_breeze_temperature') }}"
       icon_template: >-
         {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
@@ -15,7 +15,7 @@
     climate_primary_bedroom:
       friendly_name: "Primary Bedroom"
       value_template: "{{ states('sensor.master_bedroom_temperature') }}"
-      unit_of_measurement: 'º'
+      unit_of_measurement: "º"
       icon_template: >-
         {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
           mdi:run-fast
@@ -25,7 +25,7 @@
     climate_office:
       friendly_name: "Office"
       value_template: "{{ states('sensor.justin_s_office_temperature') }}"
-      unit_of_measurement: 'º'
+      unit_of_measurement: "º"
       icon_template: >-
         {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
           mdi:run-fast
@@ -35,7 +35,7 @@
     climate_camdens_bedroom:
       friendly_name: "Camden's Bedroom"
       value_template: "{{ states('sensor.camden_s_room_temperature') }}"
-      unit_of_measurement: 'º'
+      unit_of_measurement: "º"
       icon_template: >-
         {% if is_state('binary_sensor.camden_s_room_occupancy', 'on') %}
           mdi:run-fast
@@ -43,21 +43,18 @@
           mdi:account-off-outline
         {% endif %}
     kitchen_heater_power:
-      friendly_name: 'Kitchen space heater power'
+      friendly_name: "Kitchen space heater power"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["current_power_w"] }}'
-      unit_of_measurement: 'W'
+      unit_of_measurement: "W"
     kitchen_heater_today_energy:
       friendly_name: "Kitchen space heater today's energy"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["today_energy_kwh"] }}'
-      unit_of_measurement: 'kwH'
+      unit_of_measurement: "kwH"
     washer_power:
-      friendly_name: 'Washer power'
+      friendly_name: "Washer power"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["current_power_w"] }}'
-      unit_of_measurement: 'W'
+      unit_of_measurement: "W"
     washer_today_energy:
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
-      unit_of_measurement: 'kwH'
-- platform: feedparser
-  name: Portland liquor licenses
-  feed_url: 'https://www.portlandoregon.gov/rss.cfm?c=61884'
+      unit_of_measurement: "kwH"
