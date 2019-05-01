@@ -53,7 +53,6 @@
   action:
     service: switch.turn_off
     entity_id: switch.office_wemo
-#
 # - alias: Turn off office heater when temp in office stays above 73
 #   trigger:
 #     platform: numeric_state
