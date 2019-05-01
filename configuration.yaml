@@ -28,8 +28,8 @@ ring:
   password: !secret ring_password
 
 apple_tv:
-  - host: !secret apple_tv_host
-    login_id: !secret apple_tv_login_id
+  # - host: !secret apple_tv_host
+  #   login_id: !secret apple_tv_login_id
 
 remote:
   - platform: harmony
