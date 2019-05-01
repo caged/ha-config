@@ -87,12 +87,12 @@ logbook:
 map:
 
 # Enable feedreeder
-feedreader:
-  urls:
-    # New liquor licenses in Portland, OR
-    - https://www.portlandoregon.gov/rss.cfm?c=61884
-  scan_interval:
-    minutes: 30
+# feedreader:
+#   urls:
+#     # New liquor licenses in Portland, OR
+#     - https://www.portlandoregon.gov/rss.cfm?c=61884
+#   scan_interval:
+#     minutes: 30
 
 # Track the sun
 sun:
