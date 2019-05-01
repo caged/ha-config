@@ -51,7 +51,7 @@ wemo:
 
 # Enables the frontend
 frontend:
-  themes: !include_dir_named themes/
+  # themes: !include_dir_named themes/
 
 # Enables configuration UI
 config:
