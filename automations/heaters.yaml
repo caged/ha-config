@@ -39,11 +39,6 @@
     - condition: state
       entity_id: binary_sensor.workday_sensor
       state: "on"
-    - condition: numeric_state
-      entity_id: sensor.justin_s_office_temperature
-      below: 73
-      for:
-        minutes: 15
   action:
     service: switch.turn_on
     entity_id: switch.office_wemo
