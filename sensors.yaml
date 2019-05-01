@@ -58,3 +58,13 @@
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: "kwH"
+- platform: feedparser
+  name: HLN
+  feed_url: "https://www.hln.be/nieuws/rss.xml"
+  date_format: "%a, %b %d %I:%M %p"
+  inclusions:
+    - title
+    - id
+    - summary
+    - updated
+    - media
