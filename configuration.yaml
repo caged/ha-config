@@ -115,6 +115,10 @@ input_boolean:
     name: Party Mode
     initial: off
     icon: mdi:artist
+  vacation_mode:
+    name: Vacation Mode
+    initial: off
+    icon: mdi:beach
 
   # Weather prediction
   # - platform: yr
