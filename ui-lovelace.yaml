@@ -186,7 +186,7 @@ views:
       - type: "custom:list-card-custom"
         entity: sensor.portland_liquor_licenses
         title: Portland liquor licenses
-        row_limit: 6
+        row_limit: 10
         columns:
           - title: Title
             field: title
