@@ -60,4 +60,4 @@
       unit_of_measurement: "kwH"
 - platform: feedparser
   name: Portland liquor licenses
-  feed_url: "https://www.portlandoregon.gov/rss.cfm?c=61884"
+  feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
