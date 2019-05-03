@@ -16,6 +16,7 @@ views:
   ##     ##  #######  ##     ## ########
   - title: Home
     icon: mdi:shield-home
+    name: Home
     cards:
       - type: entities
         title: Home Modes
