@@ -135,9 +135,6 @@ views:
   - title: Miscellaneous
     icon: mdi:rhombus-split
     cards:
-      - type: custom:compact-custom-header
-        main_config: false
-        notifications: overflow
       - type: entities
         entities:
           - sun.sun
@@ -208,9 +205,6 @@ views:
   - title: Network
     icon: mdi:wifi
     cards:
-      - type: custom:compact-custom-header
-        main_config: false
-        notifications: overflow
       - type: vertical-stack
         cards:
           - type: history-graph
