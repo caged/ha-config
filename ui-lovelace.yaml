@@ -1,8 +1,6 @@
 resources:
   - url: /local/lovelace/mini-media-player-bundle.js?v=1.0.2
     type: module
-  - url: /local/lovelace/compact-custom-header.js?v=1.0.1b5
-    type: module
   - url: /local/lovelace/list-card-custom.js?v=0
     type: js
 title: Palmer Palace
@@ -16,7 +14,6 @@ views:
   ##     ##  #######  ##     ## ########
   - title: Home
     icon: mdi:shield-home
-    name: Home
     cards:
       - type: entities
         title: Home Modes
