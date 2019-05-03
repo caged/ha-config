@@ -17,9 +17,6 @@ views:
   - title: Home
     icon: mdi:shield-home
     cards:
-      - type: custom:compact-custom-header
-        notifications: overflow
-        main_config: true
       - type: entities
         title: Home Modes
         show_header_toggle: false
