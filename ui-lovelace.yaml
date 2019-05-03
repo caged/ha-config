@@ -201,7 +201,6 @@ views:
   ##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
 
   - title: Network
-    icon: mdi:wifi
     cards:
       - type: vertical-stack
         cards:
