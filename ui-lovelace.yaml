@@ -13,7 +13,6 @@ views:
   ##     ## ##     ## ##     ## ##
   ##     ##  #######  ##     ## ########
   - title: Home
-    icon: mdi:shield-home
     cards:
       - type: entities
         title: Home Modes
@@ -131,7 +130,6 @@ views:
   ##     ## ####  ######   ######  ######## ######## ######## ##     ## ##    ## ########  #######   #######   ######
 
   - title: Miscellaneous
-    icon: mdi:rhombus-split
     cards:
       - type: entities
         entities:
@@ -201,6 +199,7 @@ views:
   ##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
 
   - title: Network
+    icon: mdi:wifi
     cards:
       - type: vertical-stack
         cards:
