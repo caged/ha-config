@@ -1,5 +1,5 @@
 workflow "Validate configuration" {
-  resolves = ["docker://homeassistant/home-assistant:0.92.1"]
+  resolves = ["docker://homeassistant/home-assistant@0.92.1"]
   on = "push"
 }
 
