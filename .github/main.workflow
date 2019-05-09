@@ -4,6 +4,6 @@ workflow "Validate configuration" {
 }
 
 action "docker://homeassistant/home-assistant" {
-  uses = "docker://homeassistant/home-assistant@0.92.1"
+  uses = "docker://homeassistant/home-assistant"
   runs = "./scripts/test.sh"
 }
