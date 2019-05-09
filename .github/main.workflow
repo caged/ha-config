@@ -1,10 +1,10 @@
 workflow "Validate configuration" {
   resolves = ["docker://homeassistant/home-assistant"]
-  on = "watch"
+  on = "push"
 }
 
 action "docker://homeassistant/home-assistant" {
   uses = "docker://homeassistant/home-assistant"
-  runs = "hassio "
-  args = "ha check"
+  runs = "python"
+  args = "-m homeassistant -c / --script check_config --info all"
 }
