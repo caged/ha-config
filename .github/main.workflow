@@ -1,6 +1,6 @@
 workflow "Validate configuration" {
-  on = "push"
   resolves = ["docker://homeassistant/home-assistant"]
+  on = "watch"
 }
 
 action "docker://homeassistant/home-assistant" {
