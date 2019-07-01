@@ -15,6 +15,21 @@ views:
   - title: Home
     cards:
       - type: entities
+        show_header_toggle: false
+        entities:
+          - type: weblink
+            name: Unifi Controller Local
+            url: https://192.168.1.8:8443
+            icon: mdi:local-area-network
+          - type: weblink
+            name: Unifi Cloud Controller
+            url: https://unifi.ubnt.com/#/controllers/1/50
+            icon: mdi:cloud-search
+          - type: weblink
+            name: Unifi Gateway
+            url: https://192.168.1.1/#/manage/main
+            icon: mdi:security-network
+      - type: entities
         title: Home Modes
         show_header_toggle: false
         entities:
