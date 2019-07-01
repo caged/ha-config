@@ -20,7 +20,7 @@ views:
           - type: weblink
             name: Unifi Controller Local
             url: https://192.168.1.8:8443
-            icon: mdi:local-area-network
+            icon: mdi:lan
           - type: weblink
             name: Unifi Cloud Controller
             url: https://unifi.ubnt.com/#/controllers/1/50
