@@ -34,7 +34,7 @@ apple_tv:
 remote:
   - platform: harmony
     name: Living Room Harmony
-    host: !secret harmony_hub_host
+    host: 192.168.100.53
 
 hue:
   bridges:
