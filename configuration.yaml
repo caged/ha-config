@@ -23,9 +23,9 @@ weather:
 ecobee:
   api_key: !secret ecobee_api_key
 
-ring:
-  username: !secret ring_username
-  password: !secret ring_password
+# ring:
+#   username: !secret ring_username
+#   password: !secret ring_password
 
 apple_tv:
   # - host: !secret apple_tv_host
