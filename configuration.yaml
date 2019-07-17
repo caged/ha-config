@@ -36,6 +36,10 @@ remote:
     name: Living Room Harmony
     host: !secret harmony_hub_host
 
+hue:
+  bridges:
+    - host: 192.168.100.52
+
 lovelace:
   mode: yaml
 
