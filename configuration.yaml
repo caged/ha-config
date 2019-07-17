@@ -40,6 +40,10 @@ hue:
   bridges:
     - host: 192.168.100.52
 
+notify:
+  - name: notify_ecobee
+    platform: ecobee
+
 lovelace:
   mode: yaml
 
