@@ -43,8 +43,8 @@ hue:
 lovelace:
   mode: yaml
 
-camera:
-  - platform: ring
+# camera:
+#   - platform: ring
 
 ios:
 
