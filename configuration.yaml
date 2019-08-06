@@ -53,7 +53,7 @@ lovelace:
 ios:
 
 wemo:
-
+  discovery: false
 # Show links to resources in log and frontend
 # introduction:
 
