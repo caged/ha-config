@@ -61,3 +61,5 @@
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
+- platform: xfinity
+  name: "Justins Xfinity Usage"
