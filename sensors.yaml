@@ -68,3 +68,12 @@
 - platform: xfinity
   username: !secret xfinity_username
   password: !secret xfinity_password
+- platform: unifigateway
+  host: !secret unifi_host
+  username: !secret unifi_username
+  password: !secret unifi_password
+  monitored_conditions:
+    - www
+    - wlan
+    - alerts
+    - firmware
