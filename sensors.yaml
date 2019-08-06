@@ -58,6 +58,13 @@
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: "kwH"
+    xfinity_data_usage:
+      friendly_name: "Xfinity Data Usage"
+      value_template: '{{ states.sensor.xfinity_usage.attributes["total_usage"] }}'
+      unit_of_measurement: "GB"
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
+- platform: xfinity
+  username: !secret xfinity_username
+  password: !secret xfinity_password

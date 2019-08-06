@@ -36,6 +36,11 @@ views:
           - input_boolean.party_mode
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
+      - type: history-graph
+        hours_to_show: 80
+        entities:
+          - entity: sensor.xfinity_data_usage
+            name: Xfinity Data Usage
       # HVAC
       - type: entities
         title: Climate
