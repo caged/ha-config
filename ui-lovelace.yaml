@@ -37,7 +37,7 @@ views:
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
       - type: history-graph
-        hours_to_show: 8
+        hours_to_show: 80
         entities:
           - entity: sensor.xfinity_data_usage
             name: Xfinity Data Usage
