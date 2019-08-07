@@ -163,11 +163,11 @@ class UnifiGatewaySensor(Entity):
             if devices.get('upgradable'):
                 self._attributes[devices['name']] = devices['upgradable']
                 self._state += 1
-        # elif: self._sensor == SENSOR_TRAFFIC:
-        #   try:
-        #     traffic = self._ctrl.get_current_traffic_statistics()
-        #   except APIError as ex:
-        #     _LOGGER.error("Failed to retreive traffic: %s", ex)
+        elif: self._sensor == SENSOR_TRAFFIC:
+          try:
+            traffic = self._ctrl.get_current_traffic_statistics()
+          except APIError as ex:
+            _LOGGER.error("Failed to retreive traffic: %s", ex)
 
           # self._attributes = traffic['data'][0]['by_cat']
           # self._state = 0
