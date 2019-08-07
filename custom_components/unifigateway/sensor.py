@@ -165,7 +165,7 @@ class UnifiGatewaySensor(Entity):
             if devices.get('upgradable'):
                 self._attributes[devices['name']] = devices['upgradable']
                 self._state += 1
-        elif: self._sensor == SENSOR_TRAFFIC:
+        elif self._sensor == SENSOR_TRAFFIC:
           try:
             traffic = self._ctrl.get_current_traffic_statistics()
           except APIError as ex:
