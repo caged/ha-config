@@ -70,14 +70,13 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
         vol.All(cv.ensure_list, [vol.In(POSSIBLE_MONITORED)])
 })
 
+def get_current_traffic_statistics(self):
+    params = { 'type': 'by_cat' }
+    return self._write(self._api_url() + 'stat/sitedpi', params)
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     """Set up the Unifi sensor."""
     from pyunifi.controller import Controller, APIError
-
-    def get_current_traffic_statistics(self):
-        params = { 'type': 'by_cat' }
-        return self._write(self._api_url() + 'stat/sitedpi', params)
 
     Controller.get_current_traffic_statistics = get_current_traffic_statistics
 
