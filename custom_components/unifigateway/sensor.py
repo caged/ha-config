@@ -171,7 +171,7 @@ class UnifiGatewaySensor(Entity):
             _LOGGER.error("Failed to retreive traffic: %s", ex)
 
           self._attributes = {}
-          self._attributes['traffic'] = traffic
+          self._attributes['traffic'] = traffic[0]['by_cat']
           self._state = 1
           #
           # for cat in traffic['data'][0]['by_cat']:
