@@ -40,6 +40,7 @@ SENSOR_LAN = 'lan'
 SENSOR_WLAN = 'wlan'
 SENSOR_ALERTS = 'alerts'
 SENSOR_FIRMWARE = 'firmware'
+SENSOR_TRAFFIC = 'traffic'
 
 USG_SENSORS = {
     SENSOR_VPN:     ['VPN', '', 'mdi:folder-key-network'],
@@ -48,11 +49,12 @@ USG_SENSORS = {
     SENSOR_LAN:     ['LAN', '', 'mdi:lan'],
     SENSOR_WLAN:    ['WLAN','', 'mdi:wifi'],
     SENSOR_ALERTS:  ['Alerts', '', 'mdi:information-outline'],
-    SENSOR_FIRMWARE:['Firmware Upgradable', '', 'mdi:database-plus']
+    SENSOR_FIRMWARE:['Firmware Upgradable', '', 'mdi:database-plus'],
+    SENSOR_TRAFFIC: ['Traffic', 'mdi:swap-vertical']
 }
 
 POSSIBLE_MONITORED = [ SENSOR_VPN, SENSOR_WWW, SENSOR_WAN, SENSOR_LAN,
-                        SENSOR_WLAN, SENSOR_ALERTS, SENSOR_FIRMWARE ]
+                        SENSOR_WLAN, SENSOR_ALERTS, SENSOR_FIRMWARE, SENSOR_TRAFFIC ]
 DEFAULT_MONITORED = POSSIBLE_MONITORED
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -68,10 +70,14 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
         vol.All(cv.ensure_list, [vol.In(POSSIBLE_MONITORED)])
 })
 
+def get_current_traffic_statistics(self):
+    params = { 'type': 'by_cat' }
+    return self._write(self._api_url() + 'stat/sitedpi', params)
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     """Set up the Unifi sensor."""
     from pyunifi.controller import Controller, APIError
+    Controller.get_current_traffic_statistics = get_current_traffic_statistics
 
     name = config.get(CONF_NAME)
     host = config.get(CONF_HOST)
@@ -157,6 +163,17 @@ class UnifiGatewaySensor(Entity):
             if devices.get('upgradable'):
                 self._attributes[devices['name']] = devices['upgradable']
                 self._state += 1
+        # elif: self._sensor == SENSOR_TRAFFIC:
+        #   try:
+        #     traffic = self._ctrl.get_current_traffic_statistics()
+        #   except APIError as ex:
+        #     _LOGGER.error("Failed to retreive traffic: %s", ex)
+
+          # self._attributes = traffic['data'][0]['by_cat']
+          # self._state = 0
+          #
+          # for cat in traffic['data'][0]['by_cat']:
+          #     self._attributes['data']
 
         else:
           # get_healthinfo() call made for each of 4 sensors - should only be for 1
