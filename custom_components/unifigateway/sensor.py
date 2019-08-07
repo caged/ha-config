@@ -50,7 +50,7 @@ USG_SENSORS = {
     SENSOR_WLAN:    ['WLAN','', 'mdi:wifi'],
     SENSOR_ALERTS:  ['Alerts', '', 'mdi:information-outline'],
     SENSOR_FIRMWARE:['Firmware Upgradable', '', 'mdi:database-plus'],
-    SENSOR_TRAFFIC: ['Traffic', 'mdi:swap-vertical']
+    SENSOR_TRAFFIC: ['Traffic', '', 'mdi:swap-vertical']
 }
 
 POSSIBLE_MONITORED = [ SENSOR_VPN, SENSOR_WWW, SENSOR_WAN, SENSOR_LAN,
