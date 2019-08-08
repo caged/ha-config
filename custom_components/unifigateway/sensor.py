@@ -174,7 +174,7 @@ class UnifiGatewaySensor(Entity):
           tx_bytes = 0
           total_bytes = 0
           self._attributes = {}
-          gbfactor = 1<<30
+          gbfactor = 1 << 30
           for category in traffic[0]['by_cat']:
               rx = category['rx_bytes']
               tx = category['tx_bytes']
@@ -187,7 +187,7 @@ class UnifiGatewaySensor(Entity):
           self._attributes['total_bytes'] = total_bytes
           self._attributes['rx_gb'] = rx_bytes / gbfactor
           self._attributes['tx_gb'] = tx_bytes / gbfactor
-          self._attributes['total_gb'] = total_gb / gbfactor
+          self._attributes['total_gb'] = total_bytes / gbfactor
           self._state = 5
           #
           # for cat in traffic['data'][0]['by_cat']:
