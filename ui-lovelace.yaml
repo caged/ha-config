@@ -40,12 +40,10 @@ views:
         title: Network Traffic
         entities:
           - type: history-graph
-            title: Xfinity Data Usage
             hours_to_show: 24
             entities:
               - entity: sensor.xfinity_data_usage
           - type: history-graph
-            title: Unifi Traffic
             hours_to_show: 24
             entities:
               - entity: sensor.unifi_traffic_total
