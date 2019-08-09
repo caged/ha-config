@@ -41,7 +41,7 @@ views:
         entities:
           - type: history-graph
             hours_to_show: 24
-            entity: sensor.xfinity_usage
+            entity: sensor.xfinity_data_usage
       # HVAC
       - type: entities
         title: Climate
