@@ -62,6 +62,18 @@
       friendly_name: "Xfinity Data Usage"
       value_template: '{{ states.sensor.xfinity_usage.attributes["total_usage"] }}'
       unit_of_measurement: "GB"
+    unifi_traffic_total:
+      friendly_name: "Unifi Traffic"
+      value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["total_gb"] }}'
+      unit_of_measurement: "GB"
+    unifi_traffic_down:
+      friendly_name: "Unifi Traffic Down"
+      value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["rx_gb"] }}'
+      unit_of_measurement: "GB"
+    unifi_traffic_up:
+      friendly_name: "Unifi Traffic Up"
+      value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["tx_gb"] }}'
+      unit_of_measurement: "GB"
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
