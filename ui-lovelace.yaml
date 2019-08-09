@@ -36,18 +36,21 @@ views:
           - input_boolean.party_mode
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
-      - type: history-graph
-        title: Xfinity Data Usage
-        hours_to_show: 24
+      - type: entities
+        title: Network Traffic
         entities:
-          - entity: sensor.xfinity_data_usage
-      - type: history-graph
-        title: Unifi Traffic
-        hours_to_show: 24
-        entities:
-          - entity: sensor.unifi_traffic_total
-          - entity: sensor.unifi_traffic_up
-          - entity: sensor.unifi_traffic_down
+          - type: history-graph
+            title: Xfinity Data Usage
+            hours_to_show: 24
+            entities:
+              - entity: sensor.xfinity_data_usage
+          - type: history-graph
+            title: Unifi Traffic
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_total
+              - entity: sensor.unifi_traffic_up
+              - entity: sensor.unifi_traffic_down
       # HVAC
       - type: entities
         title: Climate
