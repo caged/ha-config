@@ -37,10 +37,12 @@ views:
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
       - type: history-graph
-        title: Network Traffic
         hours_to_show: 24
         entities:
           - entity: sensor.xfinity_usage
+      - type: history-graph
+        hours_to_show: 24
+        entities:
           - entity: sensor.unifi_traffic_total
           - entity: sensor.unifi_traffic_up
           - entity: sensor.unifi_traffic_down
