@@ -36,12 +36,12 @@ views:
           - input_boolean.party_mode
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
-      - type: entities
+      - type: history-graph
         title: Network Traffic
+        hours_to_show: 24
         entities:
-          - type: history-graph
-            hours_to_show: 24
-            entity: sensor.xfinity_data_usage
+          - entity: sensor.xfinity_usage
+
       # HVAC
       - type: entities
         title: Climate
