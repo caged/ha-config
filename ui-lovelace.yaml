@@ -41,7 +41,9 @@ views:
         hours_to_show: 24
         entities:
           - entity: sensor.xfinity_usage
-
+          - entity: sensor.unifi_traffic_total
+          - entity: sensor.unifi_traffic_up
+          - entity: sensor.unifi_traffic_down
       # HVAC
       - type: entities
         title: Climate
