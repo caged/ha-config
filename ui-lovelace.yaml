@@ -3,6 +3,8 @@ resources:
     type: module
   - url: /local/lovelace/list-card-custom.js?v=0
     type: js
+  - url: /local/lovelace/vertical-stack-in-card.js?v=0.1.3
+    type: js
 title: Palmer Palace
 views:
   ##     ##  #######  ##     ## ########
@@ -36,16 +38,19 @@ views:
           - input_boolean.party_mode
           - input_boolean.guest_mode
           - input_boolean.vacation_mode
-      - type: history-graph
-        hours_to_show: 24
-        entities:
-          - entity: sensor.xfinity_usage
-      - type: history-graph
-        hours_to_show: 24
-        entities:
-          - entity: sensor.unifi_traffic_total
-          - entity: sensor.unifi_traffic_up
-          - entity: sensor.unifi_traffic_down
+      - type: custom:vertical-stack-in-card
+        title: Network Traffic
+        cards:
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.xfinity_usage
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_total
+              - entity: sensor.unifi_traffic_up
+              - entity: sensor.unifi_traffic_down
       # HVAC
       - type: entities
         title: Climate
