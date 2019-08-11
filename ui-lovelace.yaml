@@ -49,6 +49,9 @@ views:
             hours_to_show: 24
             entities:
               - entity: sensor.unifi_traffic_total
+          - type: history-graph
+            hours_to_show: 24
+            entities:
               - entity: sensor.unifi_traffic_up
               - entity: sensor.unifi_traffic_down
       # HVAC
