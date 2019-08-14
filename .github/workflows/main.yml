@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run the config check
-        uses: docker://homeassistant/home-assistant
-        run: ./scripts/test.sh
+        uses: docker://homeassistant/home-assistant@0.97.2
+      - run: hassio ha check 
 #     steps:
 #     - uses: actions/checkout@master
 #     - name: Run a one-line script
