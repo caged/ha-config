@@ -74,6 +74,14 @@
       friendly_name: "Unifi Traffic Up"
       value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["tx_gb"] }}'
       unit_of_measurement: "GB"
+    xfinity_usage_yesterday:
+      friendly_name: "Yesterday's Xfinity Usage"
+      value_template: '{{ states.sensor.xfinity_meter.attributes["last_period"] }}'
+      unit_of_measurement: "GB"
+    xfinity_usage_today:
+      friendly_name: "Today's Xfinity Usage"
+      value_template: "{{ states('sensor.xfinity_meter') }}"
+      unit_of_measurement: "GB"
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
