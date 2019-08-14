@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run the config check
-        uses: docker://homeassistant/home-assistant@v0.97.2
+        uses: docker://homeassistant/home-assistant:0.97.2
       - run: hassio ha check 
 #     steps:
 #     - uses: actions/checkout@master
