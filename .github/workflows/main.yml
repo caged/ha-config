@@ -1,4 +1,4 @@
-name: Verify config
+name: Verify Home Assistant configuration
 
 on: [push]
 
@@ -7,9 +7,8 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Use docker file
-        uses: docker://homeassistant/home-assistant
       - name: Run the config check
+        uses: docker://homeassistant/home-assistant
         run: ./scripts/test.sh
 #     steps:
 #     - uses: actions/checkout@master
