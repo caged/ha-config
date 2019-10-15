@@ -7,11 +7,11 @@
     # of things like haloween lights, etc
     halloween_season:
       friendly_name: "Halloween season"
-      value_template: { { (10, 7) < (now().month, now().day) < (11, 7) } }
+      value_template: "{{ (10, 7) < (now().month, now().day) < (11, 7) }}"
     # Lets say Christmas "season" is December.
     christmas_season:
       friendly_name: "Christmas season"
-      value_template: { { now().month == 12 } }
+      value_template: "{{ now().month == 12 }}"
     home_occupied:
       friendly_name: "Home occupied"
       value_template: >-
