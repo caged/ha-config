@@ -58,10 +58,6 @@
       friendly_name: "Washer today's energy"
       value_template: '{{ states.switch.washer_wemo_insight.attributes["today_energy_kwh"] }}'
       unit_of_measurement: "kwH"
-    xfinity_data_usage:
-      friendly_name: "Xfinity Data Usage"
-      value_template: '{{ states.sensor.xfinity_usage.attributes["total_usage"] }}'
-      unit_of_measurement: "GB"
     unifi_traffic_total:
       friendly_name: "Unifi Traffic"
       value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["total_gb"] }}'
@@ -73,14 +69,6 @@
     unifi_traffic_up:
       friendly_name: "Unifi Traffic Up"
       value_template: '{{ states.sensor.unifi_gateway_traffic.attributes["tx_gb"] }}'
-      unit_of_measurement: "GB"
-    xfinity_usage_yesterday:
-      friendly_name: "Yesterday's Xfinity Usage"
-      value_template: '{{ states.sensor.xfinity_meter.attributes["last_period"] }}'
-      unit_of_measurement: "GB"
-    xfinity_usage_today:
-      friendly_name: "Today's Xfinity Usage"
-      value_template: "{{ states('sensor.xfinity_meter') }}"
       unit_of_measurement: "GB"
 - platform: feedparser
   name: Portland liquor licenses
