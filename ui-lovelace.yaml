@@ -41,14 +41,6 @@ views:
       - type: custom:vertical-stack-in-card
         title: Network Traffic
         cards:
-          - type: entities
-            entities:
-              - entity: sensor.xfinity_usage_yesterday
-              - entity: sensoir.xfinity_usage_today
-          - type: history-graph
-            hours_to_show: 24
-            entities:
-              - entity: sensor.xfinity_usage
           - type: history-graph
             hours_to_show: 24
             entities:
