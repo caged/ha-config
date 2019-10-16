@@ -1,3 +1,6 @@
+extends: default
+ignore: |
+  config/custom_components/
 rules:
   document-start: disable
   line-length:
