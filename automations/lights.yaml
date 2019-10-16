@@ -14,6 +14,17 @@
     service: light.turn_off
     entity_id: group.outside_lights
 
+- alias: Test media light state swap
+  trigger:
+    platform: state
+    entity_id: light.media
+    to: "on"
+  action:
+    service: notify.ios_justins_iphone
+    data:
+      title: "Lights are on"
+      message: "The lights are on"
+
 - alias: Turn on the media lights after the sun sets
   trigger:
     platform: sun
