@@ -7,49 +7,56 @@ resources:
     type: js
 title: Palmer Palace
 views:
-  ##     ##  #######  ##     ## ########
-  ##     ## ##     ## ###   ### ##
-  ##     ## ##     ## #### #### ##
-  ######### ##     ## ## ### ## ######
-  ##     ## ##     ## ##     ## ##
-  ##     ## ##     ## ##     ## ##
-  ##     ##  #######  ##     ## ########
   - title: Home
     cards:
+      # Lights
       - type: entities
+        title: Lights
         show_header_toggle: false
         entities:
-          - type: weblink
-            name: Unifi Controller Local
-            url: https://192.168.1.8:8443
-            icon: mdi:lan
-          - type: weblink
-            name: Unifi Cloud Controller
-            url: https://unifi.ubnt.com/#/controllers/1/50
-            icon: mdi:cloud-search
-          - type: weblink
-            name: Unifi Gateway
-            url: https://192.168.1.1/#/manage/main
-            icon: mdi:security-network
-      - type: entities
-        title: Home Modes
-        show_header_toggle: false
-        entities:
-          - input_boolean.party_mode
-          - input_boolean.guest_mode
-          - input_boolean.vacation_mode
-      - type: custom:vertical-stack-in-card
-        title: Network Traffic
-        cards:
-          - type: history-graph
-            hours_to_show: 24
-            entities:
-              - entity: sensor.unifi_traffic_total
-          - type: history-graph
-            hours_to_show: 24
-            entities:
-              - entity: sensor.unifi_traffic_up
-              - entity: sensor.unifi_traffic_down
+          - type: section
+            label: Downstairs
+          - light.living_room
+          - light.dining_room
+          - light.kitchen
+          - light.media
+          - light.playroom
+          - light.hallway
+          - light.stairway
+          - light.sink
+          - type: section
+            label: Upstairs
+          - light.bed
+          - light.office
+          - type: section
+            label: Outside
+          - light.back_door
+          - light.garage
+          - light.front_porch
+
+      # - type: entities
+      #   show_header_toggle: false
+      #   entities:
+      #     - type: weblink
+      #       name: Unifi Controller Local
+      #       url: https://192.168.1.8:8443
+      #       icon: mdi:lan
+      #     - type: weblink
+      #       name: Unifi Cloud Controller
+      #       url: https://unifi.ubnt.com/#/controllers/1/50
+      #       icon: mdi:cloud-search
+      #     - type: weblink
+      #       name: Unifi Gateway
+      #       url: https://192.168.1.1/#/manage/main
+      #       icon: mdi:security-network
+      # - type: entities
+      #   title: Home Modes
+      #   show_header_toggle: false
+      #   entities:
+      #     - input_boolean.party_mode
+      #     - input_boolean.guest_mode
+      #     - input_boolean.vacation_mode
+
       # HVAC
       - type: entities
         title: Climate
@@ -125,38 +132,18 @@ views:
               controls: true
               power: true
 
-      # Lights
-      - type: entities
-        title: Lights
-        show_header_toggle: false
-        entities:
-          - type: section
-            label: Downstairs
-          - light.living_room
-          - light.dining_room
-          - light.kitchen
-          - light.media
-          - light.playroom
-          - light.hallway
-          - light.stairway
-          - light.sink
-          - type: section
-            label: Upstairs
-          - light.bed
-          - light.office
-          - type: section
-            label: Outside
-          - light.back_door
-          - light.garage
-          - light.front_porch
-
-  ##     ## ####  ######   ######  ######## ##       ##          ###    ##    ## ########  #######  ##     ##  ######
-  ###   ###  ##  ##    ## ##    ## ##       ##       ##         ## ##   ###   ## ##       ##     ## ##     ## ##    ##
-  #### ####  ##  ##       ##       ##       ##       ##        ##   ##  ####  ## ##       ##     ## ##     ## ##
-  ## ### ##  ##   ######  ##       ######   ##       ##       ##     ## ## ## ## ######   ##     ## ##     ##  ######
-  ##     ##  ##        ## ##       ##       ##       ##       ######### ##  #### ##       ##     ## ##     ##       ##
-  ##     ##  ##  ##    ## ##    ## ##       ##       ##       ##     ## ##   ### ##       ##     ## ##     ## ##    ##
-  ##     ## ####  ######   ######  ######## ######## ######## ##     ## ##    ## ########  #######   #######   ######
+      - type: custom:vertical-stack-in-card
+        title: Network Traffic
+        cards:
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_total
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_up
+              - entity: sensor.unifi_traffic_down
 
   - title: Miscellaneous
     cards:
@@ -218,28 +205,3 @@ views:
           - title: Address
             field: summary
             regex: ".+?\\s-"
-  ##    ## ######## ######## ##      ##  #######  ########  ##    ##
-  ###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
-  ####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
-  ## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
-  ##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
-  ##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
-  ##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
-  # - title: Network
-  #   cards:
-  #     - type: vertical-stack
-  #       cards:
-  #         - type: history-graph
-  #           title: Wireless Network Data
-  #           entities:
-  #             - entity: sensor.amplifi_router_kbyte_sec_sent
-  #               name: Sent
-  #             - entity: sensor.amplifi_router_kbyte_sec_received
-  #               name: Received
-  #         - type: history-graph
-  #           title: Wireless Network Packets
-  #           entities:
-  #             - entity: sensor.amplifi_router_packets_sec_sent
-  #               name: Sent
-  #             - entity: sensor.amplifi_router_packets_sec_received
-  #               name: Received
