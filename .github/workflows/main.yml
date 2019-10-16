@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: Getting your configuration from GitHub
         uses: actions/checkout@v1
-      - name: Copy secrets into configuration folder
-        run: cp ./secrets.test.yaml ./config/secrets.yaml
       - name: Home Assistant Version
         uses: "docker://homeassistant/home-assistant:stable"
         with:
@@ -32,7 +30,7 @@ jobs:
       - name: Home Assistant Check
         uses: "docker://homeassistant/home-assistant:stable"
         with:
-          args: python -m homeassistant --config ./config/ --script check_config --info all
+          args: python -m homeassistant --config . --script check_config --info all
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
