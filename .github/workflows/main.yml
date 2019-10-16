@@ -1,4 +1,4 @@
-name: Verify Home Assistant configuration
+name: verify-home-assistant-config
 
 # yamllint disable-line rule:truthy
 on:
