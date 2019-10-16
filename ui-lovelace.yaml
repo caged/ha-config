@@ -9,6 +9,31 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
+      # Lights
+      - type: entities
+        title: Lights
+        show_header_toggle: false
+        entities:
+          - type: section
+            label: Downstairs
+          - light.living_room
+          - light.dining_room
+          - light.kitchen
+          - light.media
+          - light.playroom
+          - light.hallway
+          - light.stairway
+          - light.sink
+          - type: section
+            label: Upstairs
+          - light.bed
+          - light.office
+          - type: section
+            label: Outside
+          - light.back_door
+          - light.garage
+          - light.front_porch
+
       - type: entities
         show_header_toggle: false
         entities:
@@ -117,31 +142,6 @@ views:
             hide:
               controls: true
               power: true
-
-      # Lights
-      - type: entities
-        title: Lights
-        show_header_toggle: false
-        entities:
-          - type: section
-            label: Downstairs
-          - light.living_room
-          - light.dining_room
-          - light.kitchen
-          - light.media
-          - light.playroom
-          - light.hallway
-          - light.stairway
-          - light.sink
-          - type: section
-            label: Upstairs
-          - light.bed
-          - light.office
-          - type: section
-            label: Outside
-          - light.back_door
-          - light.garage
-          - light.front_porch
 
   - title: Miscellaneous
     cards:
