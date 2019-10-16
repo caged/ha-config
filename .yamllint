@@ -4,5 +4,5 @@ ignore: |
 rules:
   document-start: disable
   line-length:
-    level: error
-    max: 80
+    level: warning
+    max: 120
