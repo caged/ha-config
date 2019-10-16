@@ -14,15 +14,19 @@
     service: light.turn_off
     entity_id: group.outside_lights
 
-- alias: Test media light state swap
+- alias: Set Front Porch lights to Halloween during season
   trigger:
     platform: state
     entity_id: light.media
     to: "on"
+  condition:
+    condition: state
+    entity_id: binary_sensor.halloween_season
+    state: "on"
   action:
     service: notify.ios_justins_iphone
     data:
-      title: "Lights are on"
+      title: "Halloween"
       message: "The lights are on"
 
 - alias: Turn on the media lights after the sun sets
