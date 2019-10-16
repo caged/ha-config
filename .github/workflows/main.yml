@@ -1,17 +1,32 @@
 name: Verify Home Assistant configuration
 
-on: [push]
+# yamllint disable-line rule:truthy
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: 0 12 * * *
 
 jobs:
-  build:
-
+  yamllint:
     runs-on: ubuntu-latest
     steps:
-      - name: Run the config check
-        uses: docker://homeassistant/home-assistant:0.97.2
-      - run: |
-          cd /usr/src/app
-          hassio ha check --config $GITHUB_WORKSPACE
+      - name: Getting your configuration from GitHub
+        uses: actions/checkout@v1
+      - name: Running YAMLlint
+        uses: "docker://pipelinecomponents/yamllint:latest"
+        with:
+          args: yamllint .
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Run the config check
+#         uses: docker://homeassistant/home-assistant:0.97.2
+#       - run: |
+#           cd /usr/src/app
+#           hassio ha check --config $GITHUB_WORKSPACE
+
 #     steps:
 #     - uses: actions/checkout@master
 #     - name: Run a one-line script
