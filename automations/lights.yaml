@@ -1,3 +1,4 @@
+---
 - alias: Turn on the outside lights when the sun sets
   trigger:
     platform: sun
