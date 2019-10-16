@@ -17,17 +17,17 @@
 - alias: Set Front Porch lights to Halloween during season
   trigger:
     platform: state
-    entity_id: light.media
+    entity_id: light.front_porch
     to: "on"
   condition:
     condition: state
     entity_id: binary_sensor.halloween_season
     state: "on"
   action:
-    service: notify.ios_justins_iphone
+    service: hue.hue_activate_scene
     data:
-      title: "Halloween"
-      message: "The lights are on"
+      group_name: "Front Porch"
+      scene_name: "Halloween"
 
 - alias: Turn on the media lights after the sun sets
   trigger:
