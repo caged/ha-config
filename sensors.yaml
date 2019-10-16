@@ -73,9 +73,6 @@
 - platform: feedparser
   name: Portland liquor licenses
   feed_url: "https://www.portlandoregon.gov/rss.cfm?c=69018"
-- platform: xfinity
-  username: !secret xfinity_username
-  password: !secret xfinity_password
 - platform: unifigateway
   host: !secret unifi_host
   username: !secret unifi_username
