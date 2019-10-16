@@ -34,21 +34,21 @@ views:
           - light.garage
           - light.front_porch
 
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - type: weblink
-            name: Unifi Controller Local
-            url: https://192.168.1.8:8443
-            icon: mdi:lan
-          - type: weblink
-            name: Unifi Cloud Controller
-            url: https://unifi.ubnt.com/#/controllers/1/50
-            icon: mdi:cloud-search
-          - type: weblink
-            name: Unifi Gateway
-            url: https://192.168.1.1/#/manage/main
-            icon: mdi:security-network
+      # - type: entities
+      #   show_header_toggle: false
+      #   entities:
+      #     - type: weblink
+      #       name: Unifi Controller Local
+      #       url: https://192.168.1.8:8443
+      #       icon: mdi:lan
+      #     - type: weblink
+      #       name: Unifi Cloud Controller
+      #       url: https://unifi.ubnt.com/#/controllers/1/50
+      #       icon: mdi:cloud-search
+      #     - type: weblink
+      #       name: Unifi Gateway
+      #       url: https://192.168.1.1/#/manage/main
+      #       icon: mdi:security-network
       # - type: entities
       #   title: Home Modes
       #   show_header_toggle: false
@@ -56,18 +56,7 @@ views:
       #     - input_boolean.party_mode
       #     - input_boolean.guest_mode
       #     - input_boolean.vacation_mode
-      - type: custom:vertical-stack-in-card
-        title: Network Traffic
-        cards:
-          - type: history-graph
-            hours_to_show: 24
-            entities:
-              - entity: sensor.unifi_traffic_total
-          - type: history-graph
-            hours_to_show: 24
-            entities:
-              - entity: sensor.unifi_traffic_up
-              - entity: sensor.unifi_traffic_down
+
       # HVAC
       - type: entities
         title: Climate
@@ -142,6 +131,19 @@ views:
             hide:
               controls: true
               power: true
+
+      - type: custom:vertical-stack-in-card
+        title: Network Traffic
+        cards:
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_total
+          - type: history-graph
+            hours_to_show: 24
+            entities:
+              - entity: sensor.unifi_traffic_up
+              - entity: sensor.unifi_traffic_down
 
   - title: Miscellaneous
     cards:
