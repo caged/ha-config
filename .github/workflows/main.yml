@@ -15,7 +15,7 @@ jobs:
       - name: Running YAMLlint
         uses: "docker://pipelinecomponents/yamllint:latest"
         with:
-          args: 'yamllint -d "{extends: default, rules: {document-start: disable, line-length: 100}}" .'
+          args: 'yamllint -d "{extends: default, rules: {document-start: disable, line-length: {max: 100}}}" .'
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
