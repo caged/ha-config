@@ -16,8 +16,8 @@ jobs:
         uses: "docker://pipelinecomponents/yamllint:latest"
         with:
           args: >-
-            yamllint \
-              -d "{extends: default, rules: {document-start: disable, line-length: {max: 100}}}" .
+            yamllint 
+              -d \"{extends: default, rules: {document-start: disable, line-length: {max: 100}}}\" .
 
 # jobs:
 #   build:
