@@ -7,13 +7,6 @@ resources:
     type: js
 title: Palmer Palace
 views:
-  ##     ##  #######  ##     ## ########
-  ##     ## ##     ## ###   ### ##
-  ##     ## ##     ## #### #### ##
-  ######### ##     ## ## ### ## ######
-  ##     ## ##     ## ##     ## ##
-  ##     ## ##     ## ##     ## ##
-  ##     ##  #######  ##     ## ########
   - title: Home
     cards:
       - type: entities
@@ -150,14 +143,6 @@ views:
           - light.garage
           - light.front_porch
 
-  ##     ## ####  ######   ######  ######## ##       ##          ###    ##    ## ########  #######  ##     ##  ######
-  ###   ###  ##  ##    ## ##    ## ##       ##       ##         ## ##   ###   ## ##       ##     ## ##     ## ##    ##
-  #### ####  ##  ##       ##       ##       ##       ##        ##   ##  ####  ## ##       ##     ## ##     ## ##
-  ## ### ##  ##   ######  ##       ######   ##       ##       ##     ## ## ## ## ######   ##     ## ##     ##  ######
-  ##     ##  ##        ## ##       ##       ##       ##       ######### ##  #### ##       ##     ## ##     ##       ##
-  ##     ##  ##  ##    ## ##    ## ##       ##       ##       ##     ## ##   ### ##       ##     ## ##     ## ##    ##
-  ##     ## ####  ######   ######  ######## ######## ######## ##     ## ##    ## ########  #######   #######   ######
-
   - title: Miscellaneous
     cards:
       - type: entities
@@ -218,28 +203,3 @@ views:
           - title: Address
             field: summary
             regex: ".+?\\s-"
-  ##    ## ######## ######## ##      ##  #######  ########  ##    ##
-  ###   ## ##          ##    ##  ##  ## ##     ## ##     ## ##   ##
-  ####  ## ##          ##    ##  ##  ## ##     ## ##     ## ##  ##
-  ## ## ## ######      ##    ##  ##  ## ##     ## ########  #####
-  ##  #### ##          ##    ##  ##  ## ##     ## ##   ##   ##  ##
-  ##   ### ##          ##    ##  ##  ## ##     ## ##    ##  ##   ##
-  ##    ## ########    ##     ###  ###   #######  ##     ## ##    ##
-  # - title: Network
-  #   cards:
-  #     - type: vertical-stack
-  #       cards:
-  #         - type: history-graph
-  #           title: Wireless Network Data
-  #           entities:
-  #             - entity: sensor.amplifi_router_kbyte_sec_sent
-  #               name: Sent
-  #             - entity: sensor.amplifi_router_kbyte_sec_received
-  #               name: Received
-  #         - type: history-graph
-  #           title: Wireless Network Packets
-  #           entities:
-  #             - entity: sensor.amplifi_router_packets_sec_sent
-  #               name: Sent
-  #             - entity: sensor.amplifi_router_packets_sec_received
-  #               name: Received
