@@ -3,6 +3,15 @@
   country: US
 - platform: template
   sensors:
+    # Lets say haloween "season" is between Oct 7 - Nov 7 for the purpose
+    # of things like haloween lights, etc
+    halloween_season:
+      friendly_name: "Halloween season"
+      value_template: "{{ (10, 7) < (now().month, now().day) < (11, 7) }}"
+    # Lets say Christmas "season" is December.
+    christmas_season:
+      friendly_name: "Christmas season"
+      value_template: "{{ now().month == 12 }}"
     home_occupied:
       friendly_name: "Home occupied"
       value_template: >-

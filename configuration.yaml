@@ -158,6 +158,11 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 
+utility_meter:
+  unifi_meter:
+    source: sensor.unifi_traffic_total
+    cycle: daily
+
 http:
   # api_password: qZ@9Puvhk3}Wx
   ip_ban_enabled: true

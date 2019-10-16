@@ -14,6 +14,36 @@
     service: light.turn_off
     entity_id: group.outside_lights
 
+- alias: Set Front Porch lights to Halloween during season
+  trigger:
+    platform: state
+    entity_id: light.front_porch
+    to: "on"
+  condition:
+    condition: state
+    entity_id: binary_sensor.halloween_season
+    state: "on"
+  action:
+    service: hue.hue_activate_scene
+    data:
+      group_name: "Front Porch"
+      scene_name: "Halloween"
+
+- alias: Set Front Porch lights to Christmas during season
+  trigger:
+    platform: state
+    entity_id: light.front_porch
+    to: "on"
+  condition:
+    condition: state
+    entity_id: binary_sensor.christmas_season
+    state: "on"
+  action:
+    service: hue.hue_activate_scene
+    data:
+      group_name: "Front Porch"
+      scene_name: "Christmas"
+
 - alias: Turn on the media lights after the sun sets
   trigger:
     platform: sun
