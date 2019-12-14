@@ -51,13 +51,11 @@ views:
       #       name: Unifi Gateway
       #       url: https://192.168.1.1/#/manage/main
       #       icon: mdi:security-network
-      # - type: entities
-      #   title: Home Modes
-      #   show_header_toggle: false
-      #   entities:
-      #     - input_boolean.party_mode
-      #     - input_boolean.guest_mode
-      #     - input_boolean.vacation_mode
+      - type: entities
+        title: Home Modes
+        show_header_toggle: false
+        entities:
+          - input_boolean.debug_mode
 
       # HVAC
       - type: entities
