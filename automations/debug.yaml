@@ -1,14 +1,11 @@
-- alias: Notify Justin's Phone when front porch lights comes on
+- alias: A monitored light come on
   trigger:
     platform: state
     entity_id:
-      - light.fpc1
-      - light.fpc2
+      - light.h1
+      - light.h2
+      - light.h3
     to: "on"
-  condition:
-    - condition: state
-      entity_id: input_boolean.debug_mode
-      state: "on"
   action:
     service: notify.mobile_app_justin_palmers_iphone
     data_template:
