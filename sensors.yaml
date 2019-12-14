@@ -32,12 +32,12 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
-    climate_camdens_bedroom:
-      friendly_name: "Camden's Bedroom"
-      value_template: "{{ states('sensor.camdens_room_temperature') }}"
+    climate_guest_bedroom:
+      friendly_name: "Guest Bedroom"
+      value_template: "{{ states('sensor.guest_bedroom_temperature') }}"
       unit_of_measurement: "º"
       icon_template: >-
-        {% if is_state('binary_sensor.camdens_room_occupancy', 'on') %}
+        {% if is_state('binary_sensor.guest_bedroom_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
           mdi:account-off-outline
