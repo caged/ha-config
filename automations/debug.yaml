@@ -10,7 +10,7 @@
     service: notify.mobile_app_justin_palmers_iphone
     data_template:
       title: "A light turned on"
-      message: "The {{ trigger.to_state.attributes.friendly_name }} turned on"
+      message: "The light {{ trigger.to_state.attributes.friendly_name }} turned on yo"
 # - alias: Notify Justin's Phone when left front porch light comes on
 #   trigger:
 #     platform: state
