@@ -107,12 +107,11 @@ sun:
 
 # Binary sensors
 binary_sensor: !include binary_sensors.yaml
-
-# Sensors
 sensor: !include sensors.yaml
-
-# Switches
 switch: !include switches.yaml
+group: !include groups.yaml
+automation: !include_dir_merge_list automations
+script: !include scripts.yaml
 
 input_boolean:
   debug_mode:
@@ -157,10 +156,6 @@ zone:
     longitude: -122.63590812433561
     radius: 100
     icon: mdi:school
-
-group: !include groups.yaml
-automation: !include_dir_merge_list automations
-script: !include scripts.yaml
 
 utility_meter:
   unifi_meter:
