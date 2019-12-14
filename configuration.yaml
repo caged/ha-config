@@ -148,12 +148,12 @@ zone:
   - name: Home
     latitude: !secret home_lat
     longitude: !secret home_lon
-    radius: 100
+    radius: 50
     icon: mdi:shield-home
   - name: School
     latitude: !secret school_lat
     longitude: !secret school_lon
-    radius: 100
+    radius: 50
     icon: mdi:school
 
 utility_meter:
