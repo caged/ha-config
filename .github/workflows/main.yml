@@ -33,21 +33,3 @@ jobs:
         uses: "docker://homeassistant/home-assistant:stable"
         with:
           args: python -m homeassistant --config . --script check_config --info all
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Run the config check
-#         uses: docker://homeassistant/home-assistant:0.97.2
-#       - run: |
-#           cd /usr/src/app
-#           hassio ha check --config $GITHUB_WORKSPACE
-
-#     steps:
-#     - uses: actions/checkout@master
-#     - name: Run a one-line script
-#       run: echo Hello, world!
-#     - name: Run a multi-line script
-#       run: |
-#         echo Add other actions to build,
-#         echo test, and deploy your project.
