@@ -17,8 +17,8 @@
   trigger:
     platform: state
     entity_id:
-      - light.fpc1
-      - light.fpc2
+      - light.front_porch_right
+      - light.front_porch_left
       - light.front_porch
     to: "off"
   condition:
