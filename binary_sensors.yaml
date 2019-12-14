@@ -20,7 +20,7 @@
         {{  is_state('binary_sensor.cool_breeze_occupancy', 'on') or
             is_state('binary_sensor.justin_s_office_occupancy', 'on') or
             is_state('binary_sensor.master_bedroom_occupancy', 'on') or
-            is_state('binary_sensor.camden_s_room_occupancy', 'on')
+            is_state('binary_sensor.camdens_room_occupancy', 'on')
         }}
     awake:
       friendly_name: "Awake"

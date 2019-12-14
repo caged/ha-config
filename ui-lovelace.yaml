@@ -156,7 +156,7 @@ views:
           - binary_sensor.home_occupied
           - binary_sensor.justin_s_office_occupancy
           - binary_sensor.master_bedroom_occupancy
-          - binary_sensor.camden_s_room_occupancy
+          - binary_sensor.camdens_room_occupancy
           - binary_sensor.cool_breeze_occupancy
           - switch.kitchen_wemo_insight
           - binary_sensor.washer_status
