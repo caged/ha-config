@@ -1,7 +1,7 @@
 - alias: Notify Justin's Phone when front porch lights comes on
   trigger:
     platform: state
-    entities:
+    entity_id:
       - light.fpc1
       - light.fpc2
     to: "on"
