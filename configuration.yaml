@@ -50,7 +50,7 @@ lovelace:
 
 # camera:
 #   - platform: ring
-
+mobile_app:
 ios:
 
 wemo:
