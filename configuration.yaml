@@ -153,7 +153,6 @@ zone:
     radius: 100
     icon: mdi:school
 
-# 45.4896677,-122.638002
 group: !include groups.yaml
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
@@ -164,11 +163,5 @@ utility_meter:
     cycle: daily
 
 http:
-  # api_password: qZ@9Puvhk3}Wx
   ip_ban_enabled: true
   login_attempts_threshold: 3
-# panel_iframe:
-#   configurator:
-#     title: Configurator
-#     url: https://justinshome.duckdns.org:3218
-#     icon: mdi:xml
