@@ -13,7 +13,7 @@
     christmas_season:
       friendly_name: "Christmas season"
       value_template: >-
-      {{ now().month == 12 }}
+        {{ now().month == 12 }}
     home_occupied:
       friendly_name: "Home occupied"
       value_template: >-
