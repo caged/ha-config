@@ -39,6 +39,7 @@ remote:
 hue:
   bridges:
     - host: 192.168.100.52
+      allow_unreachable: true
 
 notify:
   - name: notify_ecobee
