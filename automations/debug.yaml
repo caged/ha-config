@@ -1,10 +1,8 @@
-- alias: A monitored light come on
+- alias: A monitored light or light group turned on
   trigger:
     platform: state
     entity_id:
-      - light.h1
-      - light.h2
-      - light.h3
+      - light.front_porch
     to: "on"
   condition:
     - condition: state
@@ -14,18 +12,21 @@
     service: notify.mobile_app_justin_palmers_iphone
     data_template:
       title: "A light turned on"
-      message: "The light {{ trigger.to_state.attributes.friendly_name }} turned on yo"
-# - alias: Notify Justin's Phone when left front porch light comes on
-#   trigger:
-#     platform: state
-#     entity_id: light.fpc2
-#     to: "on"
-#   condition:
-#     - condition: state
-#       entity_id: input_boolean.debug_mode
-#       state: "on"
-#   action:
-#     service: notify.ios_justin_palmers_iphone
-#     data:
-#       title: "Front porch - left light on"
-#       message: "its on"
+      message: "{{ trigger.to_state.attributes.friendly_name }} turned on"
+- alias: A monitored light or light group turned off
+  trigger:
+    platform: state
+    entity_id:
+      - light.fpc1
+      - light.fpc2
+      - light.front_porch
+    to: "off"
+  condition:
+    - condition: state
+      entity_id: input_boolean.debug_mode
+      state: "on"
+  action:
+    service: notify.mobile_app_justin_palmers_iphone
+    data_template:
+      title: "A light turned off"
+      message: "{{ trigger.to_state.attributes.friendly_name }} turned off"
