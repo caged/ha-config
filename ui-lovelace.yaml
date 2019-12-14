@@ -30,6 +30,8 @@ views:
             label: Upstairs
           - light.bed
           - light.office
+          - light.bathroom
+          - light.upstairs_hallway
           - type: section
             label: Outside
           - light.back_door

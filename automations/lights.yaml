@@ -48,13 +48,6 @@
   trigger:
     platform: sun
     event: sunset
-  condition:
-    - condition: state
-      entity_id: input_boolean.guest_mode
-      state: "off"
-    - condition: state
-      entity_id: input_boolean.vacation_mode
-      state: "off"
   action:
     service: light.turn_on
     entity_id: light.media
