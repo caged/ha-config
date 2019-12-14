@@ -6,6 +6,10 @@
       - light.h2
       - light.h3
     to: "on"
+  condition:
+    - condition: state
+      entity_id: input_boolean.debug_mode
+      state: "on"
   action:
     service: notify.mobile_app_justin_palmers_iphone
     data_template:
