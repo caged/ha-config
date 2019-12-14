@@ -28,9 +28,9 @@ views:
           - light.sink
           - type: section
             label: Upstairs
-          - light.bed
+          - light.bedroom
           - light.office
-          - light.bathroom
+          - light.main_bathroom
           - light.upstairs_hallway
           - type: section
             label: Outside
