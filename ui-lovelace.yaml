@@ -5,6 +5,8 @@ resources:
     type: js
   - url: /local/lovelace/vertical-stack-in-card.js?v=0.1.3
     type: js
+  - url: /local/lovelace/interface.css
+    type: css
 title: Palmer Palace
 views:
   - title: Home
