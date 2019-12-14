@@ -115,6 +115,10 @@ sensor: !include sensors.yaml
 switch: !include switches.yaml
 
 input_boolean:
+  debug_mode:
+    name: Debug Mode
+    initial: off
+    icon: mdi:fingerprint
   guest_mode:
     name: Guest Mode
     initial: off
