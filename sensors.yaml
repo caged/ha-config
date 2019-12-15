@@ -5,9 +5,9 @@
     climate_living_room:
       friendly_name: "Living Room"
       unit_of_measurement: "º"
-      value_template: "{{ states('sensor.cool_breeze_temperature') }}"
+      value_template: "{{ states('sensor.living_room_temperature') }}"
       icon_template: >-
-        {% if is_state('binary_sensor.cool_breeze_occupancy', 'on') %}
+        {% if is_state('binary_sensor.living_room_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
           mdi:account-off-outline
