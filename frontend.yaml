@@ -9,7 +9,6 @@ themes:
   #################################################################
 
   midnight:
-    background-image: 'center / cover no-repeat url("/local/background.jpg") fixed'
     ha-card-border-radius: "7px" # Radius on card borders
     ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.45)"
 
@@ -28,7 +27,7 @@ themes:
     label-badge-border-color: "green" # Label badge border, just a reference value
 
     # Background colors
-    primary-background-color: "#000000" # Settings background
+    primary-background-color: "#111111" # Settings background
     secondary-background-color: "#5e5e5e" # Main card UI background
     divider-color: "rgba(0, 0, 0, .12)" # Divider
 
