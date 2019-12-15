@@ -69,7 +69,7 @@ views:
           - type: divider
           - sensor.climate_living_room
           - sensor.climate_office
-          - sensor.climate_primary_bedroom
+          - sensor.climate_main_bedroom
           - sensor.climate_guest_bedroom
 
       # Weather

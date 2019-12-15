@@ -12,22 +12,22 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
-    climate_primary_bedroom:
-      friendly_name: "Primary Bedroom"
-      value_template: "{{ states('sensor.master_bedroom_temperature') }}"
+    climate_main_bedroom:
+      friendly_name: "Main Bedroom"
+      value_template: "{{ states('sensor.main_bedroom_temperature') }}"
       unit_of_measurement: "º"
       icon_template: >-
-        {% if is_state('binary_sensor.master_bedroom_occupancy', 'on') %}
+        {% if is_state('binary_sensor.main_bedroom_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
           mdi:account-off-outline
         {% endif %}
     climate_office:
       friendly_name: "Office"
-      value_template: "{{ states('sensor.justin_s_office_temperature') }}"
+      value_template: "{{ states('sensor.office_temperature') }}"
       unit_of_measurement: "º"
       icon_template: >-
-        {% if is_state('binary_sensor.justin_s_office_occupancy', 'on') %}
+        {% if is_state('binary_sensor.office_occupancy', 'on') %}
           mdi:run-fast
         {% else %}
           mdi:account-off-outline
