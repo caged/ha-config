@@ -200,7 +200,6 @@ views:
             field: title
             add_link: link
             style:
-              - white-space: nowrap
               - font-weight: bold !important
           - title: Published
             field: published
