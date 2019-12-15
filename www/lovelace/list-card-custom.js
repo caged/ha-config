@@ -28,6 +28,7 @@ class ListCard extends HTMLElement {
               box-sizing: border-box;
               border-collapse: collapse;
               font-size: 12px;
+              margin: 0 10px;
             }
 
             th {
