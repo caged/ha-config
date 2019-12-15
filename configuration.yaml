@@ -105,7 +105,8 @@ feedreader:
 # Track the sun
 sun:
 
-# Binary sensors
+# External configurations
+frontend: !include frontend.yaml
 binary_sensor: !include binary_sensors.yaml
 sensor: !include sensors.yaml
 switch: !include switches.yaml
