@@ -111,7 +111,7 @@ views:
               show_group_count: true
               sync_volume: true
               entities:
-                - entity_id: media_player.sonos_office
+                - entity_id: media_player.office
                   name: Office
                 - entity_id: media_player.sonos_bedroom
                   name: Bedroom
