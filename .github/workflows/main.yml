@@ -24,12 +24,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Copy secrets into configuration folder
         run: cp secrets.test.yaml secrets.yaml
-      - name: Home Assistant Version
-        uses: "docker://homeassistant/home-assistant:stable"
-        with:
-          args: |
-            python -m homeassistant --version
       - name: Home Assistant Check
         uses: "docker://homeassistant/home-assistant:stable"
-        with:
-          args: python -m homeassistant --config . --script check_config --info all
+        run: |
+          python -m homeassistant --version
+          python -m homeassistant --config . --script check_config --info all
