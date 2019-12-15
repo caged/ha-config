@@ -5,4 +5,4 @@
   action:
     service: frontend.set_theme
     data:
-      name: midnight
+      name: default
