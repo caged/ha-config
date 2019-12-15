@@ -111,12 +111,12 @@ views:
               show_group_count: true
               sync_volume: true
               entities:
-                - entity_id: media_player.sonos_bedroom
+                - entity_id: media_player.sonos_office
                   name: Office
                 - entity_id: media_player.sonos_bedroom
                   name: Bedroom
           - type: "custom:mini-media-player"
-            entity: media_player.office
+            entity: media_player.sonos_office
             icon: mdi:speaker
             group: true
             artwork: cover
