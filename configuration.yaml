@@ -57,10 +57,6 @@ wemo:
 # Show links to resources in log and frontend
 # introduction:
 
-# Enables the frontend
-frontend:
-  # themes: !include_dir_named themes/
-
 # Enables configuration UI
 config:
 
