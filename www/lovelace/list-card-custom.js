@@ -27,7 +27,9 @@ class ListCard extends HTMLElement {
               width: 100%;
               box-sizing: border-box;
               border-collapse: collapse;
+              font-size: 12px;
             }
+
             th {
               text-align: left;
             }
