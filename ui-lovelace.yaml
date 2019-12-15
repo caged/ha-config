@@ -134,18 +134,18 @@ views:
               controls: true
               power: true
 
-      - type: custom:vertical-stack-in-card
+      - type: entities
         title: Network Traffic
-        cards:
+        show_header_toggle: false
+        entities:
           - type: history-graph
-            hours_to_show: 24
+            hours_to_show: 3
             entities:
-              - entity: sensor.unifi_traffic_total
+              - entity: sensor.unifi_traffic_down
           - type: history-graph
-            hours_to_show: 24
+            hours_to_show: 3
             entities:
               - entity: sensor.unifi_traffic_up
-              - entity: sensor.unifi_traffic_down
 
   - title: Miscellaneous
     cards:
