@@ -134,10 +134,9 @@ views:
               controls: true
               power: true
 
-      - type: entities
+      - type: custom:vertical-stack-in-card
         title: Network Traffic
-        show_header_toggle: false
-        entities:
+        cards:
           - type: history-graph
             hours_to_show: 3
             entities:
