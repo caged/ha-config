@@ -77,3 +77,15 @@
   host: !secret unifi_host
   username: !secret unifi_username
   password: !secret unifi_password
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: disk_free
+      arg: /
+    - type: memory_free
+    - type: memory_free
+    - type: memory_use_percent
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
