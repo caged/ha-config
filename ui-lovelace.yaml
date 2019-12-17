@@ -38,21 +38,6 @@ views:
           - light.garage
           - light.front_porch
 
-      # - type: entities
-      #   show_header_toggle: false
-      #   entities:
-      #     - type: weblink
-      #       name: Unifi Controller Local
-      #       url: https://192.168.1.8:8443
-      #       icon: mdi:lan
-      #     - type: weblink
-      #       name: Unifi Cloud Controller
-      #       url: https://unifi.ubnt.com/#/controllers/1/50
-      #       icon: mdi:cloud-search
-      #     - type: weblink
-      #       name: Unifi Gateway
-      #       url: https://192.168.1.1/#/manage/main
-      #       icon: mdi:security-network
       - type: entities
         title: Home Modes
         show_header_toggle: false
@@ -145,6 +130,22 @@ views:
             hours_to_show: 3
             entities:
               - entity: sensor.unifi_traffic_up
+
+      - type: custom:vertical-stack-in-card
+      title: Raspberry PI Host
+      cards:
+        - type: history-graph
+          hours_to_show: 12
+          entities:
+            - entity: sensor.load_1m
+            - entity: sensor.load_5m
+            - entity: sensor.load_15m
+        - type: history-graph
+          hours_to_show: 12
+          entities:
+            - entity: sensor.memory_use_percent
+        - type: gauge
+          entity: sensor.disk_use_percent
 
   - title: Miscellaneous
     cards:
