@@ -132,20 +132,20 @@ views:
               - entity: sensor.unifi_traffic_up
 
       - type: custom:vertical-stack-in-card
-      title: Raspberry PI Host
-      cards:
-        - type: history-graph
-          hours_to_show: 12
-          entities:
-            - entity: sensor.load_1m
-            - entity: sensor.load_5m
-            - entity: sensor.load_15m
-        - type: history-graph
-          hours_to_show: 12
-          entities:
-            - entity: sensor.memory_use_percent
-        - type: gauge
-          entity: sensor.disk_use_percent
+        title: Raspberry PI Host
+        cards:
+          - type: history-graph
+            hours_to_show: 12
+            entities:
+              - entity: sensor.load_1m
+              - entity: sensor.load_5m
+              - entity: sensor.load_15m
+          - type: history-graph
+            hours_to_show: 12
+            entities:
+              - entity: sensor.memory_use_percent
+          - type: gauge
+            entity: sensor.disk_use_percent
 
   - title: Miscellaneous
     cards:
