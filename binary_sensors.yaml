@@ -14,10 +14,6 @@
       friendly_name: "Christmas season"
       value_template: >-
         {{ now().month == 12 }}
-    christmas_season_two:
-      friendly_name: "Christmas season"
-      value_template: >-
-        {{ now().month | float == 12 }}
     home_occupied:
       friendly_name: "Home occupied"
       value_template: >-
