@@ -146,6 +146,7 @@ views:
               - entity: sensor.memory_use_percent
           - type: gauge
             entity: sensor.disk_use_percent
+            name: "Disk"
 
   - title: Miscellaneous
     cards:

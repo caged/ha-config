@@ -21,7 +21,7 @@
   action:
     service: switch.turn_off
     entity_id: switch.office_wemo
-- alias: Ping me when its too hot
+- alias: Ping me when it gets too hot in my office
   trigger:
     platform: numeric_state
     entity_id: sensor.office_temperature
