@@ -155,31 +155,14 @@ views:
           - sun.sun
           - binary_sensor.workday_sensor
           - binary_sensor.awake
-          - switch.office_wemo
+          - binary_sensor.washer_status
           - binary_sensor.home_occupied
           - binary_sensor.office_occupancy
           - binary_sensor.main_bedroom_occupancy
           - binary_sensor.guest_bedroom_occupancy
           - binary_sensor.living_room_occupancy
-          - switch.kitchen_wemo_insight
-          - binary_sensor.washer_status
           - binary_sensor.kitchen_heater_status
-      # Ring Videos
-      # - type: horizontal-stack
-      #   cards:
-      #     - type: picture-glance
-      #       title: Front Door
-      #       entities:
-      #         - binary_sensor.ring_front_door_motion
-      #         - sensor.ring_front_door_last_activity
-      #       camera_image: camera.front_door
-      #     - type: picture-glance
-      #       title: Garage
-      #       entities:
-      #         - binary_sensor.ring_garage_motion
-      #         - sensor.ring_garage_last_activity
-      #       camera_image: camera.garage
-      # Sensor graphs
+
       - type: vertical-stack
         cards:
           - type: history-graph
