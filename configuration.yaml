@@ -40,6 +40,7 @@ hue:
   bridges:
     - host: 192.168.100.52
       allow_unreachable: true
+      allow_hue_groups: true
 
 notify:
   - name: notify_ecobee
