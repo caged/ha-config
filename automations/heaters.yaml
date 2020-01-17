@@ -21,6 +21,18 @@
   action:
     service: switch.turn_off
     entity_id: switch.office_wemo
+- alias: Ping me when its too hot
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.office_temperature
+    above: 78
+    for:
+      minutes: 15
+  action:
+    service: notify.mobile_app_justin_palmers_iphone
+    data_template:
+      title: "It's hot in your office"
+      message: "It's {{ sensor.office_temperature }}º in your office.  It's been above 78º for 15 minutes."
 # - alias: Turn off office heater when temp in office stays above 73
 #   trigger:
 #     platform: numeric_state
