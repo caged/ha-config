@@ -28,10 +28,10 @@ ecobee:
 #   password: !secret ring_password
 
 apple_tv:
-  - host: 192.168.100.54
-    name: media
-  - host: 192.168.100.55
-    name: bedroom
+  # - host: 192.168.100.54
+  #   name: living_room
+  # - host: 192.168.100.55
+  #   name: bedroom
 #   login_id: !secret apple_tv_login_id
 
 remote:
