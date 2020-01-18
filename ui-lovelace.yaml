@@ -11,10 +11,6 @@ title: Palmer Palace
 views:
   - title: Home
     cards:
-      - type: history-graph
-        title: "Sun test"
-        entities:
-          - sun.sun.next_setting
       # Lights
       - type: entities
         title: Lights
