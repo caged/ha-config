@@ -214,22 +214,22 @@ views:
               controls: true
               power: true
 
-        - type: history-graph
-          title: Download
-          style: |
-            ha-card {
-              border-radius: 6px;
-              box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-            }
+      - type: history-graph
+        title: Download
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
 
-            .card-header {
-              font-size: 16px;
-              padding: 9px;
-              font-weight: bold;
-            }
-          hours_to_show: 3
-          entities:
-            - entity: sensor.unifi_traffic_down
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
+        hours_to_show: 3
+        entities:
+          - entity: sensor.unifi_traffic_down
       # - type: custom:mod-card
       #   title: Network Traffic
       #   style: |
