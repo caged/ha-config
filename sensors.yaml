@@ -1,8 +1,8 @@
 - platform: yr
-# - platform: awair
-#   access_token: !secret awair_access_token
-#   devices:
-#     - uuid: awair-r2_19522
+- platform: awair
+  access_token: !secret awair_access_token
+  devices:
+    - uuid: awair-r2_19522
 #       name: Livingroom Awair
 #     - uuid: awair-r2_18895
 #       name: Bedroom Awair
