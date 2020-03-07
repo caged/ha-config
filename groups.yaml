@@ -3,12 +3,15 @@ outside_lights:
   - light.garage
   - light.front_porch
 downstairs_lights:
-  - light.kitchen
-  - light.sink
+  - light.living_room
+  - light.lamp
   - light.dining_room
-  - light.stairway
-  - light.hallway
+  - light.kitchen
+  - light.media
   - light.playroom
+  - light.hallway
+  - light.stairway
+  - light.sink
 upstairs_lights:
   - light.office
   - light.bedroom

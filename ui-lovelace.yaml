@@ -38,6 +38,7 @@ views:
         entities:
           - type: section
             label: Downstairs
+          - group.downstairs
           - light.living_room
           - light.lamp
           - light.dining_room
