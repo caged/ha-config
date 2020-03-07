@@ -9,24 +9,24 @@ resources:
     type: module
 title: Palmer Palace
 default: &default
-  foo: "bar"
+  style: |
+    ha-card {
+      border-radius: 6px;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      font-size: 16px;
+      padding: 9px;
+      font-weight: bold;
+    }
 views:
   - title: Home
     cards:
       # Lights
       - type: entities
         title: Lights
-        style: |
-          ha-card {
-            border-radius: 6px;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-          }
-
-          .card-header {
-            font-size: 16px;
-            padding: 9px;
-            font-weight: bold;
-          }
+        <<: *default
         show_header_toggle: false
         entities:
           - type: section
