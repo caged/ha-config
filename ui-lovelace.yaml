@@ -24,7 +24,7 @@ styles: &styles
       border-bottom: 1px solid #eee;
     }
 views:
-  !include_dir_merge_list views
+  !include_dir_list views
   # - title: Miscellaneous
   #   cards:
   #     - type: entities
