@@ -45,7 +45,7 @@ views:
           - sensor.awair_score_2
           - sensor.awair_bedroom_score
       - type: history-graph
-        title: Awair Score
+        title: Awair CO2
         entities:
           - sensor.livingroom_awair_co2
           - sensor.awair_co2_2
