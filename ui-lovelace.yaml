@@ -313,7 +313,7 @@ views:
                     padding: 12px !important;
                   }
 
-                  ha-card .header .name {
+                  ha-card .header .name > span {
                     font-size: 12px;
                     color: #333;
                     opacity: 1;
