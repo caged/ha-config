@@ -17,9 +17,10 @@ styles: &styles
 
     .card-header {
       font-size: 16px;
-      padding: 9px;
+      padding: 12px;
       font-weight: bold;
-      color: blue;
+      color: #0178e1;
+      line-height: 1em;
     }
 views:
   - title: Home
