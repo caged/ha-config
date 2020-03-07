@@ -290,24 +290,15 @@ views:
       - type: horizontal-stack
         cards:
           - type: custom:mini-graph-card
+            group: true
             entities:
-              - sensor.unifi_traffic_down
+              - entity: sensor.unifi_traffic_down
+                name: "Download"
           - type: custom:mini-graph-card
+            group: true
             entities:
-              - sensor.unifi_traffic_up
-
-      - type: history-graph
-        title: Download
-        <<: *styles
-        hours_to_show: 3
-        entities:
-          - entity: sensor.unifi_traffic_down
-      - type: history-graph
-        title: Upload
-        <<: *styles
-        hours_to_show: 3
-        entities:
-          - entity: sensor.unifi_traffic_up
+              - entity: sensor.unifi_traffic_up
+                name: "Upload"
 
       # - type: custom:vertical-stack-in-card
       #   title: Raspberry PI Host
