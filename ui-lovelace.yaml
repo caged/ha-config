@@ -301,11 +301,10 @@ views:
         debug_cardmod: true
         style:
           .:
-            "ha-card":
-              "hui-horizontal-stack-card": |
-                ha-card {
-                  background: red !important;
-                }
+            "ha-card hui-horizontal-stack-card": |
+              ha-card {
+                background: red !important;
+              }
         card:
           type: horizontal-stack
           cards:
