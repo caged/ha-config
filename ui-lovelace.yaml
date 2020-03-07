@@ -203,7 +203,8 @@ views:
               controls: true
               power: true
 
-      - type: custom:mod-card
+      - type: custom:vertical-stack-in-card
+        title: Network Traffic
         style: |
           ha-card {
             border-radius: 6px;
@@ -215,18 +216,15 @@ views:
             padding: 9px;
             font-weight: bold;
           }
-        card:
-          type: custom:vertical-stack-in-card
-          title: Network Traffic
-          cards:
-            - type: history-graph
-              hours_to_show: 3
-              entities:
-                - entity: sensor.unifi_traffic_down
-            - type: history-graph
-              hours_to_show: 3
-              entities:
-                - entity: sensor.unifi_traffic_up
+        cards:
+          - type: history-graph
+            hours_to_show: 3
+            entities:
+              - entity: sensor.unifi_traffic_down
+          - type: history-graph
+            hours_to_show: 3
+            entities:
+              - entity: sensor.unifi_traffic_up
 
       - type: custom:vertical-stack-in-card
         title: Raspberry PI Host
@@ -271,43 +269,30 @@ views:
           - binary_sensor.living_room_occupancy
           - binary_sensor.kitchen_heater_status
 
-      - type: custom:mod-card
-        style: |
-          ha-card {
-            border-radius: 6px;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-          }
-
-          .card-header {
-            font-size: 16px;
-            padding: 9px;
-            font-weight: bold;
-          }
-        card:
-          type: vertical-stack
-          cards:
-            - type: history-graph
-              hours_to_show: 8
-              entities:
-                - entity: sensor.washer_power
-                  name: Washer
-            - type: history-graph
-              hours_to_show: 8
-              entities:
-                - entity: sensor.kitchen_heater_power
-                  name: Kitchen heater
-        - type: "custom:list-card-custom"
-          entity: sensor.portland_liquor_licenses
-          title: Portland liquor licenses
-          row_limit: 10
-          columns:
-            - title: Title
-              field: title
-              add_link: link
-              style:
-                - font-weight: bold !important
-            - title: Published
-              field: published
-            - title: Address
-              field: summary
-              regex: ".+?\\s-"
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            hours_to_show: 8
+            entities:
+              - entity: sensor.washer_power
+                name: Washer
+          - type: history-graph
+            hours_to_show: 8
+            entities:
+              - entity: sensor.kitchen_heater_power
+                name: Kitchen heater
+      - type: "custom:list-card-custom"
+        entity: sensor.portland_liquor_licenses
+        title: Portland liquor licenses
+        row_limit: 10
+        columns:
+          - title: Title
+            field: title
+            add_link: link
+            style:
+              - font-weight: bold !important
+          - title: Published
+            field: published
+          - title: Address
+            field: summary
+            regex: ".+?\\s-"
