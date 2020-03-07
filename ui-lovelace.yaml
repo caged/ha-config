@@ -14,13 +14,13 @@ views:
       # Lights
       - type: entities
         title: Lights
-        # style: |
-        #   ha-card {
-        #     font-variant: small-caps;
-        #   }
-        #   .card-header {
-        #     font-size: 16px;
-        #   }
+        style: |
+          ha-card {
+            font-variant: small-caps;
+          }
+          .card-header {
+            font-size: 16px;
+          }
         show_header_toggle: false
         entities:
           - type: section
