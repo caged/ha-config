@@ -1,6 +1,6 @@
 - platform: yr
-# - platform: awair
-#   access_token: !secret awair_access_token
+- platform: awair
+  access_token: !secret awair_access_token
 # - platform: ring
 - platform: template
   sensors:
