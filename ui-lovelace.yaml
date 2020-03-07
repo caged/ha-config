@@ -302,19 +302,10 @@ views:
         style:
           .:
             "ha-card":
-              .: |
+              "hui-horizontal-stack-card": |
                 ha-card {
                   background: red !important;
                 }
-          # "hui-horizontal-stack-card":
-          #   .: |
-          #     ha-card {
-          #       background: red;
-          #     }
-          #   $: |
-          #     ha-card {
-          #       background: green;
-          #     }
         card:
           type: horizontal-stack
           cards:
