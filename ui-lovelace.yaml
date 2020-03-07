@@ -300,8 +300,8 @@ views:
         title: "Network"
         debug_cardmod: true
         style:
-          .:
-            hui-horizontal-stack-card: |
+          hui-horizontal-stack-card:
+            $: |
               ha-card {
                 background: red !important;
               }
