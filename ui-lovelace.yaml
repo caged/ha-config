@@ -21,6 +21,7 @@ styles: &styles
       font-weight: bold;
       color: #0178e1;
       line-height: 1em;
+      border-bottom: 1px solid #eee;
     }
 views:
   - title: Home
