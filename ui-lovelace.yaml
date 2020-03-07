@@ -314,14 +314,13 @@ views:
                   }
 
                   ha-card .header .name > span {
-                    font-size: 12px;
+                    font-size: 14px;
                     color: #333;
                     opacity: 1;
                   }
 
                   ha-card .state {
                     padding: 0 12px;
-                    font-size: 12px;
                   }
         card:
           type: horizontal-stack
