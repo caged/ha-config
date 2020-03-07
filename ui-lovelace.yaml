@@ -287,18 +287,21 @@ views:
               controls: true
               power: true
 
-      - type: horizontal-stack
-        cards:
-          - type: custom:mini-graph-card
-            group: true
-            entities:
-              - entity: sensor.unifi_traffic_down
-                name: "Download"
-          - type: custom:mini-graph-card
-            group: true
-            entities:
-              - entity: sensor.unifi_traffic_up
-                name: "Upload"
+      - type: custom:mod-card
+        title: "Network"
+        card:
+          type: horizontal-stack
+          cards:
+            - type: custom:mini-graph-card
+              group: true
+              entities:
+                - entity: sensor.unifi_traffic_down
+                  name: "Download"
+            - type: custom:mini-graph-card
+              group: true
+              entities:
+                - entity: sensor.unifi_traffic_up
+                  name: "Upload"
 
       # - type: custom:vertical-stack-in-card
       #   title: Raspberry PI Host
