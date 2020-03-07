@@ -89,13 +89,13 @@ views:
         name: Awair Score
         icon: mdi:percent
         <<: *styles
-      color_thresholds:
-        - value: 0
-          color: "#ff7a3d"
-        - value: 60
-          color: "#fad242"
-        - value: 80
-          color: "#afd81c"
+        color_thresholds:
+          - value: 0
+            color: "#ff7a3d"
+          - value: 60
+            color: "#fad242"
+          - value: 80
+            color: "#afd81c"
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
