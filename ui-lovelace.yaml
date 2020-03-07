@@ -305,7 +305,8 @@ views:
               mini-graph-card:
                 $: |
                   ha-card {
-                    background-color: red !important;
+                    padding: 6px;
+                    border-radius: 3px;
                   }
         card:
           type: horizontal-stack
