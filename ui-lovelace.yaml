@@ -217,7 +217,7 @@ views:
 
       - type: history-graph
         title: Download
-        icon: mdi:download
+        icon: mdi:home
         <<: *styles
         hours_to_show: 3
         entities:
