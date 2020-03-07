@@ -47,6 +47,15 @@ styles: &styles
       color: #333 !important;
       opacity: 1 !important;
     }
+
+    hui-horizontal-stack-card {
+      background: #fff;
+    }
+
+    hui-horizontal-stack-card .name {
+      padding: 9px;
+      font-size: 12px;
+    }
 views:
   - title: Home
     icon: mdi:home-circle-outline
