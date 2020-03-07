@@ -27,6 +27,8 @@ views:
   - title: Home
     cards:
       - type: thermostat
+        title: Thermostat
+        <<: *styles
         entity: climate.living_room
       # Lights
       - type: entities
