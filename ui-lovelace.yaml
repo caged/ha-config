@@ -301,6 +301,10 @@ views:
         debug_cardmod: true
         style:
           $: |
+            hui-horizontal-stack-card  ha-card {
+              background: yellow;
+            }
+
             :host {
               background: blue;
             }
