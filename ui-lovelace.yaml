@@ -38,7 +38,8 @@ views:
         entities:
           - type: section
             label: Downstairs
-          - group.downstairs_lights
+          - entity: group.downstairs_lights
+            name: Downstairs Lights
           - light.living_room
           - light.lamp
           - light.dining_room
@@ -50,12 +51,16 @@ views:
           - light.sink
           - type: section
             label: Upstairs
+          - entity: group.upstairs_lights
+            name: Upstairs Lights
           - light.bedroom_main
           - light.office
           - light.main_bathroom
           - light.upstairs_hallway
           - type: section
             label: Outside
+          - entity: group.outside_lights
+            name: Outside Lights
           - light.back_door
           - light.garage
           - light.front_porch
