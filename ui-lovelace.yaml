@@ -89,7 +89,6 @@ views:
         name: Awair Score
         icon: mdi:percent
         <<: *styles
-        line_width: 3
         show:
           points: true
         line_color:
