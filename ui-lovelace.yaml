@@ -204,6 +204,7 @@ views:
               power: true
 
       - type: custom:mod-card
+        title: Network Traffic
         style: |
           ha-card {
             border-radius: 6px;
@@ -217,7 +218,6 @@ views:
           }
         card:
           type: vertical-stack
-          title: Network Traffic
           cards:
             - type: history-graph
               hours_to_show: 3
