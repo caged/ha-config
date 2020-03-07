@@ -34,6 +34,7 @@ views:
       # HVAC
       - type: entities
         title: Climate
+        icon: mdi:thermometer-lines
         <<: *styles
         show_header_toggle: false
         entities:
