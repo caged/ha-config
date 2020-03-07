@@ -27,7 +27,7 @@ views:
   - title: Home
     cards:
       - type: thermostat
-        entity: climate.ecobee
+        entity: climate.living_room
       # Lights
       - type: entities
         title: Lights
