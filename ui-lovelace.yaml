@@ -50,6 +50,7 @@ views:
       # Lights
       - type: entities
         title: Lights
+        icon: mdi:ceiling-light
         <<: *styles
         show_header_toggle: false
         entities:
@@ -216,12 +217,14 @@ views:
 
       - type: history-graph
         title: Download
+        icon: mdi:download-network-outline
         <<: *styles
         hours_to_show: 3
         entities:
           - entity: sensor.unifi_traffic_down
       - type: history-graph
         title: Upload
+        icon: mdi:upload-network-outline
         <<: *styles
         hours_to_show: 3
         entities:
