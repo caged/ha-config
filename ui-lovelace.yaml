@@ -74,6 +74,37 @@ views:
             name: Bedroom
           - entity: sensor.awair_co2_office
             name: Office
+      - type: history-graph
+        title: Awair Temperature
+        <<: *styles
+        entities:
+          - entity: sensor.awair_temperature_livingroom
+            name: Livingroom
+          - entity: sensor.awair_temperature_bedroom
+            name: Bedroom
+          - entity: sensor.awair_temperature_office
+            name: Office
+      - type: history-graph
+        title: Awair Chemicals
+        <<: *styles
+        entities:
+          - entity: sensor.awair_voc_livingroom
+            name: Livingroom
+          - entity: sensor.awair_voc_bedroom
+            name: Bedroom
+          - entity: sensor.awair_voc_office
+            name: Office
+      - type: history-graph
+        title: Awair Particles
+        <<: *styles
+        entities:
+          - entity: sensor.awair_pm2_5_livingroom
+            name: Livingroom
+          - entity: sensor.awair_pm2_5_bedroom
+            name: Bedroom
+          - entity: sensor.awair_pm2_5_office
+            name: Office
+
       - type: entities
         title: Home Modes
         <<: *styles
