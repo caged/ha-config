@@ -287,6 +287,15 @@ views:
               controls: true
               power: true
 
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.unifi_traffic_down
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.unifi_traffic_up
+
       - type: history-graph
         title: Download
         <<: *styles
@@ -299,29 +308,7 @@ views:
         hours_to_show: 3
         entities:
           - entity: sensor.unifi_traffic_up
-      # - type: custom:mod-card
-      #   title: Network Traffic
-      #   style: |
-      #     ha-card {
-      #       border-radius: 6px;
-      #       box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-      #     }
-      #     .card-header {
-      #       font-size: 16px;
-      #       padding: 9px;
-      #       font-weight: bold;
-      #     }
-      #   card:
-      #     type: vertical-stack
-      #     cards:
-      #       - type: history-graph
-      #         hours_to_show: 3
-      #         entities:
-      #           - entity: sensor.unifi_traffic_down
-      #       - type: history-graph
-      #         hours_to_show: 3
-      #         entities:
-      #           - entity: sensor.unifi_traffic_up
+
       # - type: custom:vertical-stack-in-card
       #   title: Raspberry PI Host
       #   cards:
