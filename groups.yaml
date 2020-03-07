@@ -13,5 +13,7 @@ downstairs_lights:
   - light.stairway
   - light.sink
 upstairs_lights:
+  - light.bedroom_main
   - light.office
-  - light.bedroom
+  - light.main_bathroom
+  - light.upstairs_hallway
