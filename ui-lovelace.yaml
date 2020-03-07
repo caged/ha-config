@@ -261,6 +261,7 @@ views:
       #       name: "Disk"
 
   - title: Miscellaneous
+    icon: mdi:hexagon-multiple-outline
     cards:
       - type: entities
         <<: *styles
