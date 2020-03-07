@@ -8,6 +8,8 @@ resources:
   - url: /local/lovelace/card-mod.js
     type: module
 title: Palmer Palace
+default: &default
+  foo: "bar"
 views:
   - title: Home
     cards:
