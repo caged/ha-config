@@ -86,8 +86,9 @@ views:
           - light.front_porch
 
       - type: custom:mini-graph-card
-        name: SERVER
+        name: Awair Score
         icon: mdi:percent
+        <<: *styles
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
