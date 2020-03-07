@@ -161,7 +161,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Awair Temperature
-        icon: mdi:thermostat
+        icon: mdi:thermometer-lines
         <<: *styles
         line_width: 4
         show:
@@ -180,7 +180,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Awair Chemicals
-        icon: mdi:periodic-table-co2
+        icon: mdi:biohazard
         <<: *styles
         line_width: 4
         show:
@@ -199,7 +199,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Awair Dust Particles
-        icon: mdi:periodic-table-co2
+        icon: mdi:air-filter
         <<: *styles
         line_width: 4
         show:
