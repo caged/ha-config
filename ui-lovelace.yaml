@@ -21,6 +21,9 @@ styles: &styles
       padding: 12px;
       line-height: 1em;
       border-bottom: 1px solid #eee;
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
     }
 
     .name {
