@@ -334,6 +334,7 @@ views:
                 - entity: sensor.unifi_traffic_down
                   name: "Download"
             - type: custom:mini-graph-card
+              icon: mdi:progress-upload
               group: true
               entities:
                 - entity: sensor.unifi_traffic_up
