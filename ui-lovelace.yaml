@@ -17,8 +17,9 @@ views:
         style: |
           ha-card {
             border-radius: 6px;
-            box-shadow: none;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
           }
+
           .card-header {
             font-size: 16px;
             padding: 9px;
@@ -50,6 +51,17 @@ views:
 
       - type: history-graph
         title: Awair Score
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
@@ -59,6 +71,17 @@ views:
             name: Office
       - type: history-graph
         title: Awair CO2
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         entities:
           - entity: sensor.awair_co2_livingroom
             name: Livingroom
@@ -75,6 +98,17 @@ views:
       # HVAC
       - type: entities
         title: Climate
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         show_header_toggle: false
         entities:
           - entity: climate.living_room
@@ -87,10 +121,32 @@ views:
 
       # Weather
       - type: weather-forecast
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         entity: weather.dark_sky
 
       # Media and apple tv
       - type: entities
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         title: Media
         show_header_toggle: false
         entities:
@@ -149,6 +205,17 @@ views:
 
       - type: custom:vertical-stack-in-card
         title: Network Traffic
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         cards:
           - type: history-graph
             hours_to_show: 3
@@ -179,6 +246,17 @@ views:
   - title: Miscellaneous
     cards:
       - type: entities
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         entities:
           - sun.sun
           - binary_sensor.workday_sensor
