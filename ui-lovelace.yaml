@@ -298,6 +298,7 @@ views:
 
       - type: custom:mod-card
         title: "Network"
+        debug_cardmod: true
         style:
           $: |
             :host {
