@@ -300,19 +300,15 @@ views:
         title: "Network"
         debug_cardmod: true
         style:
-          .: |
-            hui-horizontal-stack-card  ha-card {
-              background: yellow;
-            }
-
-            :host {
-              background: blue;
-            }
-            ha-card {
-              background: red;
-              border-radius: 3px;
-              padding: 12px;
-            }
+          "hui-horizontal-stack-card":
+            .: |
+              ha-card {
+                background: red;
+              }
+            $: |
+              ha-card {
+                background: green;
+              }
         card:
           type: horizontal-stack
           cards:
