@@ -36,6 +36,12 @@ styles: &styles
       padding: 0;
       margin-right: 9px;
     }
+
+    .name > span {
+      font-size: 16px;
+      color: #333;
+      opacity: 1;
+    }
 views:
   - title: Home
     icon: mdi:home-circle-outline
