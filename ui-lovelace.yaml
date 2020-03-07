@@ -19,7 +19,7 @@ styles: &styles
       font-size: 16px;
       padding: 12px;
       font-weight: bold;
-      color: #0178e1;
+      color: #333;
       line-height: 1em;
       border-bottom: 1px solid #eee;
     }
@@ -102,17 +102,7 @@ views:
 
       # Media and apple tv
       - type: entities
-        style: |
-          ha-card {
-            border-radius: 6px;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-          }
-
-          .card-header {
-            font-size: 16px;
-            padding: 9px;
-            font-weight: bold;
-          }
+        <<: *styles
         title: Media
         show_header_toggle: false
         entities:
