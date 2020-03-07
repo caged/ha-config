@@ -139,9 +139,18 @@ views:
             name: Bedroom
           - entity: sensor.awair_co2_office
             name: Office
-      - type: history-graph
-        title: Awair Humidity
+
+      - type: custom:mini-graph-card
+        name: Awair Humidity
+        icon: mdi:periodic-table-co2
         <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_humidity_livingroom
             name: Livingroom
@@ -149,9 +158,18 @@ views:
             name: Bedroom
           - entity: sensor.awair_humidity_office
             name: Office
-      - type: history-graph
-        title: Awair Temperature
+
+      - type: custom:mini-graph-card
+        name: Awair Temperature
+        icon: mdi:thermostat
         <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_temperature_livingroom
             name: Livingroom
@@ -159,9 +177,18 @@ views:
             name: Bedroom
           - entity: sensor.awair_temperature_office
             name: Office
-      - type: history-graph
-        title: Awair Chemicals
+
+      - type: custom:mini-graph-card
+        name: Awair Chemicals
+        icon: mdi:periodic-table-co2
         <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_voc_livingroom
             name: Livingroom
@@ -169,9 +196,18 @@ views:
             name: Bedroom
           - entity: sensor.awair_voc_office
             name: Office
-      - type: history-graph
-        title: Awair Particles
+
+      - type: custom:mini-graph-card
+        name: Awair Dust Particles
+        icon: mdi:periodic-table-co2
         <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_pm2_5_livingroom
             name: Livingroom
