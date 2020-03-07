@@ -121,19 +121,17 @@ views:
           - entity: sensor.awair_score_office
             name: Office
 
-      - type: history-graph
-        title: Awair Score
+      - type: custom:mini-graph-card
+        name: Awair CO2
+        icon: mdi:percent
         <<: *styles
-        entities:
-          - entity: sensor.awair_score_livingroom
-            name: Livingroom
-          - entity: sensor.awair_score_bedroom
-            name: Bedroom
-          - entity: sensor.awair_score_office
-            name: Office
-      - type: history-graph
-        title: Awair CO2
-        <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_co2_livingroom
             name: Livingroom
