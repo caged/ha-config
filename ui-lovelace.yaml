@@ -299,9 +299,11 @@ views:
       - type: custom:mod-card
         title: "Network"
         style:
-          .: |
+          $: |
             ha-card {
               background: red;
+              border-radius: 3px;
+              padding: 12px;
             }
         card:
           type: horizontal-stack
