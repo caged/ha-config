@@ -311,7 +311,12 @@ views:
 
                   ha-card .header {
                     padding: 12px !important;
+                  }
+
+                  ha-card .header .name {
                     font-size: 12px;
+                    color: #333;
+                    opacity: 1;
                   }
 
                   ha-card .state {
