@@ -91,6 +91,17 @@ views:
             name: Office
       - type: entities
         title: Home Modes
+        style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          }
+
+          .card-header {
+            font-size: 16px;
+            padding: 9px;
+            font-weight: bold;
+          }
         show_header_toggle: false
         entities:
           - input_boolean.debug_mode
@@ -203,47 +214,61 @@ views:
               controls: true
               power: true
 
-      - type: custom:mod-card
-        title: Network Traffic
-        style: |
-          ha-card {
-            border-radius: 6px;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-          }
+        - type: history-graph
+          title: Download
+          style: |
+            ha-card {
+              border-radius: 6px;
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+            }
 
-          .card-header {
-            font-size: 16px;
-            padding: 9px;
-            font-weight: bold;
-          }
-        card:
-          type: vertical-stack
-          cards:
-            - type: history-graph
-              hours_to_show: 3
-              entities:
-                - entity: sensor.unifi_traffic_down
-            - type: history-graph
-              hours_to_show: 3
-              entities:
-                - entity: sensor.unifi_traffic_up
-
-      - type: custom:vertical-stack-in-card
-        title: Raspberry PI Host
-        cards:
-          - type: history-graph
-            hours_to_show: 12
-            entities:
-              - entity: sensor.load_1m
-              - entity: sensor.load_5m
-              - entity: sensor.load_15m
-          - type: history-graph
-            hours_to_show: 12
-            entities:
-              - entity: sensor.memory_use_percent
-          - type: gauge
-            entity: sensor.disk_use_percent
-            name: "Disk"
+            .card-header {
+              font-size: 16px;
+              padding: 9px;
+              font-weight: bold;
+            }
+          hours_to_show: 3
+          entities:
+            - entity: sensor.unifi_traffic_down
+      # - type: custom:mod-card
+      #   title: Network Traffic
+      #   style: |
+      #     ha-card {
+      #       border-radius: 6px;
+      #       box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      #     }
+      #     .card-header {
+      #       font-size: 16px;
+      #       padding: 9px;
+      #       font-weight: bold;
+      #     }
+      #   card:
+      #     type: vertical-stack
+      #     cards:
+      #       - type: history-graph
+      #         hours_to_show: 3
+      #         entities:
+      #           - entity: sensor.unifi_traffic_down
+      #       - type: history-graph
+      #         hours_to_show: 3
+      #         entities:
+      #           - entity: sensor.unifi_traffic_up
+      # - type: custom:vertical-stack-in-card
+      #   title: Raspberry PI Host
+      #   cards:
+      #     - type: history-graph
+      #       hours_to_show: 12
+      #       entities:
+      #         - entity: sensor.load_1m
+      #         - entity: sensor.load_5m
+      #         - entity: sensor.load_15m
+      #     - type: history-graph
+      #       hours_to_show: 12
+      #       entities:
+      #         - entity: sensor.memory_use_percent
+      #     - type: gauge
+      #       entity: sensor.disk_use_percent
+      #       name: "Disk"
 
   - title: Miscellaneous
     cards:
