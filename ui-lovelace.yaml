@@ -216,7 +216,7 @@ views:
             font-weight: bold;
           }
         card:
-          type: custom:vertical-stack-in-card
+          type: vertical-stack
           title: Network Traffic
           cards:
             - type: history-graph
