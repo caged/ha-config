@@ -75,6 +75,16 @@ views:
           - entity: sensor.awair_co2_office
             name: Office
       - type: history-graph
+        title: Awair Humidity
+        <<: *styles
+        entities:
+          - entity: sensor.awair_humidity_livingroom
+            name: Livingroom
+          - entity: sensor.awair_humidity_bedroom
+            name: Bedroom
+          - entity: sensor.awair_humidity_office
+            name: Office
+      - type: history-graph
         title: Awair Temperature
         <<: *styles
         entities:
