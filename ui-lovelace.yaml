@@ -85,26 +85,11 @@ views:
           - light.garage
           - light.front_porch
 
-      - type: horizontal-stack
-        title: Awair Score
-        cards:
-          - type: custom:mini-graph-card
-            group: true
-            entities:
-              - sensor.awair_score_livingroom
-          - type: custom:mini-graph-card
-            group: true
-            entities:
-              - sensor.awair_score_bedroom
-          - type: custom:mini-graph-card
-            group: true
-            entities:
-              - sensor.awair_score_office
-
       - type: custom:mini-graph-card
         name: Awair Score
         icon: mdi:percent
         <<: *styles
+        lower_bound: 50
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
