@@ -298,7 +298,11 @@ views:
 
       - type: custom:mod-card
         title: "Network"
-        <<: *styles
+        style:
+          .: |
+            ha-card {
+              background: red;
+            }
         card:
           type: horizontal-stack
           cards:
