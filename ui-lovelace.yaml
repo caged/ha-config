@@ -23,6 +23,11 @@ styles: &styles
       line-height: 1em;
       border-bottom: 1px solid #eee;
     }
+
+    .icon {
+      padding: 0;
+      margin-right: 9px;
+    }
 views:
   - title: Home
     icon: mdi:home-circle-outline
