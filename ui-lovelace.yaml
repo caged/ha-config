@@ -26,6 +26,10 @@ styles: &styles
       font-weight: bold;
     }
 
+    .header {
+      border-bottom: 1px solid #eee;
+    }
+
     .name {
       font-size: 16px;
       color: #333;
