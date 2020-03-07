@@ -8,7 +8,7 @@ resources:
   - url: /local/lovelace/card-mod.js
     type: module
 title: Palmer Palace
-default: &default
+styles: &styles
   style: |
     ha-card {
       border-radius: 6px;
@@ -26,7 +26,7 @@ views:
       # Lights
       - type: entities
         title: Lights
-        <<: *default
+        <<: *styles
         show_header_toggle: false
         entities:
           - type: section
