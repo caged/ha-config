@@ -89,11 +89,7 @@ views:
         name: Awair Score
         icon: mdi:percent
         <<: *styles
-        line_width: 3
-        show:
-          icon: false
-          name: false
-          state: true
+        line_width: 2
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
