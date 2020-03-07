@@ -15,6 +15,10 @@ views:
       - type: entities
         title: Lights
         style: |
+          ha-card {
+            border-radius: 6px;
+            box-shadow: none;
+          }
           .card-header {
             font-size: 16px;
             padding: 9px;
