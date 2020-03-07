@@ -302,10 +302,11 @@ views:
         style:
           hui-horizontal-stack-card:
             $:
-              mini-graph-card: |
-                ha-card {
-                  background-color: red !important;
-                }
+              mini-graph-card:
+                $: |
+                  ha-card {
+                    background-color: red !important;
+                  }
         card:
           type: horizontal-stack
           cards:
