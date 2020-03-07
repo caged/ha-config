@@ -311,6 +311,12 @@ views:
 
                   ha-card .header {
                     padding: 12px !important;
+                    font-size: 12px;
+                  }
+
+                  ha-card .state {
+                    padding: 0 12px;
+                    font-size: 12px;
                   }
         card:
           type: horizontal-stack
