@@ -300,6 +300,9 @@ views:
         title: "Network"
         style:
           $: |
+            :host {
+              background: blue;
+            }
             ha-card {
               background: red;
               border-radius: 3px;
