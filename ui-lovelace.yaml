@@ -24,7 +24,7 @@ styles: &styles
       border-bottom: 1px solid #eee;
     }
 
-    .icon {
+    .name .icon {
       padding: 0;
       margin-right: 9px;
     }
