@@ -217,14 +217,12 @@ views:
 
       - type: history-graph
         title: Download
-        icon: mdi:home
         <<: *styles
         hours_to_show: 3
         entities:
           - entity: sensor.unifi_traffic_down
       - type: history-graph
         title: Upload
-        icon: mdi:upload
         <<: *styles
         hours_to_show: 3
         entities:
