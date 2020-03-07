@@ -203,8 +203,7 @@ views:
               controls: true
               power: true
 
-      - type: custom:vertical-stack-in-card
-        title: Network Traffic
+      - type: custom:mod-card
         style: |
           ha-card {
             border-radius: 6px;
@@ -216,15 +215,18 @@ views:
             padding: 9px;
             font-weight: bold;
           }
-        cards:
-          - type: history-graph
-            hours_to_show: 3
-            entities:
-              - entity: sensor.unifi_traffic_down
-          - type: history-graph
-            hours_to_show: 3
-            entities:
-              - entity: sensor.unifi_traffic_up
+        card:
+          type: custom:vertical-stack-in-card
+          title: Network Traffic
+          cards:
+            - type: history-graph
+              hours_to_show: 3
+              entities:
+                - entity: sensor.unifi_traffic_down
+            - type: history-graph
+              hours_to_show: 3
+              entities:
+                - entity: sensor.unifi_traffic_up
 
       - type: custom:vertical-stack-in-card
         title: Raspberry PI Host
