@@ -56,6 +56,31 @@ styles: &styles
       padding: 9px;
       font-size: 12px;
     }
+horizontal_card_styles: &horizontal_card_styles
+  style:
+    hui-horizontal-stack-card:
+      $:
+        mini-graph-card:
+          $: |
+            ha-card {
+              border-radius: 3px !important;
+              border: 1px solid #eee !important;
+            }
+
+            ha-card .header {
+              padding: 12px !important;
+            }
+
+            ha-card .header .name > span {
+              font-size: 14px;
+              color: #333;
+              opacity: 1;
+            }
+
+            ha-card .state {
+              padding: 0 12px;
+            }
+
 views:
   - title: Home
     icon: mdi:home-circle-outline
@@ -299,29 +324,7 @@ views:
       - type: custom:mod-card
         title: "Network"
         debug_cardmod: true
-        style:
-          hui-horizontal-stack-card:
-            $:
-              mini-graph-card:
-                $: |
-                  ha-card {
-                    border-radius: 3px !important;
-                    border: 1px solid #eee !important;
-                  }
-
-                  ha-card .header {
-                    padding: 12px !important;
-                  }
-
-                  ha-card .header .name > span {
-                    font-size: 14px;
-                    color: #333;
-                    opacity: 1;
-                  }
-
-                  ha-card .state {
-                    padding: 0 12px;
-                  }
+        <<: *horizontal_card_styles
         card:
           type: horizontal-stack
           cards:
