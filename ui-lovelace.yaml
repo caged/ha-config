@@ -41,17 +41,21 @@ views:
       - type: history-graph
         title: Awair Score
         entities:
-          - sensor.awair_score
-          - sensor.awair_score_2
-          - entity: sensor.awair_bedroom_score
+          - entity: sensor.awair_score_livingroom
+            name: Livingroom
+          - entity: sensor.awair_score_bedroom
             name: Bedroom
+          - entity: sensor.awair_score_office
+            name: Office
       - type: history-graph
         title: Awair CO2
         entities:
-          - sensor.livingroom_awair_co2
-          - sensor.awair_co2_2
-          - entity: sensor.awair_bedroom_co2
+          - entity: sensor.awair_co2_livingroom
+            name: Livingroom
+          - entity: sensor.awair_co2_bedroom
             name: Bedroom
+          - entity: sensor.awair_co2_office
+            name: Office
       - type: entities
         title: Home Modes
         show_header_toggle: false
