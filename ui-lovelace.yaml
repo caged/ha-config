@@ -302,7 +302,7 @@ views:
         style:
           hui-horizontal-stack-card:
             $: |
-              ha-card {
+              #root {
                 background: red !important;
               }
         card:
