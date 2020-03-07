@@ -3,11 +3,8 @@
   access_token: !secret awair_access_token
   devices:
     - uuid: awair-r2_19522
-      name: Livingroom Awair
     - uuid: awair-r2_18895
-      name: Bedroom Awair
     - uuid: awair-r2_19550
-      name: Office Awair
 # - platform: ring
 - platform: template
   sensors:
