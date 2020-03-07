@@ -123,7 +123,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Awair CO2
-        icon: mdi:percent
+        icon: mdi:periodic-table-co2
         <<: *styles
         line_width: 4
         show:
