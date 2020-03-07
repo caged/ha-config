@@ -92,6 +92,10 @@ views:
         line_width: 3
         show:
           points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+          - "#96E108"
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
