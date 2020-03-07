@@ -25,6 +25,7 @@ styles: &styles
     }
 views:
   - title: Home
+    icon: mdi:home-outline
     cards:
       - type: thermostat
         title: Thermostat
