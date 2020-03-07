@@ -329,6 +329,7 @@ views:
           type: horizontal-stack
           cards:
             - type: custom:mini-graph-card
+              icon: mdi:progress-download
               group: true
               entities:
                 - entity: sensor.unifi_traffic_down
