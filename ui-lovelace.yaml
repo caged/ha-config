@@ -24,281 +24,46 @@ styles: &styles
       border-bottom: 1px solid #eee;
     }
 views:
-  - title: Home
-    cards:
-      - type: thermostat
-        title: Thermostat
-        <<: *styles
-        entity: climate.living_room
-      # HVAC
-      - type: entities
-        title: Climate
-        <<: *styles
-        show_header_toggle: false
-        entities:
-          - sensor.climate_living_room
-          - sensor.climate_office
-          - sensor.climate_main_bedroom
-          - sensor.climate_guest_bedroom
-      # Lights
-      - type: entities
-        title: Lights
-        <<: *styles
-        show_header_toggle: false
-        entities:
-          - type: section
-            label: Downstairs
-          - entity: group.downstairs_lights
-            name: Downstairs Lights
-          - light.living_room
-          - light.lamp
-          - light.dining_room
-          - light.kitchen
-          - light.media
-          - light.playroom
-          - light.hallway
-          - light.stairway
-          - light.sink
-          - type: section
-            label: Upstairs
-          - entity: group.upstairs_lights
-            name: Upstairs Lights
-          - light.bedroom_main
-          - light.office
-          - light.main_bathroom
-          - light.upstairs_hallway
-          - type: section
-            label: Outside
-          - entity: group.outside_lights
-            name: Outside Lights
-          - light.back_door
-          - light.garage
-          - light.front_porch
-
-      - type: history-graph
-        title: Awair Score
-        <<: *styles
-        entities:
-          - entity: sensor.awair_score_livingroom
-            name: Livingroom
-          - entity: sensor.awair_score_bedroom
-            name: Bedroom
-          - entity: sensor.awair_score_office
-            name: Office
-      - type: history-graph
-        title: Awair CO2
-        <<: *styles
-        entities:
-          - entity: sensor.awair_co2_livingroom
-            name: Livingroom
-          - entity: sensor.awair_co2_bedroom
-            name: Bedroom
-          - entity: sensor.awair_co2_office
-            name: Office
-      - type: history-graph
-        title: Awair Humidity
-        <<: *styles
-        entities:
-          - entity: sensor.awair_humidity_livingroom
-            name: Livingroom
-          - entity: sensor.awair_humidity_bedroom
-            name: Bedroom
-          - entity: sensor.awair_humidity_office
-            name: Office
-      - type: history-graph
-        title: Awair Temperature
-        <<: *styles
-        entities:
-          - entity: sensor.awair_temperature_livingroom
-            name: Livingroom
-          - entity: sensor.awair_temperature_bedroom
-            name: Bedroom
-          - entity: sensor.awair_temperature_office
-            name: Office
-      - type: history-graph
-        title: Awair Chemicals
-        <<: *styles
-        entities:
-          - entity: sensor.awair_voc_livingroom
-            name: Livingroom
-          - entity: sensor.awair_voc_bedroom
-            name: Bedroom
-          - entity: sensor.awair_voc_office
-            name: Office
-      - type: history-graph
-        title: Awair Particles
-        <<: *styles
-        entities:
-          - entity: sensor.awair_pm2_5_livingroom
-            name: Livingroom
-          - entity: sensor.awair_pm2_5_bedroom
-            name: Bedroom
-          - entity: sensor.awair_pm2_5_office
-            name: Office
-
-      - type: entities
-        title: Home Modes
-        <<: *styles
-        show_header_toggle: false
-        entities:
-          - input_boolean.debug_mode
-
-      # Weather
-      - type: weather-forecast
-        <<: *styles
-        entity: weather.dark_sky
-
-      # Media and apple tv
-      - type: entities
-        <<: *styles
-        title: Media
-        show_header_toggle: false
-        entities:
-          - type: section
-            label: Apple TV
-          - type: custom:mini-media-player
-            entity: media_player.living_room
-            artwork: full-cover-fit
-            group: true
-            icon: mdi:apple
-            name: Living Room
-            hide:
-              volume: true
-              source: true
-              power: true
-          - type: section
-            label: Sonos
-          - type: "custom:mini-media-player"
-            entity: media_player.sonos_living_room
-            icon: mdi:speaker
-            artwork: cover
-            source: icon
-            info: scroll
-            group: true
-            volume_stateless: true
-            hide:
-              power: true
-              shuffle: false
-              source: true
-            sonos:
-              show_group_count: true
-              sync_volume: true
-              entities:
-                - entity_id: media_player.sonos_office
-                  name: Office
-                - entity_id: media_player.sonos_bedroom
-                  name: Bedroom
-          - type: "custom:mini-media-player"
-            entity: media_player.sonos_office
-            icon: mdi:speaker
-            group: true
-            artwork: cover
-            volume_stateless: true
-            hide:
-              controls: true
-              power: true
-          - type: "custom:mini-media-player"
-            entity: media_player.sonos_bedroom
-            icon: mdi:speaker
-            group: true
-            artwork: cover
-            volume_stateless: true
-            hide:
-              controls: true
-              power: true
-
-      - type: history-graph
-        title: Download
-        <<: *styles
-        hours_to_show: 3
-        entities:
-          - entity: sensor.unifi_traffic_down
-      - type: history-graph
-        title: Upload
-        <<: *styles
-        hours_to_show: 3
-        entities:
-          - entity: sensor.unifi_traffic_up
-      # - type: custom:mod-card
-      #   title: Network Traffic
-      #   style: |
-      #     ha-card {
-      #       border-radius: 6px;
-      #       box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-      #     }
-      #     .card-header {
-      #       font-size: 16px;
-      #       padding: 9px;
-      #       font-weight: bold;
-      #     }
-      #   card:
-      #     type: vertical-stack
-      #     cards:
-      #       - type: history-graph
-      #         hours_to_show: 3
-      #         entities:
-      #           - entity: sensor.unifi_traffic_down
-      #       - type: history-graph
-      #         hours_to_show: 3
-      #         entities:
-      #           - entity: sensor.unifi_traffic_up
-      # - type: custom:vertical-stack-in-card
-      #   title: Raspberry PI Host
-      #   cards:
-      #     - type: history-graph
-      #       hours_to_show: 12
-      #       entities:
-      #         - entity: sensor.load_1m
-      #         - entity: sensor.load_5m
-      #         - entity: sensor.load_15m
-      #     - type: history-graph
-      #       hours_to_show: 12
-      #       entities:
-      #         - entity: sensor.memory_use_percent
-      #     - type: gauge
-      #       entity: sensor.disk_use_percent
-      #       name: "Disk"
-
-  - title: Miscellaneous
-    cards:
-      - type: entities
-        <<: *styles
-        entities:
-          - sun.sun
-          - binary_sensor.workday_sensor
-          - binary_sensor.awake
-          - binary_sensor.washer_status
-          - binary_sensor.home_occupied
-          - binary_sensor.office_occupancy
-          - binary_sensor.main_bedroom_occupancy
-          - binary_sensor.guest_bedroom_occupancy
-          - binary_sensor.living_room_occupancy
-          - binary_sensor.kitchen_heater_status
-
-      - type: vertical-stack
-        cards:
-          - type: history-graph
-            hours_to_show: 8
-            entities:
-              - entity: sensor.washer_power
-                name: Washer
-          - type: history-graph
-            hours_to_show: 8
-            entities:
-              - entity: sensor.kitchen_heater_power
-                name: Kitchen heater
-      - type: "custom:list-card-custom"
-        entity: sensor.portland_liquor_licenses
-        title: Portland liquor licenses
-        row_limit: 10
-        columns:
-          - title: Title
-            field: title
-            add_link: link
-            style:
-              - font-weight: bold !important
-          - title: Published
-            field: published
-          - title: Address
-            field: summary
-            regex: ".+?\\s-"
+  !include_dir_merge_list views
+  # - title: Miscellaneous
+  #   cards:
+  #     - type: entities
+  #       <<: *styles
+  #       entities:
+  #         - sun.sun
+  #         - binary_sensor.workday_sensor
+  #         - binary_sensor.awake
+  #         - binary_sensor.washer_status
+  #         - binary_sensor.home_occupied
+  #         - binary_sensor.office_occupancy
+  #         - binary_sensor.main_bedroom_occupancy
+  #         - binary_sensor.guest_bedroom_occupancy
+  #         - binary_sensor.living_room_occupancy
+  #         - binary_sensor.kitchen_heater_status
+  #     - type: vertical-stack
+  #       cards:
+  #         - type: history-graph
+  #           hours_to_show: 8
+  #           entities:
+  #             - entity: sensor.washer_power
+  #               name: Washer
+  #         - type: history-graph
+  #           hours_to_show: 8
+  #           entities:
+  #             - entity: sensor.kitchen_heater_power
+  #               name: Kitchen heater
+  #     - type: "custom:list-card-custom"
+  #       entity: sensor.portland_liquor_licenses
+  #       title: Portland liquor licenses
+  #       row_limit: 10
+  #       columns:
+  #         - title: Title
+  #           field: title
+  #           add_link: link
+  #           style:
+  #             - font-weight: bold !important
+  #         - title: Published
+  #           field: published
+  #         - title: Address
+  #           field: summary
+  #           regex: ".+?\\s-"
