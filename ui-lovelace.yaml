@@ -48,11 +48,11 @@ styles: &styles
       opacity: 1 !important;
     }
 
-    hui-horizontal-stack-card {
+    hui-horizontal-stack-card #root {
       background: #fff;
     }
 
-    hui-horizontal-stack-card .name {
+    ha-card[group] .name {
       padding: 9px;
       font-size: 12px;
     }
