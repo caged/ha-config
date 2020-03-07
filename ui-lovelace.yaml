@@ -93,7 +93,7 @@ views:
         show:
           icon: false
           name: false
-          state: false
+          state: true
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
