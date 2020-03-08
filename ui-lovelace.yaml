@@ -411,13 +411,25 @@ views:
         show:
           points: true
         line_color:
-          - "#FF4040"
           - "#0896E1"
+          - "#FF4040"
         entities:
           - entity: sensor.snowpiercer_temperature_sensor_inside
             name: Inside
           - entity: sensor.snowpiercer_temperature_sensor_outside
             name: Outside
+
+      - type: custom:mini-graph-card
+        name: Total mileage
+        icon: mdi:counter
+        <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#888888"
+        entities:
+          - entity: sensor.snowpiercer_mileage_sensor
 
   - title: Miscellaneous
     icon: mdi:hexagon-multiple-outline
