@@ -362,6 +362,8 @@ views:
     cards:
       - type: map
         title: Tesla location
+        default_zoom: 12s
+        aspect_ratio: 16x9
         entities:
           - device_tracker.snowpiercer_location_tracker
 
