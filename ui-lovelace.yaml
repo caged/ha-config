@@ -357,6 +357,13 @@ views:
       #     - type: gauge
       #       entity: sensor.disk_use_percent
       #       name: "Disk"
+  - title: Tesla
+    icon: mdi:car-electric
+    cards:
+      - type: map
+        title: Tesla location
+        entities:
+          - device_tracker.snowpiercer_location_tracker
 
   - title: Miscellaneous
     icon: mdi:hexagon-multiple-outline
