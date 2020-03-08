@@ -369,7 +369,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Charge level
-        icon: mdi:battery
+        icon: mdi:battery-charging-50
         <<: *styles
         line_width: 4
         show:
@@ -380,8 +380,8 @@ views:
           - entity: sensor.snowpiercer_battery_sensor
 
       - type: custom:mini-graph-card
-        name: Mileage range
-        icon: mdi:battery
+        name: Current mileage range
+        icon: mdi:road-variant
         <<: *styles
         line_width: 4
         show:
