@@ -375,7 +375,7 @@ views:
         show:
           points: true
         line_color:
-          - "#E10896"
+          - "#96E108"
         entities:
           - entity: sensor.snowpiercer_battery_sensor
 
@@ -399,7 +399,7 @@ views:
         show:
           points: true
         line_color:
-          - "#E10896"
+          - "#96E108"
         entities:
           - entity: sensor.snowpiercer_charging_rate_sensor
 
@@ -411,7 +411,7 @@ views:
         show:
           points: true
         line_color:
-          - "#E10896"
+          - "#FF4040"
           - "#0896E1"
         entities:
           - entity: sensor.snowpiercer_temperature_sensor_inside
