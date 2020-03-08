@@ -360,10 +360,14 @@ views:
   - title: Tesla
     icon: mdi:car-electric
     badges:
+      - type: state-label
+        entity: binary_sensor.snowpiercer_charger_sensor
       - binary_sensor.snowpiercer_charger_sensor
       - binary_sensor.snowpiercer_online_sensor
       - binary_sensor.snowpiercer_parking_brake_sensor
       - climate.snowpiercer_hvac_climate_system
+      - lock.snowpiercer_charger_door_lock
+      - lock.snowpiercer_door_lock
     cards:
       - type: map
         title: Tesla location
