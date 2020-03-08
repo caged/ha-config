@@ -359,6 +359,11 @@ views:
       #       name: "Disk"
   - title: Tesla
     icon: mdi:car-electric
+    badges:
+      - binary_sensor.snowpiercer_charger_sensor
+      - binary_sensor.snowpiercer_online_sensor
+      - binary_sensor.snowpiercer_parking_brake_sensor
+      - climate.snowpiercer_hvac_climate_system
     cards:
       - type: map
         title: Tesla location
