@@ -369,7 +369,7 @@ views:
 
       - type: custom:mini-graph-card
         name: Charge level
-        icon: mdi:battery-charging-50
+        icon: mdi:battery-charging-high
         <<: *styles
         line_width: 4
         show:
@@ -390,6 +390,18 @@ views:
           - "#E10896"
         entities:
           - entity: sensor.snowpiercer_range_sensor
+
+      - type: custom:mini-graph-card
+        name: Charging rate
+        icon: mdi:battery-plus
+        <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+        entities:
+          - entity: sensor.snowpiercer_charging_rate_sensor
 
   - title: Miscellaneous
     icon: mdi:hexagon-multiple-outline
