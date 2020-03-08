@@ -60,6 +60,9 @@ ios:
 wemo:
 # Show links to resources in log and frontend
 # introduction:
+tesla:
+  username: !secret tesla_email
+  password: !secret tesla_password
 
 # Enables configuration UI
 config:
