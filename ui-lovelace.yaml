@@ -403,6 +403,22 @@ views:
         entities:
           - entity: sensor.snowpiercer_charging_rate_sensor
 
+      - type: custom:mini-graph-card
+        name: Temperature
+        icon: mdi:thermometer-lines
+        <<: *styles
+        line_width: 4
+        show:
+          points: true
+        line_color:
+          - "#E10896"
+          - "#0896E1"
+        entities:
+          - entity: sensor.snowpiercer_temperature_sensor_inside
+            name: Inside
+          - entity: sensor.snowpiercer_temperature_sensor_outside
+            name: Outside
+
   - title: Miscellaneous
     icon: mdi:hexagon-multiple-outline
     cards:
