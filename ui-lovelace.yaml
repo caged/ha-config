@@ -420,7 +420,7 @@ views:
             name: Outside
 
       - type: custom:mini-graph-card
-        name: Total mileage
+        name: Odometer
         icon: mdi:counter
         <<: *styles
         line_width: 4
