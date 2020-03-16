@@ -387,6 +387,7 @@ views:
         icon: mdi:battery-charging-high
         <<: *styles
         line_width: 4
+        points_per_hour: 1
         show:
           points: true
         line_color:
