@@ -101,6 +101,7 @@ views:
           - sensor.climate_main_bedroom
           - sensor.climate_guest_bedroom
           - sensor.climate_dining_room
+          - sensor.climate_downstairs_hallway
       # Lights
       - type: entities
         title: Lights
