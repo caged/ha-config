@@ -49,6 +49,16 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
+    climate_dining_room:
+      friendly_name: "Dining Room"
+      value_template: "{{ states('sensor.dining_room_temperature') }}"
+      unit_of_measurement: "º"
+      icon_template: >-
+        {% if is_state('binary_sensor.dining_room_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:account-off-outline
+        {% endif %}
     kitchen_heater_power:
       friendly_name: "Kitchen space heater power"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["current_power_w"] }}'
