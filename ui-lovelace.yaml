@@ -148,6 +148,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
@@ -155,6 +156,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_score_office
             name: Office
+          - entity: sensor.awair_score_camden
+            name: Camden
 
       - type: custom:mini-graph-card
         name: Awair CO2
@@ -168,6 +171,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_co2_livingroom
             name: Livingroom
@@ -175,6 +179,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_co2_office
             name: Office
+          - entity: sensor.awair_co2_camden
+            name: Camden
 
       - type: custom:mini-graph-card
         name: Awair Humidity
@@ -188,6 +194,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_humidity_livingroom
             name: Livingroom
@@ -195,6 +202,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_humidity_office
             name: Office
+          - entity: sensor.awair_humidity_camden
+            name: Camden
 
       - type: custom:mini-graph-card
         name: Awair Temperature
@@ -208,6 +217,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_temperature_livingroom
             name: Livingroom
@@ -215,6 +225,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_temperature_office
             name: Office
+          - entity: sensor.awair_temperature_camden
+            name: Camden
 
       - type: custom:mini-graph-card
         name: Awair Chemicals
@@ -228,6 +240,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_voc_livingroom
             name: Livingroom
@@ -235,6 +248,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_voc_office
             name: Office
+          - entity: sensor.awair_voc_camden
+            name: Camden
 
       - type: custom:mini-graph-card
         name: Awair Dust Particles
@@ -248,6 +263,7 @@ views:
           - "#E10896"
           - "#0896E1"
           - "#96E108"
+          - "#FF8C38"
         entities:
           - entity: sensor.awair_pm2_5_livingroom
             name: Livingroom
@@ -255,6 +271,8 @@ views:
             name: Bedroom
           - entity: sensor.awair_pm2_5_office
             name: Office
+          - entity: sensor.awair_pm2_5_camden
+            name: Cadmen
 
       - type: entities
         title: Home Modes
