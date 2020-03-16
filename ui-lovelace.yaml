@@ -139,6 +139,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair Score
         icon: mdi:percent
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
@@ -158,6 +159,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair CO2
         icon: mdi:periodic-table-co2
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
@@ -177,6 +179,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair Humidity
         icon: mdi:periodic-table-co2
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
@@ -196,6 +199,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair Temperature
         icon: mdi:thermometer-lines
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
@@ -215,6 +219,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair Chemicals
         icon: mdi:biohazard
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
@@ -234,6 +239,7 @@ views:
       - type: custom:mini-graph-card
         name: Awair Dust Particles
         icon: mdi:air-filter
+        points_per_hour: 1
         <<: *styles
         line_width: 4
         show:
