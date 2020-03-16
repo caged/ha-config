@@ -69,6 +69,26 @@
         {% else %}
           mdi:account-off-outline
         {% endif %}
+    climate_map_room:
+      friendly_name: "Map Room"
+      value_template: "{{ states('sensor.map_room_temperature') }}"
+      unit_of_measurement: "º"
+      icon_template: >-
+        {% if is_state('binary_sensor.map_room_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:account-off-outline
+        {% endif %}
+    climate_upstairs_hallway:
+      friendly_name: "Upstairs Hallway"
+      value_template: "{{ states('sensor.upstairs_hallway_temperature') }}"
+      unit_of_measurement: "º"
+      icon_template: >-
+        {% if is_state('binary_sensor.upstairs_hallway_occupancy', 'on') %}
+          mdi:run-fast
+        {% else %}
+          mdi:account-off-outline
+        {% endif %}
     kitchen_heater_power:
       friendly_name: "Kitchen space heater power"
       value_template: '{{ states.switch.kitchen_wemo_insight.attributes["current_power_w"] }}'
