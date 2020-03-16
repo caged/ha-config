@@ -5,6 +5,7 @@
     - uuid: awair-r2_19522
     - uuid: awair-r2_18895
     - uuid: awair-r2_19550
+    - uuid: awair-r2_19632
 # - platform: ring
 - platform: template
   sensors:
