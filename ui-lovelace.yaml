@@ -138,6 +138,7 @@ views:
 
       - type: glance
         title: Awair Scores
+        <<: *styles
         entities:
           - entity: sensor.awair_score_livingroom
             name: Livingroom
