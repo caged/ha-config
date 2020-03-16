@@ -136,6 +136,18 @@ views:
           - light.garage
           - light.front_porch
 
+      - type: glance
+        title: Awair Scores
+        entities:
+          - entity: sensor.awair_score_livingroom
+            name: Livingroom
+          - entity: sensor.awair_score_bedroom
+            name: Bedroom
+          - entity: sensor.awair_score_office
+            name: Office
+          - entity: sensor.awair_score_camden
+            name: Camden
+
       - type: custom:mini-graph-card
         name: Awair Score
         icon: mdi:percent
