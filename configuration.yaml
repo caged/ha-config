@@ -11,6 +11,13 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_api_key
+    mode: freedaily
+    latitude: !secret home_lat
+    longitude: !secret  home_lon
+    
 sensor:
   - platform: awair
     access_token: !secret awair_access_token
