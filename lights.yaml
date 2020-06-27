@@ -48,6 +48,11 @@
     - light.hue_garage_2
     - light.hue_garage_3
 - platform: group
+  name: Porch
+  entities:
+    - light.hue_porch_1c
+    - light.hue_porch_2c
+- platform: group
   name: Downstairs
   entities:
     - light.dining_room
@@ -61,3 +66,8 @@
   entities:
     - light.hue_backdoor
     - light.garage
+- platform: group
+  name: Outside
+  entities:
+    - light.backyard
+    - light.porch
