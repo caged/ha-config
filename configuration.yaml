@@ -1,4 +1,3 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -12,14 +11,14 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 sensor:
-    - platform: awair
-      access_token: !secret awair_access_token
-      devices:
-        # Living Room
-        - uuid: awair-r2_19522
-        # Bedroom
-        - uuid: awair-r2_18895
-        # Office
-        - uuid: awair-r2_19550
-        # Camden
-        - uuid: awair-r2_19632
+  - platform: awair
+    access_token: !secret awair_access_token
+    devices:
+      # Living Room
+      - uuid: awair-r2_19522
+      # Bedroom
+      - uuid: awair-r2_18895
+      # Office
+      - uuid: awair-r2_19550
+      # Camden
+      - uuid: awair-r2_19632
