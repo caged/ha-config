@@ -25,6 +25,12 @@
     - light.hue_kitchen_4
     - light.hue_kitchen_5
 - platform: group
+  name: Hallway
+  entities:
+    - light.hue_hallway_1
+    - light.hue_hallway_2
+    - light.hue_hallway_3
+- platform: group
   name: Bedroom
   entities:
     - light.hue_bedroom_lamp_justin
@@ -35,3 +41,11 @@
   entities:
     - light.hue_stairway_1
     - light.hue_stairway_2
+- platform: group
+  name: Downstairs
+  entities:
+    - light.dining_room
+    - light.floor_lamp
+    - light.kitchen
+    - light.tv_media_lights
+    - light.hallway
