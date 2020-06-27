@@ -23,6 +23,7 @@
     - light.hue_kitchen_2
     - light.hue_kitchen_3
     - light.hue_kitchen_4
+    - light.hue_kitchen_5
 - platform: group
   name: Bedroom
   entities:
