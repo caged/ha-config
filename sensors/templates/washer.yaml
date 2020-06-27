@@ -1,0 +1,8 @@
+washer_current_power:
+  friendly_name: Washer power
+  value_template: "{{ state_attr('switch.washer_wemo', 'current_power_w') }}"
+  unit_of_measurement: W
+washer_todays_energy:
+  friendly_name: Washer today's energy
+  value_template: "{{ state_attr('switch.washer_wemo', 'today_energy_kwh') }}"
+  unit_of_measurement: kwH

@@ -10,23 +10,11 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+sensor: !include_dir_merge_list sensors
 
 weather:
   - platform: openweathermap
     api_key: !secret openweathermap_api_key
     mode: freedaily
     latitude: !secret home_lat
-    longitude: !secret  home_lon
-    
-sensor:
-  - platform: awair
-    access_token: !secret awair_access_token
-    devices:
-      # Living Room
-      - uuid: awair-r2_19522
-      # Bedroom
-      - uuid: awair-r2_18895
-      # Office
-      - uuid: awair-r2_19550
-      # Camden
-      - uuid: awair-r2_19632
+    longitude: !secret home_lon
