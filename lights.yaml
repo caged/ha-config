@@ -53,6 +53,14 @@
     - light.hue_porch_1c
     - light.hue_porch_2c
 - platform: group
+  name: Office
+  entities:
+    - light.hue_office_1c
+    - light.hue_office_2
+    - light.hue_office_3
+    - light.hue_office_4
+    - light.hue_office_5
+- platform: group
   name: Downstairs
   entities:
     - light.dining_room
