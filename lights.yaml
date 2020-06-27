@@ -66,6 +66,12 @@
   entities:
     - light.hue_guest_bedroom_1
     - light.hue_guest_bedroom_2
+- platform: group
+  name: Upstairs hallway
+  entities:
+    - light.hue_upstairs_hallway_1
+    - light.hue_upstairs_hallway_2
+    - light.hue_upstairs_hallway_3
 # Super groups
 - platform: group
   name: Living room
@@ -87,6 +93,10 @@
   name: Upstairs
   entities:
     - light.office
+    - light.upstairs_hallway
+    - light.gueest_bedroom
+    - light.hue_toilet
+    - light.hue_shower
 - platform: group
   name: Backyard
   entities:
