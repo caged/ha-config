@@ -70,6 +70,10 @@
     - light.hallway
     - light.hue_sink
 - platform: group
+  name: Upstairs
+  entities:
+    - light.office
+- platform: group
   name: Backyard
   entities:
     - light.hue_backdoor
