@@ -41,6 +41,7 @@
   entities:
     - light.hue_stairway_1
     - light.hue_stairway_2
+    - light.hue_stairway_3
 - platform: group
   name: Garage
   entities:
