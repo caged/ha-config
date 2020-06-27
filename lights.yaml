@@ -107,3 +107,14 @@
   entities:
     - light.backyard
     - light.porch
+- platform: group
+  name: Inside
+  entities:
+    - light.downstairs
+    - light.upstairs
+    - light.stairway
+- platform: group
+  name: All
+  entities:
+    - light.inside
+    - light.outside
