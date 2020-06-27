@@ -5,6 +5,7 @@ default_config:
 tts:
   - platform: google_translate
 
+light: !include lights.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
