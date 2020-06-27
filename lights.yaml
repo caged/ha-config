@@ -61,8 +61,21 @@
     - light.hue_office_4
     - light.hue_office_5
 - platform: group
+  name: Guest bedroom
+  entities:
+    - light.hue_guest_bedroom_1
+    - light.hue_guest_bedroom_2
+# Super groups
+- platform: group
+  name: Living room
+  entities:
+    - light.hue_living_room_fan_c
+    - light.tv_media_lights
+    - light.floor_lamp
+- platform: group
   name: Downstairs
   entities:
+    - light.living_room
     - light.dining_room
     - light.floor_lamp
     - light.kitchen
