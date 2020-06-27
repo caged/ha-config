@@ -42,6 +42,12 @@
     - light.hue_stairway_1
     - light.hue_stairway_2
 - platform: group
+  name: Garage
+  entities:
+    - light.hue_garage_1
+    - light.hue_garage_2
+    - light.hue_garage_3
+- platform: group
   name: Downstairs
   entities:
     - light.dining_room
@@ -49,3 +55,9 @@
     - light.kitchen
     - light.tv_media_lights
     - light.hallway
+    - light.hue_sink
+- platform: group
+  name: Backyard
+  entities:
+    - light.hue_backdoor
+    - light.garage
