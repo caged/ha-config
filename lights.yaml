@@ -30,3 +30,8 @@
     - light.hue_bedroom_lamp_justin
     - light.hue_bedroom_lamp_heather
     - light.hue_bedroom_lightstrip
+- platform: group
+  name: Stairway
+  entities:
+    - light.hue_stairway_1
+    - light.hue_stairway_2
