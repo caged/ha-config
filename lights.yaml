@@ -1,5 +1,31 @@
 - platform: group
-  name: Floor Lamp
+  name: Floor lamp
   entities:
     - light.hue_floor_lamp_1
     - light.shue_floor_lamp_2
+- platform: group
+  name: TV media lights
+  entities:
+    - light.hue_tv_right
+    - light.hue_tv_left
+- platform: group
+  name: Dining room
+  entities:
+    - light.hue_dining_room_1
+    - light.hue_dining_room_2
+    - light.hue_dining_room_3
+    - light.hue_dining_room_4
+    - light.hue_dining_room_5
+- platform: group
+  name: Kitchen
+  entities:
+    - light.hue_kitchen_1
+    - light.hue_kitchen_2
+    - light.hue_kitchen_3
+    - light.hue_kitchen_4
+- platform: group
+  name: Bedroom
+  entities:
+    - light.hue_bedroom_lamp_justin
+    - light.hue_bedroom_lamp_heather
+    - light.hue_bedroom_lightstrip
