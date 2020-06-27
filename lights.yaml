@@ -1,5 +1,5 @@
 - platform: group
   name: Floor Lamp
   entities:
-    - light.light.hue_floor_lamp_1
-    - light.light.hue_floor_lamp_2
+    - light.hue_floor_lamp_1
+    - light.shue_floor_lamp_2
