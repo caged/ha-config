@@ -6,8 +6,8 @@
 - platform: group
   name: TV media lights
   entities:
-    - light.hue_tv_right
-    - light.hue_tv_left
+    - light.tv_right_1p
+    - light.tv_left_1p
 - platform: group
   name: Dining room
   entities:
