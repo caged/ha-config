@@ -11,11 +11,11 @@
 - platform: group
   name: Dining room
   entities:
-    - light.hue_dining_room_1
-    - light.hue_dining_room_2
-    - light.hue_dining_room_3
-    - light.hue_dining_room_4
-    - light.hue_dining_room_5
+    - light.diningroom_1
+    - light.diningroom_2
+    - light.diningroom_3
+    - light.diningroom_4
+    - light.diningroom_5
 - platform: group
   name: Kitchen
   entities:
