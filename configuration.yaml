@@ -18,3 +18,10 @@ weather:
     mode: freedaily
     latitude: !secret home_lat
     longitude: !secret home_lon
+
+notify:
+  - name: ALL_DEVICES
+    platform: group
+    services:
+      - service: mobile_app_justin_palmers_iphone
+      - service: mobile_app_heather_palmers_iphone
