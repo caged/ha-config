@@ -1,15 +1,14 @@
-- id: '1593378236436'
+- id: "1593378236436"
   alias: Turn on TV media lights when the sun sets
-  description: ''
+  description: ""
   trigger:
-  - event: sunset
-    platform: sun
+    - event: sunset
+      platform: sun
   condition: []
   action:
-  - data:
-      LampHexValue: '#cc0000'
-      brightness: 75
-      kelvin: 2000
-    entity_id: light.tv_media_lights
-    service: light.turn_on
-
+    - data:
+        LampHexValue: "#cc0000"
+        brightness: 75
+        kelvin: 2000
+      entity_id: light.tv_media_lights
+      service: light.turn_on
