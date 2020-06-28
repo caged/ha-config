@@ -31,7 +31,7 @@ jobs:
         uses: docker://github/super-linter:v2.2.0
         env:
           DEFAULT_BRANCH: main
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_YAML: true
   validate_config:
     name: Validate Homeassistant config
