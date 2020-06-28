@@ -7,8 +7,7 @@
   condition: []
   action:
     - data:
-        LampHexValue: "#cc0000"
-        brightness: 75
+        brightness: 175
         kelvin: 2000
       entity_id: light.tv_media_lights
       service: light.turn_on
