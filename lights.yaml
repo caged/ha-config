@@ -19,64 +19,64 @@
 - platform: group
   name: Kitchen
   entities:
-    - light.hue_kitchen_1
-    - light.hue_kitchen_2
-    - light.hue_kitchen_3
-    - light.hue_kitchen_4
-    - light.hue_kitchen_5
+    - light.kitchen_1
+    - light.kitchen_2
+    - light.kitchen_3
+    - light.kitchen_4
+    - light.kitchen_5
 - platform: group
   name: Hallway
   entities:
-    - light.hue_hallway_1
-    - light.hue_hallway_2
-    - light.hue_hallway_3
+    - light.hallway_1
+    - light.hallway_2
+    - light.hallway_3
 - platform: group
   name: Bedroom
   entities:
-    - light.hue_bedroom_lamp_justin
-    - light.hue_bedroom_lamp_heather
-    - light.hue_bedroom_lightstrip
+    - light.bedroom_lamp_justin
+    - light.bedroom_lamp_heather
+    - light.bed_1ls
 - platform: group
   name: Stairway
   entities:
-    - light.hue_stairway_1
-    - light.hue_stairway_2
-    - light.hue_stairway_3
+    - light.stairway_1
+    - light.stairway_2
+    - light.stairway_3
 - platform: group
   name: Garage
   entities:
-    - light.hue_garage_1
-    - light.hue_garage_2
-    - light.hue_garage_3
+    - light.garage_1
+    - light.garage_2
+    - light.garage_3
 - platform: group
   name: Porch
   entities:
-    - light.hue_porch_1c
-    - light.hue_porch_2c
+    - light.porch_1c
+    - light.porch_2c
 - platform: group
   name: Office
   entities:
-    - light.hue_office_1c
-    - light.hue_office_2
-    - light.hue_office_3
-    - light.hue_office_4
-    - light.hue_office_5
+    - light.office_1
+    - light.office_2
+    - light.office_3
+    - light.office_4
+    - light.office_5c
 - platform: group
   name: Guest bedroom
   entities:
-    - light.hue_guest_bedroom_1
-    - light.hue_guest_bedroom_2
+    - light.guest_bedroom_1
+    - light.guest_bedroom_2
 - platform: group
   name: Upstairs hallway
   entities:
-    - light.hue_upstairs_hallway_1
-    - light.hue_upstairs_hallway_2
-    - light.hue_upstairs_hallway_3
+    - light.upstairs_hallway_1
+    - light.upstairs_hallway_2
+    - light.upstairs_hallway_3
 # Super groups
 - platform: group
   name: Living room
   entities:
-    - light.hue_living_room_fan_c
+    - light.livingroom_ceilingfan_1c
     - light.tv_media_lights
     - light.floor_lamp
 - platform: group
@@ -88,19 +88,19 @@
     - light.kitchen
     - light.tv_media_lights
     - light.hallway
-    - light.hue_sink
+    - light.sink_1
 - platform: group
   name: Upstairs
   entities:
     - light.office
     - light.upstairs_hallway
     - light.gueest_bedroom
-    - light.hue_toilet
-    - light.hue_shower
+    - light.toilet_1
+    - light.shower_1
 - platform: group
   name: Backyard
   entities:
-    - light.hue_backdoor
+    - light.backdoor_1c
     - light.garage
 - platform: group
   name: Outside
