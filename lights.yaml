@@ -1,8 +1,8 @@
 - platform: group
   name: Floor lamp
   entities:
-    - light.hue_floor_lamp_1
-    - light.shue_floor_lamp_2
+    - light.floorlamp_1
+    - light.floorlamp_2
 - platform: group
   name: TV media lights
   entities:
