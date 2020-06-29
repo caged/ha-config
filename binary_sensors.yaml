@@ -1,9 +1,11 @@
-halloween_season:
-  friendly_name: "Halloween season"
-  value_template: >-
-    {{ (10, 14) < (now().month, now().day) < (11, 1) }}
-# Lets say Christmas "season" is December.
-christmas_season:
-  friendly_name: "Christmas season"
-  value_template: >-
-    {{ now().month == 12 }}
+- platform: template
+  sensors:
+    halloween_season:
+      friendly_name: "Halloween season"
+      value_template: >-
+        {{ (10, 14) < (now().month, now().day) < (11, 1) }}
+    # Lets say Christmas "season" is December.
+    christmas_season:
+      friendly_name: "Christmas season"
+      value_template: >-
+        {{ now().month == 12 }}
