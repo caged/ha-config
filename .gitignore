@@ -1,6 +1,7 @@
 # Home assistant stuff now in /config
 *.log
 *.db
+*.db-*
 
 # Ignore folders.
 .storage

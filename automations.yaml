@@ -1,13 +1,16 @@
-- id: "1593378236436"
-  alias: Turn on TV media lights when the sun sets
-  description: ""
+- id: '1593378236436'
+  alias: Turn on some lights when the sun sets
+  description: ''
   trigger:
-    - event: sunset
-      platform: sun
+  - event: sunset
+    platform: sun
   condition: []
   action:
-    - data:
-        brightness: 175
-        kelvin: 2000
-      entity_id: light.tv_media_lights
-      service: light.turn_on
+  - data:
+      brightness: 175
+      kelvin: 2000
+    entity_id: light.tv_media_lights
+    service: light.turn_on
+  - data: {}
+    entity_id: light.outside
+    service: light.turn_on
