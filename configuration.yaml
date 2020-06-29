@@ -20,7 +20,7 @@ weather:
     longitude: !secret home_lon
 
 notify:
-  - name: ALL_DEVICES
+  - name: all_devices
     platform: group
     services:
       - service: mobile_app_justin_palmers_iphone
