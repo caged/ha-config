@@ -12,3 +12,7 @@ downstairs_motion:
     - binary_sensor.downstairs_hallway_occupancy
     - binary_sensor.living_room_occupancy
     - binary_sensor.map_room_occupancy
+inside_motion:
+  entities:
+    - group.upstairs_motion
+    - group.downstairs_motion
