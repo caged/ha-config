@@ -42,3 +42,17 @@
   - data: {}
     entity_id: light.outside
     service: light.turn_off
+- id: '1593537894918'
+  alias: Lock garage door if left unlocked
+  description: ''
+  trigger:
+  - entity_id: lock.garage_door_deadbolt
+    for: 0:30:00
+    from: locked
+    platform: state
+    to: unlocked
+  condition: []
+  action:
+  - data: {}
+    entity_id: lock.garage_door_deadbolt
+    service: lock.lock
