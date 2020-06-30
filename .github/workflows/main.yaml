@@ -2,8 +2,6 @@ name: verify-home-assistant-config
 
 on:
   push:
-    branches-ignore:
-      - "main"
   schedule:
     - cron: 0 12 * * *
 
