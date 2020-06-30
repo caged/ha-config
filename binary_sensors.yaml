@@ -9,8 +9,8 @@
       friendly_name: "Christmas season"
       value_template: >-
         {{ now().month == 12 }}
-    washer_state:
-      friendly_name: "Washer state"
-      value_template: >-
-        {{ state_attr('switch.washer_wemo', 'state_detail') == 'on' }}
-      icon_template: mdi:washing-machine
+    # washer_state:
+    #   friendly_name: "Washer state"
+    #   value_template: >-
+    #     {{ state_attr('switch.washer_wemo', 'state_detail') == 'on' }}
+    #   icon_template: mdi:washing-machine
