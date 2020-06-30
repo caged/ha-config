@@ -12,5 +12,7 @@
     washer:
       friendly_name: "Washer state"
       value_template: >-
-        {{ state_attr('switch.washer_wemo', 'state_detail') == 'on' }}
+        {{ is_state('switch.washer_wemo_insight', 'on')
+           and states('sensor.washer_power') | float > 0.5
+        }}
       icon_template: mdi:washing-machine
