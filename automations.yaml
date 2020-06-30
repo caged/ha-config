@@ -1,5 +1,5 @@
 - id: '1593378236436'
-  alias: Turn on some lights when the sun sets
+  alias: Turn on lights when the sun sets
   description: ''
   trigger:
   - event: sunset
@@ -31,3 +31,14 @@
       message: The washer has finished
       title: Hoooly shit, Heather
     service: notify.mobile_app_heather_palmers_iphone
+- id: '1593490239841'
+  alias: Turn off lights when sun rises
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.outside
+    service: light.turn_off
