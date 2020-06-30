@@ -1,10 +1,10 @@
-'1593388215405':
+"1593388215405":
   alias: Test notifying all devices
   sequence:
-  - data:
-      data:
-        push:
-          thread-id: test-notify
-      message: A test notification from Home Assistant
-      title: Sent from Home Assistant
-    service: notify.all_devices
+    - data:
+        data:
+          push:
+            thread-id: test-notify
+        message: A test notification from Home Assistant
+        title: Sent from Home Assistant
+      service: notify.all_devices
