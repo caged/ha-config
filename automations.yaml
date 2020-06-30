@@ -1,5 +1,5 @@
 - id: '1593378236436'
-  alias: Turn on some lights when the sun sets
+  alias: Turn on lights when the sun sets
   description: ''
   trigger:
   - event: sunset
@@ -14,3 +14,45 @@
   - data: {}
     entity_id: light.outside
     service: light.turn_on
+- id: '1593406386687'
+  alias: Notify Heather when washer turns off
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.washer_state
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      data:
+        push:
+          thread-id: washer-off
+      message: The washer has finished
+      title: Hoooly shit, Heather
+    service: notify.mobile_app_heather_palmers_iphone
+- id: '1593490239841'
+  alias: Turn off lights when sun rises
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.outside
+    service: light.turn_off
+- id: '1593537894918'
+  alias: Lock garage door if left unlocked
+  description: ''
+  trigger:
+  - entity_id: lock.garage_door_deadbolt
+    for: 0:30:00
+    from: locked
+    platform: state
+    to: unlocked
+  condition: []
+  action:
+  - data: {}
+    entity_id: lock.garage_door_deadbolt
+    service: lock.lock
