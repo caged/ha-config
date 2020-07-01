@@ -56,3 +56,17 @@
   - data: {}
     entity_id: lock.garage_door_deadbolt
     service: lock.lock
+- id: '1593559217090'
+  alias: Lock back door deadbolt if no motion detected
+  description: ''
+  trigger:
+  - entity_id: group.inside_motion
+    for: 00:30:00
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: lock.back_door_deadbolt
+    service: lock.lock
