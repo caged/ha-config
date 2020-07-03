@@ -17,6 +17,6 @@ inside_motion:
     - group.upstairs_motion
     - group.downstairs_motion
 batteries:
-  friendly_name: "Battery status"
+  name: "Battery status"
   icon: mdi:battery-charging
   control: hidden
