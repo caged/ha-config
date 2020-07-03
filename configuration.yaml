@@ -1,6 +1,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+homeassistant:
+  customize: !include customize.yaml
+
 # Text to speech
 tts:
   - platform: google_translate
