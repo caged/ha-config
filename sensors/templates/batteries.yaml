@@ -2,3 +2,15 @@ back_door_deadbolt_battery:
   device_class: battery
   friendly_name: Back door deadbolt battery
   value_template: "{{ state_attr('lock.back_door_deadbolt', 'battery_level') }}"
+garage_door_deadbolt_battery:
+  device_class: battery
+  friendly_name: Garage door deadbolt battery
+  value_template: "{{ state_attr('lock.garage_door_deadbolt', 'battery_level') }}"
+office_sensor_battery:
+  device_class: battery
+  friendly_name: Office sensor battery
+  value_template: "{{ state_attr('sensor.office_sensor_light_level', 'battery_level') }}"
+bathroom_sensor_battery:
+  device_class: battery
+  friendly_name: Bathroom sensor battery
+  value_template: "{{ state_attr('sensor.bathroom_sensor_light_level', 'battery_level') }}"
