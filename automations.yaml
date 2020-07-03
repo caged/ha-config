@@ -1,72 +1,92 @@
-- id: "1593378236436"
+- id: '1593378236436'
   alias: Turn on lights when the sun sets
-  description: ""
+  description: ''
   trigger:
-    - event: sunset
-      platform: sun
+  - event: sunset
+    platform: sun
   condition: []
   action:
-    - data:
-        brightness: 175
-        kelvin: 2000
-      entity_id: light.tv_media_lights
-      service: light.turn_on
-    - data: {}
-      entity_id: light.outside
-      service: light.turn_on
-- id: "1593406386687"
+  - data:
+      brightness: 175
+      kelvin: 2000
+    entity_id: light.tv_media_lights
+    service: light.turn_on
+  - data: {}
+    entity_id: light.outside
+    service: light.turn_on
+- id: '1593406386687'
   alias: Notify Heather when washer turns off
-  description: ""
+  description: ''
   trigger:
-    - entity_id: binary_sensor.washer
-      from: "on"
-      platform: state
-      to: "off"
+  - entity_id: binary_sensor.washer
+    from: 'on'
+    platform: state
+    to: 'off'
   condition: []
   action:
-    - data:
-        data:
-          push:
-            thread-id: washer-off
-        message: The washer has finished
-        title: Hoooly shit, Heather
-      service: notify.mobile_app_heather_palmers_iphone
-- id: "1593490239841"
+  - data:
+      data:
+        push:
+          thread-id: washer-off
+      message: The washer has finished
+      title: Hoooly shit, Heather
+    service: notify.mobile_app_heather_palmers_iphone
+- id: '1593490239841'
   alias: Turn off lights when sun rises
-  description: ""
+  description: ''
   trigger:
-    - event: sunrise
-      platform: sun
+  - event: sunrise
+    platform: sun
   condition: []
   action:
-    - data: {}
-      entity_id: light.outside
-      service: light.turn_off
-- id: "1593537894918"
+  - data: {}
+    entity_id: light.outside
+    service: light.turn_off
+- id: '1593537894918'
   alias: Lock garage door if left unlocked
-  description: ""
+  description: ''
   trigger:
-    - entity_id: lock.garage_door_deadbolt
-      for: 0:30:00
-      from: locked
-      platform: state
-      to: unlocked
+  - entity_id: lock.garage_door_deadbolt
+    for: 0:30:00
+    from: locked
+    platform: state
+    to: unlocked
   condition: []
   action:
-    - data: {}
-      entity_id: lock.garage_door_deadbolt
-      service: lock.lock
-- id: "1593559217090"
+  - data: {}
+    entity_id: lock.garage_door_deadbolt
+    service: lock.lock
+- id: '1593559217090'
   alias: Lock back door deadbolt if no motion detected
-  description: ""
+  description: ''
   trigger:
-    - entity_id: group.inside_motion
-      for: 00:30:00
-      from: "on"
-      platform: state
-      to: "off"
+  - entity_id: group.inside_motion
+    for: 00:30:00
+    from: 'on'
+    platform: state
+    to: 'off'
   condition: []
   action:
-    - data: {}
-      entity_id: lock.back_door_deadbolt
-      service: lock.lock
+  - data: {}
+    entity_id: lock.back_door_deadbolt
+    service: lock.lock
+- id: '1593800025106'
+  alias: Update state of batteries
+  description: ''
+  trigger:
+  - minutes: /1
+    platform: time_pattern
+  condition: []
+  action:
+  - data_template:
+      entities: "{%- for item in states.sensor if (\n  not is_state_attr(item.entity_id,\
+        \ 'hidden', true)\n  and not is_state_attr(item.entity_id, 'is_battery_level',\
+        \ false)\n  and (\n    is_state_attr(item.entity_id, 'device_class', 'battery')\n\
+        \    or 'battery' in item.attributes.icon | lower\n    or (item.entity_id\
+        \ | lower).endswith('_bat')\n    or (item.name | lower).endswith('_bat')\n\
+        \    ) or (\n      (\n        'battery' in item.entity_id | lower\n      \
+        \  or 'battery' in item.name | lower\n      ) and (\n        item.attributes.icon\
+        \ is not defined\n      )\n    )\n  )\n-%}\n  {{ item.entity_id }}{% if not\
+        \ loop.last %}, {% endif %}\n{%- endfor -%}"
+      object_id: batteries
+    service: group.set
