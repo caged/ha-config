@@ -1,0 +1,4 @@
+back_door_deadbolt_battery:
+  device_class: battery
+  friendly_name: Back door deadbolt battery
+  value_template: "{{ state_attr('lock.back_door_deadbolt', 'battery_level') }}"
