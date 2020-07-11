@@ -16,3 +16,6 @@ inside_motion:
   entities:
     - group.upstairs_motion
     - group.downstairs_motion
+batteries:
+  name: 'Battery status'
+  icon: mdi:battery-charging

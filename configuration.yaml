@@ -1,6 +1,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+homeassistant:
+  customize: !include customize.yaml
+
 # Text to speech
 tts:
   - platform: google_translate
@@ -30,5 +33,5 @@ notify:
 wemo:
   discovery: false
   static:
-    - 192.168.100.15
-    - 192.168.100.71
+    - 192.168.1.10
+    - 192.168.1.8

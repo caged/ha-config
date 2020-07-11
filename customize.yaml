@@ -1,0 +1,4 @@
+sensor.justin_palmers_iphone_battery_state:
+  is_battery_level: false
+sensor.heather_palmers_iphone_battery_state:
+  is_battery_level: false
