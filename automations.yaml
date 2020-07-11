@@ -74,7 +74,7 @@
   alias: Update state of batteries
   description: ''
   trigger:
-  - minutes: /10
+  - hours: /1
     platform: time_pattern
   condition: []
   action:
