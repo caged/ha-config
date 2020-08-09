@@ -73,6 +73,11 @@
     - light.upstairs_hallway_1
     - light.upstairs_hallway_2
     - light.upstairs_hallway_3
+- platform: group
+  name: Main bathroom
+  entities:
+    - light.toilet_1
+    - light.shower_1
 # Super groups
 - platform: group
   name: Living room
@@ -95,9 +100,8 @@
   entities:
     - light.office
     - light.upstairs_hallway
-    - light.gueest_bedroom
-    - light.toilet_1
-    - light.shower_1
+    - light.guest_bedroom
+    - light.main_bathroom
 - platform: group
   name: Backyard
   entities:
