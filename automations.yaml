@@ -104,3 +104,129 @@
   - data: {}
     entity_id: light.stairway
     service: light.turn_off
+- id: '1596996048808'
+  alias: Turn on bathroom lights if motion detected
+  description: ''
+  trigger:
+  - device_id: 5b53855474b949b19ce7de6c11c2d2b2
+    domain: binary_sensor
+    entity_id: binary_sensor.bathroom_sensor_motion
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - data:
+      group_name: Main bathroom
+      scene_name: Nightlight
+    service: hue.hue_activate_scene
+- id: '1596996176869'
+  alias: Turn off bathroom lights if no motion detected
+  description: ''
+  trigger:
+  - device_id: 5b53855474b949b19ce7de6c11c2d2b2
+    domain: binary_sensor
+    entity_id: binary_sensor.bathroom_sensor_motion
+    for:
+      hours: 0
+      minutes: 3
+      seconds: 0
+    platform: device
+    type: no_motion
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.main_bathroom
+    service: light.turn_off
+- id: '1597342127916'
+  alias: Turn off key lights when no office motion
+  description: ''
+  trigger:
+  - device_id: 962ea31655b44604a50450308f2c1070
+    domain: binary_sensor
+    entity_id: binary_sensor.office_occupancy
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+    platform: device
+    type: not_occupied
+  condition: []
+  action:
+  - device_id: 2d5c0a384e504c7c8dc01d07a6e5c52d
+    domain: light
+    entity_id: light.elgato_key_light_air
+    type: turn_off
+- id: '1597342306409'
+  alias: Send notifications when CO2 is too damn high
+  description: ''
+  trigger:
+  - above: 800
+    device_id: 23995a08140c4c108cc86f9455a2ed8d
+    domain: sensor
+    entity_id: sensor.awair_co2_office
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    platform: device
+    type: value
+  - above: 800
+    device_id: 4b3d7ae4f0da43bdbfc22c2053899a4a
+    domain: sensor
+    entity_id: sensor.awair_co2_camden
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    platform: device
+    type: value
+  - above: 800
+    device_id: 95855a130e1c412b9fccfa5d777a5294
+    domain: sensor
+    entity_id: sensor.awair_co2_livingroom
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    platform: device
+    type: value
+  - above: 800
+    device_id: 8359789b27e845a8bd0344cfd90deaa3
+    domain: sensor
+    entity_id: sensor.awair_co2_bedroom
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    platform: device
+    type: value
+  condition: []
+  action:
+  - data_template:
+      message: '{{ trigger.from_state.name }} has been elevated for an hour: {{ states(trigger.entity_id)
+        }} {{trigger.to_state.attributes.unit_of_measurement}}'
+      title: Open a damn window yo!
+    service: notify.all_devices
+- id: '1597358392746'
+  alias: Test multiple actions
+  description: ''
+  trigger:
+  - entity_id: light.office
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - before: '16:00:00'
+    condition: time
+  - data:
+      brightness: 155
+      color_temp: 100
+    entity_id: light.elgato_key_light_air
+    service: light.turn_on
+  - after: '16:00:00'
+    condition: time
+  - data:
+      brightness: 5
+      color_temp: 100
+    service: light.turn_on
