@@ -1,10 +1,27 @@
-"1593388215405":
+'1593388215405':
   alias: Test notifying all devices
   sequence:
-    - data:
-        data:
-          push:
-            thread-id: test-notify
-        message: A test notification from Home Assistant
-        title: Sent from Home Assistant
-      service: notify.all_devices
+  - data:
+      data:
+        push:
+          thread-id: test-notify
+      message: A test notification from Home Assistant
+      title: Sent from Home Assistant
+    service: notify.all_devices
+'1597360912091':
+  alias: Toggle bathroom light scene based on sun
+  sequence:
+  - after: sunrise
+    before: sunset
+    condition: sun
+  - data:
+      group_name: Main bathroom
+      scene_name: Bright
+    service: hue.hue_activate_scene
+  - after: sunset
+    before: sunrise
+    condition: sun
+  - data:
+      group_name: Main bathroom
+      scene_name: Nightlight
+    service: hue.hue_activate_scene

@@ -115,10 +115,8 @@
     type: motion
   condition: []
   action:
-  - data:
-      group_name: Main bathroom
-      scene_name: Nightlight
-    service: hue.hue_activate_scene
+  - data: {}
+    service: script.1597360912091
 - id: '1596996176869'
   alias: Turn off bathroom lights if no motion detected
   description: ''
