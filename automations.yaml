@@ -254,3 +254,33 @@
         stuff: hello
     entity_id: script.1597421207870
     service: script.turn_on
+- id: '1598288460878'
+  alias: Office - Turn off lights when room is not occupied
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_occupancy
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.office
+    service: light.turn_off
+- id: '1598290197406'
+  alias: Stairway - Turn on stairway nightlight if its dark
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.stairway_sensor_motion
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - below: '20'
+    condition: numeric_state
+    entity_id: sensor.stairway_sensor_light_level
+  action:
+  - data:
+      group_name: Stairway
+      scene_name: Nightlight
+    service: hue.hue_activate_scene
