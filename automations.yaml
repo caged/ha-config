@@ -105,7 +105,7 @@
     entity_id: light.stairway
     service: light.turn_off
 - id: '1596996048808'
-  alias: Turn on bathroom lights if motion detected
+  alias: Bathroom - Turn on bathroom lights if motion detected
   description: ''
   trigger:
   - device_id: 5b53855474b949b19ce7de6c11c2d2b2
@@ -115,10 +115,13 @@
     type: motion
   condition: []
   action:
-  - data: {}
-    service: script.1597360912091
+  - data_template:
+      variables:
+        group: Main bathroom
+    entity_id: script.1597360912091
+    service: script.turn_on
 - id: '1596996176869'
-  alias: Turn off bathroom lights if no motion detected
+  alias: Bathroom - Turn off bathroom lights if no motion detected
   description: ''
   trigger:
   - device_id: 5b53855474b949b19ce7de6c11c2d2b2
@@ -136,18 +139,13 @@
     entity_id: light.main_bathroom
     service: light.turn_off
 - id: '1597342127916'
-  alias: Turn off key lights when no office motion
+  alias: Office - Turn off key light when office lights are off
   description: ''
   trigger:
-  - device_id: 962ea31655b44604a50450308f2c1070
-    domain: binary_sensor
-    entity_id: binary_sensor.office_occupancy
-    for:
-      hours: 0
-      minutes: 5
-      seconds: 0
-    platform: device
-    type: not_occupied
+  - entity_id: light.office
+    from: 'on'
+    platform: state
+    to: 'off'
   condition: []
   action:
   - device_id: 2d5c0a384e504c7c8dc01d07a6e5c52d
@@ -228,3 +226,31 @@
       brightness: 5
       color_temp: 100
     service: light.turn_on
+- id: '1597362840308'
+  alias: Office - Turn on keylight when office lights on
+  description: ''
+  trigger:
+  - entity_id: light.office
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness: 50
+      color_temp: 1
+    entity_id: light.elgato_key_light_air
+    service: light.turn_on
+- id: '1597421392273'
+  alias: Test - Run script with arguments
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data_template:
+      variables:
+        stuff: hello
+    entity_id: script.1597421207870
+    service: script.turn_on
