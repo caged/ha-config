@@ -8,23 +8,6 @@
       message: A test notification from Home Assistant
       title: Sent from Home Assistant
     service: notify.all_devices
-'1597360912091':
-  alias: Turn on nightlight scene based on sun
-  sequence:
-  - after: sunrise
-    before: sunset
-    condition: sun
-  - data_template:
-      group_name: '{{ group }}'
-      scene_name: Bright
-    service: hue.hue_activate_scene
-  - after: sunset
-    before: sunrise
-    condition: sun
-  - data_template:
-      group_name: '{{ group }}'
-      scene_name: Nightlight
-    service: hue.hue_activate_scene
 '1597421207870':
   alias: Test command line arguments
   sequence:
@@ -32,3 +15,17 @@
       message: A test notification from Home Assistant / {{ stuff }}
       title: 'The title: {{ stuff }}'
     service: notify.mobile_app_justin_palmers_iphone
+'1598286532340':
+  alias: Toggle nightlight scene for hue group based on sun
+  sequence:
+  - data_template:
+      group_name: '{{ group or "Office" }}'
+      scene_name: '{% if states(''sun.sun'') == ''above_horizon'' %}Bright{% else
+        %}Nightlight{%endif%}'
+    service: hue.hue_activate_scene
+  - data_template:
+      domain: light
+      message: Activating scene in {{ group or "Office" }} for {{ states("sun.sun")
+        }}
+      name: '{{ group or "Office" }} light'
+    service: logbook.log

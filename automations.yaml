@@ -118,7 +118,7 @@
   - data_template:
       variables:
         group: Main bathroom
-    entity_id: script.1597360912091
+    entity_id: script.1598286532340
     service: script.turn_on
 - id: '1596996176869'
   alias: Bathroom - Turn off bathroom lights if no motion detected
