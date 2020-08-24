@@ -1,7 +1,7 @@
 upstairs_motion:
   entities:
     - binary_sensor.bathroom_sensor_motion
-    - binary_sensor.office_sensor_motion
+    - binary_sensor.stairway_sensor_motion
     - binary_sensor.guest_bedroom_occupancy
     - binary_sensor.main_bedroom_occupancy
     - binary_sensor.office_occupancy
