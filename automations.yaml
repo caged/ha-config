@@ -91,7 +91,7 @@
       object_id: batteries
     service: group.set
 - id: '1594311296712'
-  alias: Turn off stairway lights after 5 minutes
+  alias: Stairway - Turn off stairway lights after 5 minutes
   description: ''
   trigger:
   - entity_id: light.stairway
@@ -153,10 +153,10 @@
     entity_id: light.elgato_key_light_air
     type: turn_off
 - id: '1597342306409'
-  alias: Send notifications when CO2 is too damn high
+  alias: Send notifications when CO2 remains elevated
   description: ''
   trigger:
-  - above: 800
+  - above: 1000
     device_id: 23995a08140c4c108cc86f9455a2ed8d
     domain: sensor
     entity_id: sensor.awair_co2_office
@@ -166,7 +166,7 @@
       seconds: 0
     platform: device
     type: value
-  - above: 800
+  - above: 1000
     device_id: 4b3d7ae4f0da43bdbfc22c2053899a4a
     domain: sensor
     entity_id: sensor.awair_co2_camden
@@ -176,7 +176,7 @@
       seconds: 0
     platform: device
     type: value
-  - above: 800
+  - above: 1000
     device_id: 95855a130e1c412b9fccfa5d777a5294
     domain: sensor
     entity_id: sensor.awair_co2_livingroom
@@ -186,7 +186,7 @@
       seconds: 0
     platform: device
     type: value
-  - above: 800
+  - above: 1000
     device_id: 8359789b27e845a8bd0344cfd90deaa3
     domain: sensor
     entity_id: sensor.awair_co2_bedroom
@@ -201,7 +201,7 @@
   - data_template:
       message: '{{ trigger.from_state.name }} has been elevated for an hour: {{ states(trigger.entity_id)
         }} {{trigger.to_state.attributes.unit_of_measurement}}'
-      title: Open a damn window yo!
+      title: Open a window
     service: notify.all_devices
 - id: '1597358392746'
   alias: Test multiple actions
@@ -258,7 +258,8 @@
   alias: Office - Turn off lights when room is not occupied
   description: ''
   trigger:
-  - entity_id: binary_sensor.office_occupancy
+  - entity_id: binary_sensor.office_fbsnsr_motion
+    for: 00:20:00
     from: 'on'
     platform: state
     to: 'off'
@@ -276,7 +277,7 @@
     platform: state
     to: 'on'
   condition:
-  - below: '20'
+  - below: '5'
     condition: numeric_state
     entity_id: sensor.stairway_sensor_light_level
   action:
@@ -284,3 +285,16 @@
       group_name: Stairway
       scene_name: Nightlight
     service: hue.hue_activate_scene
+- id: '1598742539851'
+  alias: Office - Turn on lights when office occupied
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_fbsnsr_motion
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.office
+    service: light.turn_on
