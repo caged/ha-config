@@ -1,3 +1,6 @@
+- platform: switch
+  name: Back fence lights
+  entity_id: switch.back_fence_lights
 - platform: group
   name: Floor lamp
   entities:
@@ -107,7 +110,6 @@
   entities:
     - light.backdoor_1c
     - light.garage
-    - switch.back_fence_lights
 - platform: group
   name: Outside
   entities:
