@@ -298,3 +298,14 @@
   - data: {}
     entity_id: light.office
     service: light.turn_on
+- id: '1604809073711'
+  alias: Turn off back fence lights at 1am
+  description: ''
+  trigger:
+  - at: 01:00:00
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.back_fence_lights
+    service: switch.turn_off
