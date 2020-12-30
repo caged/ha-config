@@ -35,3 +35,7 @@ wemo:
   static:
     - 192.168.1.10
     - 192.168.1.8
+
+http:
+#   ssl_certificate: /ssl/fullchain.pem
+#   ssl_key: /ssl/privkey.pem

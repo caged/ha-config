@@ -139,19 +139,18 @@
     entity_id: light.main_bathroom
     service: light.turn_off
 - id: '1597342127916'
-  alias: Office - Turn off key light when office lights are off
+  alias: Office - Turn off key lights at 11pm
   description: ''
   trigger:
-  - entity_id: light.office
-    from: 'on'
-    platform: state
-    to: 'off'
+  - at: '23:00:00'
+    platform: time
   condition: []
   action:
-  - device_id: 2d5c0a384e504c7c8dc01d07a6e5c52d
-    domain: light
-    entity_id: light.elgato_key_light_air
-    type: turn_off
+  - data: {}
+    entity_id:
+    - light.elgato_key_light_air_1
+    - light.elgato_key_light_air_2
+    service: light.turn_off
 - id: '1597342306409'
   alias: Send notifications when CO2 remains elevated
   description: ''
@@ -225,21 +224,6 @@
   - data:
       brightness: 5
       color_temp: 100
-    service: light.turn_on
-- id: '1597362840308'
-  alias: Office - Turn on keylight when office lights on
-  description: ''
-  trigger:
-  - entity_id: light.office
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      brightness: 50
-      color_temp: 1
-    entity_id: light.elgato_key_light_air
     service: light.turn_on
 - id: '1597421392273'
   alias: Test - Run script with arguments
