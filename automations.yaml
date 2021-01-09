@@ -2,26 +2,26 @@
   alias: Turn on lights when the sun sets
   description: ''
   trigger:
-  - event: sunset
-    platform: sun
+    - event: sunset
+      platform: sun
   condition: []
   action:
-  - data:
-      brightness: 175
-      kelvin: 2000
-    entity_id: light.tv_media_lights
-    service: light.turn_on
-  - data: {}
-    entity_id: light.outside
-    service: light.turn_on
+    - data:
+        brightness: 175
+        kelvin: 2000
+      entity_id: light.tv_media_lights
+      service: light.turn_on
+    - data: {}
+      entity_id: light.outside
+      service: light.turn_on
 - id: '1593406386687'
   alias: Notify Heather when washer turns off
   description: ''
   trigger:
-  - entity_id: binary_sensor.washer
-    from: 'on'
-    platform: state
-    to: 'off'
+    - entity_id: binary_sensor.washer
+      from: 'on'
+      platform: state
+      to: 'off'
   condition: []
   action:
     - data:
@@ -35,261 +35,263 @@
   alias: Turn off lights when sun rises
   description: ''
   trigger:
-  - event: sunrise
-    platform: sun
+    - event: sunrise
+      platform: sun
   condition: []
   action:
-  - data: {}
-    entity_id: light.outside
-    service: light.turn_off
+    - data: {}
+      entity_id: light.outside
+      service: light.turn_off
 - id: '1593537894918'
   alias: Lock garage door if left unlocked
   description: ''
   trigger:
-  - entity_id: lock.garage_door_deadbolt
-    for: 0:30:00
-    from: locked
-    platform: state
-    to: unlocked
+    - entity_id: lock.garage_door_deadbolt
+      for: 0:30:00
+      from: locked
+      platform: state
+      to: unlocked
   condition: []
   action:
-  - data: {}
-    entity_id: lock.garage_door_deadbolt
-    service: lock.lock
+    - data: {}
+      entity_id: lock.garage_door_deadbolt
+      service: lock.lock
 - id: '1593559217090'
   alias: Lock back door deadbolt if no motion detected
   description: ''
   trigger:
-  - entity_id: group.inside_motion
-    for: 00:30:00
-    from: 'on'
-    platform: state
-    to: 'off'
+    - entity_id: group.inside_motion
+      for: 00:30:00
+      from: 'on'
+      platform: state
+      to: 'off'
   condition: []
   action:
-  - data: {}
-    entity_id: lock.back_door_deadbolt
-    service: lock.lock
+    - data: {}
+      entity_id: lock.back_door_deadbolt
+      service: lock.lock
 - id: '1593800025106'
   alias: Update state of batteries
   description: ''
   trigger:
-  - hours: /1
-    platform: time_pattern
+    - hours: /1
+      platform: time_pattern
   condition: []
   action:
-  - data_template:
-      entities: "{%- for item in states.sensor if (\n  not is_state_attr(item.entity_id,\
-        \ 'hidden', true)\n  and not is_state_attr(item.entity_id, 'is_battery_level',\
-        \ false)\n  and (\n    is_state_attr(item.entity_id, 'device_class', 'battery')\n\
-        \    or 'battery' in item.attributes.icon | lower\n    or (item.entity_id\
-        \ | lower).endswith('_bat')\n    or (item.name | lower).endswith('_bat')\n\
-        \    ) or (\n      (\n        'battery' in item.entity_id | lower\n      \
-        \  or 'battery' in item.name | lower\n      ) and (\n        item.attributes.icon\
-        \ is not defined\n      )\n    )\n  )\n-%}\n  {{ item.entity_id }}{% if not\
-        \ loop.last %}, {% endif %}\n{%- endfor -%}"
-      object_id: batteries
-    service: group.set
+    - data_template:
+        entities:
+          "{%- for item in states.sensor if (\n  not is_state_attr(item.entity_id,\
+          \ 'hidden', true)\n  and not is_state_attr(item.entity_id, 'is_battery_level',\
+          \ false)\n  and (\n    is_state_attr(item.entity_id, 'device_class', 'battery')\n\
+          \    or 'battery' in item.attributes.icon | lower\n    or (item.entity_id\
+          \ | lower).endswith('_bat')\n    or (item.name | lower).endswith('_bat')\n\
+          \    ) or (\n      (\n        'battery' in item.entity_id | lower\n      \
+          \  or 'battery' in item.name | lower\n      ) and (\n        item.attributes.icon\
+          \ is not defined\n      )\n    )\n  )\n-%}\n  {{ item.entity_id }}{% if not\
+          \ loop.last %}, {% endif %}\n{%- endfor -%}"
+        object_id: batteries
+      service: group.set
 - id: '1594311296712'
   alias: Stairway - Turn off stairway lights after 5 minutes
   description: ''
   trigger:
-  - entity_id: light.stairway
-    for: 0:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
+    - entity_id: light.stairway
+      for: 0:05:00
+      from: 'off'
+      platform: state
+      to: 'on'
   condition: []
   action:
-  - data: {}
-    entity_id: light.stairway
-    service: light.turn_off
+    - data: {}
+      entity_id: light.stairway
+      service: light.turn_off
 - id: '1596996048808'
   alias: Bathroom - Turn on bathroom lights if motion detected
   description: ''
   trigger:
-  - device_id: 5b53855474b949b19ce7de6c11c2d2b2
-    domain: binary_sensor
-    entity_id: binary_sensor.bathroom_sensor_motion
-    platform: device
-    type: motion
+    - device_id: 5b53855474b949b19ce7de6c11c2d2b2
+      domain: binary_sensor
+      entity_id: binary_sensor.bathroom_sensor_motion
+      platform: device
+      type: motion
   condition: []
   action:
-  - data_template:
-      variables:
-        group: Main bathroom
-    entity_id: script.1598286532340
-    service: script.turn_on
+    - data_template:
+        variables:
+          group: Main bathroom
+      entity_id: script.1598286532340
+      service: script.turn_on
 - id: '1596996176869'
   alias: Bathroom - Turn off bathroom lights if no motion detected
   description: ''
   trigger:
-  - device_id: 5b53855474b949b19ce7de6c11c2d2b2
-    domain: binary_sensor
-    entity_id: binary_sensor.bathroom_sensor_motion
-    for:
-      hours: 0
-      minutes: 3
-      seconds: 0
-    platform: device
-    type: no_motion
+    - device_id: 5b53855474b949b19ce7de6c11c2d2b2
+      domain: binary_sensor
+      entity_id: binary_sensor.bathroom_sensor_motion
+      for:
+        hours: 0
+        minutes: 3
+        seconds: 0
+      platform: device
+      type: no_motion
   condition: []
   action:
-  - data: {}
-    entity_id: light.main_bathroom
-    service: light.turn_off
+    - data: {}
+      entity_id: light.main_bathroom
+      service: light.turn_off
 - id: '1597342127916'
   alias: Office - Turn off key lights at 11pm
   description: ''
   trigger:
-  - at: '23:00:00'
-    platform: time
+    - at: '23:00:00'
+      platform: time
   condition: []
   action:
-  - data: {}
-    entity_id:
-    - light.elgato_key_light_air_1
-    - light.elgato_key_light_air_2
-    service: light.turn_off
+    - data: {}
+      entity_id:
+        - light.elgato_key_light_air_1
+        - light.elgato_key_light_air_2
+      service: light.turn_off
 - id: '1597342306409'
   alias: Send notifications when CO2 remains elevated
   description: ''
   trigger:
-  - above: 1000
-    device_id: 23995a08140c4c108cc86f9455a2ed8d
-    domain: sensor
-    entity_id: sensor.awair_co2_office
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
-    platform: device
-    type: value
-  - above: 1000
-    device_id: 4b3d7ae4f0da43bdbfc22c2053899a4a
-    domain: sensor
-    entity_id: sensor.awair_co2_camden
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
-    platform: device
-    type: value
-  - above: 1000
-    device_id: 95855a130e1c412b9fccfa5d777a5294
-    domain: sensor
-    entity_id: sensor.awair_co2_livingroom
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
-    platform: device
-    type: value
-  - above: 1000
-    device_id: 8359789b27e845a8bd0344cfd90deaa3
-    domain: sensor
-    entity_id: sensor.awair_co2_bedroom
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
-    platform: device
-    type: value
+    - above: 1000
+      device_id: 23995a08140c4c108cc86f9455a2ed8d
+      domain: sensor
+      entity_id: sensor.awair_co2_office
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+      platform: device
+      type: value
+    - above: 1000
+      device_id: 4b3d7ae4f0da43bdbfc22c2053899a4a
+      domain: sensor
+      entity_id: sensor.awair_co2_camden
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+      platform: device
+      type: value
+    - above: 1000
+      device_id: 95855a130e1c412b9fccfa5d777a5294
+      domain: sensor
+      entity_id: sensor.awair_co2_livingroom
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+      platform: device
+      type: value
+    - above: 1000
+      device_id: 8359789b27e845a8bd0344cfd90deaa3
+      domain: sensor
+      entity_id: sensor.awair_co2_bedroom
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+      platform: device
+      type: value
   condition: []
   action:
-  - data_template:
-      message: '{{ trigger.from_state.name }} has been elevated for an hour: {{ states(trigger.entity_id)
-        }} {{trigger.to_state.attributes.unit_of_measurement}}'
-      title: Open a window
-    service: notify.all_devices
+    - data_template:
+        message:
+          '{{ trigger.from_state.name }} has been elevated for an hour: {{ states(trigger.entity_id)
+          }} {{trigger.to_state.attributes.unit_of_measurement}}'
+        title: Open a window
+      service: notify.all_devices
 - id: '1597358392746'
   alias: Test multiple actions
   description: ''
   trigger:
-  - entity_id: light.office
-    from: 'on'
-    platform: state
-    to: 'off'
+    - entity_id: light.office
+      from: 'on'
+      platform: state
+      to: 'off'
   condition: []
   action:
-  - before: '16:00:00'
-    condition: time
-  - data:
-      brightness: 155
-      color_temp: 100
-    entity_id: light.elgato_key_light_air
-    service: light.turn_on
-  - after: '16:00:00'
-    condition: time
-  - data:
-      brightness: 5
-      color_temp: 100
-    service: light.turn_on
+    - before: '16:00:00'
+      condition: time
+    - data:
+        brightness: 155
+        color_temp: 100
+      entity_id: light.elgato_key_light_air
+      service: light.turn_on
+    - after: '16:00:00'
+      condition: time
+    - data:
+        brightness: 5
+        color_temp: 100
+      service: light.turn_on
 - id: '1597421392273'
   alias: Test - Run script with arguments
   description: ''
   trigger:
-  - event: sunrise
-    platform: sun
+    - event: sunrise
+      platform: sun
   condition: []
   action:
-  - data_template:
-      variables:
-        stuff: hello
-    entity_id: script.1597421207870
-    service: script.turn_on
+    - data_template:
+        variables:
+          stuff: hello
+      entity_id: script.1597421207870
+      service: script.turn_on
 - id: '1598288460878'
   alias: Office - Turn off lights when room is not occupied
   description: ''
   trigger:
-  - entity_id: binary_sensor.office_fbsnsr_motion
-    for: 00:20:00
-    from: 'on'
-    platform: state
-    to: 'off'
+    - entity_id: binary_sensor.office_fbsnsr_motion
+      for: 00:20:00
+      from: 'on'
+      platform: state
+      to: 'off'
   condition: []
   action:
-  - data: {}
-    entity_id: light.office
-    service: light.turn_off
+    - data: {}
+      entity_id: light.office
+      service: light.turn_off
 - id: '1598290197406'
   alias: Stairway - Turn on stairway nightlight if its dark
   description: ''
   trigger:
-  - entity_id: binary_sensor.stairway_sensor_motion
-    from: 'off'
-    platform: state
-    to: 'on'
+    - entity_id: binary_sensor.stairway_sensor_motion
+      from: 'off'
+      platform: state
+      to: 'on'
   condition:
-  - below: '5'
-    condition: numeric_state
-    entity_id: sensor.stairway_sensor_light_level
+    - below: '5'
+      condition: numeric_state
+      entity_id: sensor.stairway_sensor_light_level
   action:
-  - data:
-      group_name: Stairway
-      scene_name: Nightlight
-    service: hue.hue_activate_scene
+    - data:
+        group_name: Stairway
+        scene_name: Nightlight
+      service: hue.hue_activate_scene
 - id: '1598742539851'
   alias: Office - Turn on lights when office occupied
   description: ''
   trigger:
-  - entity_id: binary_sensor.office_fbsnsr_motion
-    from: 'off'
-    platform: state
-    to: 'on'
+    - entity_id: binary_sensor.office_fbsnsr_motion
+      from: 'off'
+      platform: state
+      to: 'on'
   condition: []
   action:
-  - data: {}
-    entity_id: light.office
-    service: light.turn_on
+    - data: {}
+      entity_id: light.office
+      service: light.turn_on
 - id: '1604809073711'
   alias: Turn off back fence lights at 1am
   description: ''
   trigger:
-  - at: 01:00:00
-    platform: time
+    - at: 01:00:00
+      platform: time
   condition: []
   action:
-  - data: {}
-    entity_id: switch.back_fence_lights
-    service: switch.turn_off
+    - data: {}
+      entity_id: switch.back_fence_lights
+      service: switch.turn_off
