@@ -28,7 +28,7 @@ notify:
     platform: group
     services:
       - service: mobile_app_justin_palmers_iphone
-      - service: mobile_app_heather_iphone
+      - service: mobile_app_heathers_iphone
 
 wemo:
   discovery: false
