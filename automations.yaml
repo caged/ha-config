@@ -24,13 +24,13 @@
     to: 'off'
   condition: []
   action:
-  - data:
-      data:
-        push:
-          thread-id: washer-off
-      message: The washer has finished
-      title: Hoooly shit, Heather
-    service: notify.mobile_app_heather_palmers_iphone
+    - data:
+        data:
+          push:
+            thread-id: washer-off
+        message: The washer has finished
+        title: Hoooly shit, Heather
+      service: notify.mobile_app_heathers_iphone
 - id: '1593490239841'
   alias: Turn off lights when sun rises
   description: ''
