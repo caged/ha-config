@@ -16,12 +16,12 @@ scene: !include scenes.yaml
 binary_sensor: !include binary_sensors.yaml
 sensor: !include_dir_merge_list sensors
 
-weather:
-  - platform: openweathermap
-    api_key: !secret openweathermap_api_key
-    mode: freedaily
-    latitude: !secret home_lat
-    longitude: !secret home_lon
+# weather:
+#   - platform: openweathermap
+#     api_key: !secret openweathermap_api_key
+#     mode: freedaily
+#     latitude: !secret home_lat
+#     longitude: !secret home_lon
 
 notify:
   - name: all_devices
